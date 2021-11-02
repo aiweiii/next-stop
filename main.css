@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --roboto: 'Roboto', sans-serif; 
+
+    /*inspiration: https://www.behance.net/gallery/126461853/PosilekDlaSeniora-Fighting-indifference?tracking_source=search_projects_recommended%7Cwebsite*/
+    
+    --black: #000000;
+    --grey: #938F8C;
+    --light-grey: #F9F8F7;
+    --white: #FFFFFF;
+    --crimson: #F82257;
+    --tangerine: #FDA16B;
+}
