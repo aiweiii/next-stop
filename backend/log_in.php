@@ -27,6 +27,9 @@
         if ($status)
         { 
             $_SESSION['email'] = $email;
+
+            $username = $dao->getFullname();
+            $_SESSION['username'] = $username;
             exit;
         }
         else
