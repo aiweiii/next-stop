@@ -4,8 +4,15 @@ require_once 'common.php';
 
 $dao = new PostDAO();
 $posts = $dao->getAll();
-$posts = array_reverse($posts) // Get an Indexed Array of Post objects
+$posts = array_reverse($posts); // Get an Indexed Array of Post objects
 
+    if(!empty($_POST)){
+        # Page is visited with search criteria specified
+        $country = $_POST["country"];
+        $uni = $_POST["uni"];
+        $filtered_list = $dao->search($country, $uni);    
+        // var_dump($person_list);
+    }
 
 ?>
 
@@ -15,27 +22,13 @@ $posts = array_reverse($posts) // Get an Indexed Array of Post objects
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+        <!-- Axios -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <!-- Vue3 CDN -->
+        <script src="https://unpkg.com/vue@next"></script>
+
         <style type="text/css">
-            /* table {
-            margin: 8px;
-            }
-
-            th {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: .7em;
-            background: #666;
-            color: #FFF;
-            padding: 2px 6px;
-            border-collapse: separate;
-            border: 1px solid #000;
-            }
-
-            td {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: .7em;
-            border: 1px solid #DDD;
-            } */
-
             .text {
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
@@ -51,6 +44,7 @@ $posts = array_reverse($posts) // Get an Indexed Array of Post objects
 
     </head>
 <body>
+
 
     <div class='row'>
         <nav>
@@ -98,138 +92,123 @@ $posts = array_reverse($posts) // Get an Indexed Array of Post objects
         <div class="row sticky-top" style="background-color: white;">
             <a href='add.html' class='btn btn-warning'><h3> Share Your Experience! </h3></a>
 
-            <div class="col text-center">
-            <label for='country'> Choose a Country: </label>
-                <select name='country' id='country'>
-                    <!-- <option value='SG' selected=$selected>SG</option>
-                    <option value='KR' selected=$selected>KR</option>
-                    <option value='UK' selected=$selected>UK</option> -->
-                    <option value='*'>All</option>
-                    <option value='Singapore'> Singapore </option>
-                    <option value='Korea'> KR </option>
-                    <option value='United Kingdom'>UK</option>
-                </select>
-            </div>
+            <div id="app" class="text-center">
 
-            <div class="col text-center">
-                <label for='uni'> Choose a University: </label>
-                    <select name='uni' id='uni'>
-                        <!-- <option value='NUS' selected=$selected>NUS</option>
-                        <option value='NTU' selected=$selected>NTU</option>
-                        <option value='SNU' selected=$selected>SNU</option>
-                        <option value='YSU' selected=$selected>YSU</option>
-                        <option value='UOM' selected=$selected>UOM</option>
-                        <option value='UOL' selected=$selected>UOL</option> -->
+            <br>
 
-                        <option value='*'>All</option>
-                        <option value='NUS'>NUS</option>
-                        <option value='NTU'>NTU</option>
-                        <option value='SNU'>SNU</option>
-                        <option value='YSU'>YSU</option>
-                        <option value='UOM'>UOM</option>
-                        <option value='UOL'>UOL</option>
+            <h4> Filter Your Search </h4>
+
+                <div class="row text-center">
+                    <label for='country'> Choose a Country: </label>
+                        <select name='country' id='country'>
+                            <option value='*'> All </option>
+                            <option value="Korea"> Korea </option>
+                            <option v-for="country in countArr" :value="country"> {{country}} </option>
+                        </select>
                     </select>
-                </select>
-            </div>
+                </div>
 
+                <b> or </b>
 
+                <div class="row text-center">
+                    <label for='uni'> Choose a University: </label>
+                        <select name='uni' id='uni'>
+                            <option value='*'> All </option>
+                            <option value="SNU"> SNU </option>
+                            <option v-for="uni in uniArr" :value="uni"> {{uni}} </option>
+                        </select>
+                    </select>
+                </div>
 
 
                 <br>
-                <input type='submit' value='Go!'/>
-
-            
-        </div>
-
-        <!-- <div class="row"> -->
-            
-        <br><div class='row'>
-
-    <?php
-        if( count($posts) > 0 ) {
-
-            // echo "
-
-            // ";
-
-            // echo "
-            //     <div class='col-sm'>
-            //         <table border='1'>
-            //             <tr>
-            //                 <th>ID</th>
-            //                 <th>Create Timestamp</th>
-            //                 <th>Last Update Timestamp</th>
-            //                 <th>Subject</th>
-            //                 <th>Edit Link</th>
-            //                 <th>Delete Link</th>
-            //             </tr>
-            // ";
-
-
-
-            foreach($posts as $post_object ) {
-                echo "
-
-                <div class='card mb-3 border-warning'>
-                    <img src='...' class='card-img-top' alt='...'>
-                    <div class='card-body'>
-                        <h5 class='card-title'>{$post_object->getSubject()}</h5>
-                        <h6 class='card-subtitle mb-2 text-muted' style='display: none;'> Last Updated: {$post_object->getUpdateTimestamp()}</h6>
-                        <h6 class='card-subtitle mb-2 text-muted'> Country: {$post_object->getCountry()}</h6>
-                        <h6 class='card-subtitle mb-2 text-muted'> University: {$post_object->getUniversity()}</h6>
-                        <p class='card-text'>{$post_object->getEntry()}</p>
-                        <a style='display: none; href='edit.php?id={$post_object->getID()}'>Edit</a>
-                        <a style='display: none;' href='delete.php?id={$post_object->getID()}'>Delete</a>
-                        <p class='card-text'><small class='text-muted'>Last updated on {$post_object->getUpdateTimestamp()} by <b>@{$post_object->getUsername()}</b> </small></p>
-                    </div>
-                </div>
-                ";
-            }
-
-            // <div class='card mb-3 border-warning'>
-            //     <div class='card-body'>
-            //         <h5 class='card-title'>{$post_object->getSubject()}</h5>
-            //         <h6 class='card-subtitle mb-2 text-muted'> Last Updated: {$post_object->getUpdateTimestamp()}</h6>
-            //         <h6 class='card-subtitle mb-2 text-muted'> Country: {$post_object->getCountry()}</h6>
-            //         <h6 class='card-subtitle mb-2 text-muted'> University: {$post_object->getUniversity()}</h6>
-            //         <p class='card-text'>{$post_object->getEntry()}</p>
-            //         <a style='display: none; href='edit.php?id={$post_object->getID()}'>Edit</a>
-            //         <a style='display: none;' href='delete.php?id={$post_object->getID()}'>Delete</a>
-            //     </div>
-            // </div>
-
-            //     <tr>
-            //     <td>
-            //         {$post_object->getID()}
-            //     </td>
-            //     <td>
-            //         {$post_object->getCreateTimestamp()}
-            //     </td>
-            //     <td>
-            //         {$post_object->getUpdateTimestamp()}
-            //     </td>
-            //     <td>
-            //         {$post_object->getSubject()}
-            //     </td>
-            //     <td>
-            //         <a href='edit.php?id={$post_object->getID()}'>Edit</a>
-            //     </td>
-            //     <td>
-            //         <a href='delete.php?id={$post_object->getID()}'>Delete</a>
-            //     </td>
-            // </tr>
-
-            // echo "
-            //     </table>
-            // ";
-        }
-    ?>
+                <input class="btn btn-success" type='submit' value='Go!'/>
+                <br>
 
             </div>
 
-        <!-- </div> -->
+        </div>
+
+        
+
+        <!-- <div class="row"> -->
+        <br>
+        <div class='row'>
+
+            <?php
+                if( count($posts) > 0 ) {
+
+                    foreach($posts as $post_object ) {
+                        echo "
+
+                        <div class='card mb-3 border-warning'>
+                            <img src='...' class='card-img-top' alt='...'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>{$post_object->getSubject()}</h5>
+                                <h6 class='card-subtitle mb-2 text-muted' style='display: none;'> Last Updated: {$post_object->getUpdateTimestamp()}</h6>
+                                <h6 class='card-subtitle mb-2 text-muted'> Country: {$post_object->getCountry()}</h6>
+                                <h6 class='card-subtitle mb-2 text-muted'> University: {$post_object->getUniversity()}</h6>
+                                <p class='card-text'>{$post_object->getEntry()}</p>
+                                <a style='display: none; href='edit.php?id={$post_object->getID()}'>Edit</a>
+                                <a style='display: none;' href='delete.php?id={$post_object->getID()}'>Delete</a>
+                                <p class='card-text'><small class='text-muted'>Last updated on {$post_object->getUpdateTimestamp()} by <b>@{$post_object->getUsername()}</b> </small></p>
+                            </div>
+                        </div>
+                        ";
+                    }
+
+                }
+            ?>
+
+        </div>
 
     </div>
+
+    <script>
+
+    const app = Vue.createApp( {
+        //=========== DATA PROPERTIES ===========
+        data() {
+            return {
+                uniArr: [],
+                countArr: [],
+            }
+        },
+
+        //=========== METHODS =========== 
+        methods: {
+            addChild() {
+                var url = "../countries.json";
+                axios.get(url) 
+                .then(response => {
+                    var myCountries = response.data;
+                    var universities = []
+                    var countries = []
+                    for (let i=0; i<myCountries.length; i++){
+                        if (!countries.includes(myCountries[i]['Country'])) {
+                            countries.push(myCountries[i]['Country'])
+                        }
+                        universities.push(myCountries[i]['University'])
+                    }
+                    this.uniArr = universities;
+                    this.countArr = countries;
+                    // console.log(this.uniVar);
+                    // console.log(this.countryVar);
+                    // return universities, countries
+                })
+                .catch(error => {
+                    console.log(error.message)
+                })
+            }
+        },
+
+        created() {
+            this.addChild()
+        },
+    } )
+    const vm = app.mount('#app')
+
+    </script>
 
         <!-- bootstrap -->    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
