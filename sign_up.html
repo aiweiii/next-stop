@@ -178,17 +178,18 @@
 
                             if (result == '') {
                                 this.success = true
+
+                                this.full_name = ''
+                                this.email = ''
+                                this.password = ''
+                                this.confirm_password = ''
+                                window.scrollTo(0,document.body.scrollHeight);
+    
+                                setTimeout(function () {
+                                    window.location.href = 'homepage/homepage.html';
+                                }, 4000);
                             }
 
-                            this.full_name = ''
-                            this.email = ''
-                            this.password = ''
-                            this.confirm_password = ''
-                            window.scrollTo(0,document.body.scrollHeight);
-
-                            setTimeout(function () {
-                                window.location.replace("http://www.w3schools.com");
-                            }, 4000);
                         })
                         .catch(error => {
                             // process error object
