@@ -190,6 +190,40 @@ class PostDAO {
         // STEP 5
         return $status;
     }
+
+    public function search($country, $university){
+        $conn = new ConnectionManager();
+        $pdo = $conn->getConnection();
+        $sql = "select * from post where country like :country and university like :university";
+
+        if ($country === "*" && $university === "*") {
+            $sql = "select * from post";
+        } elseif ($country === "*") {
+            $sql = "select * from post where university like :university";
+        } elseif ($university === "*") {
+            $sql = "select * from post where country like :country";
+        }
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        if ($country === "*" && $university === "*") {
+            $stmt->bindParam("uni",$university);
+            $stmt->bindParam("country",$country);
+        } elseif ($country === "*") {
+            $stmt->bindParam("university",$university);
+        } elseif ($uni === "*") {
+            $stmt->bindParam("country",$country);
+        }
+
+        $stmt->execute();
+        $result = [];
+        while($row = $stmt->fetch()){
+            $result[] = new POST($row["id"],$row["email"],$row["uni"],$row["country"],$row["fdesc"]);
+        }
+        $stmt = null;
+        $pdo = null;
+        return $result;
+    }
 }
 
 ?>
