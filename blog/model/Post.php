@@ -1,4 +1,4 @@
-P<?php
+<?php
 
 class Post {
     private $id;
