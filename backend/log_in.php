@@ -28,7 +28,7 @@
         { 
             $_SESSION['email'] = $email;
 
-            $username = $dao->getFullname();
+            $username = $user->getFullname();
             $_SESSION['username'] = $username;
             exit;
         }

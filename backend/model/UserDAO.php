@@ -74,13 +74,13 @@ class UserDAO {
         $conn = $connMgr->connect();
         
         // prepare insert
-        $sql = "UPDATE user_info SET university = :university  WHERE fullname = :fullname";
+        $sql = "UPDATE user_info SET university = :university  WHERE email = :email";
         $stmt = $conn->prepare($sql);
         
-        $fullname = $user->getFullname();
-        $university = $user->setUniversity();
+        $email = $user->getEmail();
+        $university = $user->getUniversity();
 
-        $stmt->bindParam(":fullname", $fullname, PDO::PARAM_STR);
+        $stmt->bindParam(":email", $email, PDO::PARAM_STR);
         $stmt->bindParam(":university", $university, PDO::PARAM_STR);
         
 

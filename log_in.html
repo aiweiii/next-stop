@@ -26,7 +26,7 @@
     <nav>
         <div class="nav-logo">
             <a href="#" id="nav-logo">next stop.</a>
-        </div>  
+        </div>
 
         <div class="nav-items" id="nav-items">
             <a href="#" class="nav-item" id="nav-home">Home</a>
@@ -50,8 +50,8 @@
     <script>
         var navItems = document.getElementById("nav-items");
         navItems.style.maxHeight = "0px";
-        function toggleMenu(){
-            if( navItems.style.maxHeight == "0px" ){
+        function toggleMenu() {
+            if (navItems.style.maxHeight == "0px") {
                 navItems.style.maxHeight = "200px";
             } else {
                 navItems.style.maxHeight = "0px";
@@ -60,25 +60,25 @@
     </script>
 
     <div class="positioning-login">
-            <div id="log_in_form" class="col-4 mobile-display">
-                <h1>LOGO</h1>
-                <h3>Welcome back to Next Stop.</h3>
-                <p>New here? <a href="sign_up.html">Create an account</a>.</p>
-                <div class="input-fields">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" v-model="email">
-                    <div class="error" v-html="email_error"></div>
-                </div>
-
-                <div class="input-fields">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" v-model="password">
-                    <div class="error" v-html="password_error"></div>
-                </div>
-
-                <button @click="log_in">Log In</button>
+        <div id="log_in_form" class="col-4 mobile-display">
+            <h1>LOGO</h1>
+            <h3>Welcome back to Next Stop.</h3>
+            <p>New here? <a href="sign_up.html">Create an account</a>.</p>
+            <div class="input-fields">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" v-model="email">
+                <div class="error" v-html="email_error"></div>
             </div>
+
+            <div class="input-fields">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" v-model="password">
+                <div class="error" v-html="password_error"></div>
+            </div>
+
+            <button @click="log_in">Log In</button>
         </div>
+    </div>
 </body>
 
 </html>
@@ -107,7 +107,7 @@
                         .then(response => {
                             // process response.dataobject
                             // console.log(typeof(response.data))
-                            // console.log(response.data)
+                            console.log(response.data)
                             var result = response.data
 
                             this.email_error = ''
@@ -131,7 +131,7 @@
 
                             // if no error, redirect to homepage
                             if (result == '') {
-                                window.location.replace("http://stackoverflow.com");
+                                window.location.href = 'homepage/homepage.php';
                             }
                         })
                         .catch(error => {

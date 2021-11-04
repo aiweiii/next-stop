@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <nav>
         <div class="nav-logo">
             <a href="../landing_page/landing_page.html" id="nav-logo">next stop.</a>
@@ -39,14 +40,55 @@
     <div class="container">
         <div class="title">Choose Your University:</div>
         <div class="search-bar">
-            <form autocomplete="off" action="/action_page.php">
+            <form autocomplete="off" action="">
                 <div class="autocomplete" style="width:100%;">
                     <input id="myInput" type="text" name="myCountry">
+                    <input type="submit">
+                </form>
+
                 </div>
             </form>
         </div>
-        <a href="../homepage/homepage.php" class="confirm-btn" onclick="addUni()">Confirm</a>
+        <a class="confirm-btn" id="confirm">Confirm</a>
+        <!-- a href="../homepage/homepage.php" -->
+        <div id="outcome"></div>
     </div>
+
+    <?php
+    // session start, get username and email
+    require_once '../backend/common.php';
+    
+    if (isset($_SESSION['email'])) {
+        $email = $_SESSION['email'];
+        $username = $_SESSION['username'];
+    }
+
+
+    // Create the DAO object to facilitate connection to the database.
+    if (isset($_GET['myCountry'])){
+        $university = $_GET['myCountry'];
+        
+        $dao = new UserDAO();
+        $user = $dao->get($email);
+        
+        // Check if the email exists
+        if ($user != null) {
+            // If email exists
+            // update university for this user
+            $user->setUniversity($university);
+            // echo $user->getUniversity();
+            $dao->update($user);
+
+            header("Location: ../homepage/homepage.php");
+        } else {
+            $errors['email'][] = 'This email account does not exist.';
+            exit();
+        }
+        // echo $email, $username, $university;
+
+    }
+
+    ?>
 
     <script>
         var navItems = document.getElementById("nav-items");
@@ -60,52 +102,6 @@
             }
         }
 
-        function addUni() {
-            <?php
-            require_once 'common.php';
-            $email = $_SESSION['email'];
-            echo $email;
-
-            // Create the DAO object to facilitate connection to the database.
-            $dao = new UserDAO();
-            $user = $dao->get($email);
-            // Check if the email exists
-            if ($user != null) {
-                // If email exists
-                // get the hashed password from the database
-                // Match the hashed password with the one which user entered
-                // if it does not match. -> error
-                $hashed = $user->getPasswordhashed();
-                $status = password_verify($password, $hashed);
-
-
-                // check if the plain text password is valid
-                if ($status) {
-                    $_SESSION['email'] = $email;
-
-                    $username = $dao->getFullname();
-                    $_SESSION['username'] = $username;
-                    exit;
-                } else {
-                    // password not valid
-                    // return to login page and show error
-                    $errors['password'][] = 'Invalid password.';
-                }
-            } else {
-                $errors['email'][] = 'This email account does not exist.';
-            }
-            if (count($errors) > 0) {
-                // header('Location: login.php');
-                echo json_encode($errors);
-                exit();
-            }
-
-            // debug
-            // echo json_encode($_SESSION);
-            ?>
-
-
-        }
     </script>
     <script src="validation_page.js"></script>
 
