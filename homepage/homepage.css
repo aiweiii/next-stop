@@ -1,0 +1,97 @@
+.hero {
+    width: 100%;
+    height: 89vh;
+    padding: 3% 5%;
+    font-family: var(--roboto);
+    display: flex;
+    align-items: stretch;
+}
+
+.title {
+    font-family: var(--roboto);
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 3% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.task-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+.task {
+    background: var(--light-grey);
+    display: flex;
+    flex-direction: row;
+    height: 18%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 5px;
+    align-items: center;
+    padding-left: 18px;
+    cursor: pointer;
+}
+
+.task:hover {
+    background: rgba(192, 192, 178, 0.527);
+    transition: ease-in-out .3s;
+}
+
+.icon {
+    background: white;
+    padding: 4px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 5px;
+    
+}
+
+.find {
+    font-size: 18px;
+}
+
+.right {
+    margin-left: 18px;
+}
+
+.task-text {
+    font-size: 20px;
+}
+
+.task-subtitle {
+    margin-top: 3px;
+    font-size: 13px;
+    color: rgb(145, 145, 145);
+}
+
+.progress-bar {
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+}
+
+progress {
+    width: 93%;
+}
+
+.task-done {
+    background: rgba(188, 245, 198, 0.527);
+    cursor: default;
+}
+.task-done:hover{
+    background: rgba(188, 245, 198, 0.527);
+}

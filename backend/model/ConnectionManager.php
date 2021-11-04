@@ -6,7 +6,7 @@ class ConnectionManager {
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "uni_exchange";
+        $dbname = "wad2_proj";
         
         // Create connection
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);     

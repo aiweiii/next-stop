@@ -12,6 +12,12 @@ require_once "common.php";
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
+// debug
+    // $full_name = 'xue er';
+    // $email = 'lol@smu.edu.sg';
+    // $password = 'Password1';
+    // $confirm_password = 'Password1';
+
     // Form field validation - fullname field
     if (empty($full_name)){
         $errors['full_name'][] = 'Please enter your name.';
@@ -78,6 +84,7 @@ require_once "common.php";
 if ( $status ) {
     // success; redirect page
     $_SESSION["email"] = $email;
+    $_SESSION["username"] = $full_name;
     // header("Location: ../login.html");
     exit();
 }
