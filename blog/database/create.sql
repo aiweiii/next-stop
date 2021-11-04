@@ -3,9 +3,9 @@ create database wad2_proj;
 use wad2_proj;
 
 create table user_info
-(email varchar(255) not null primary key,
-fullname varchar(255) not null,
-password varchar(255) not null);
+(email varchar(250) not null primary key,
+fullname varchar(250) not null,
+password varchar(250) not null);
 
 create table post (
     id integer auto_increment primary key,
