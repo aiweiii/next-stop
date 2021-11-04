@@ -17,7 +17,7 @@
         </div>  
 
         <div class="nav-items" id="nav-items">
-            <a href="../homepage/homepage.html" class="nav-item" id="nav-home">Home</a>
+            <a href="../homepage/homepage.php" class="nav-item" id="nav-home">Home</a>
             <a href="#" class="nav-item" id="nav-forum">Forum</a>
             <a href="#" class="nav-item" id="nav-uniGuide">University Guide</a>
             <a href="../sign_up.html" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
@@ -43,7 +43,7 @@
                 </div>
             </form>
         </div>
-        <a href="../homepage/homepage.html" class="confirm-btn">Confirm</a>
+        <a href="../homepage/homepage.php" class="confirm-btn">Confirm</a>
     </div>
 
     <script>

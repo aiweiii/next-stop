@@ -18,7 +18,7 @@
         </div>  
 
         <div class="nav-items" id="nav-items">
-            <a href="homepage.html" class="nav-item" id="nav-home">Home</a>
+            <a href="homepage.php" class="nav-item" id="nav-home">Home</a>
             <a href="#" class="nav-item" id="nav-forum">Forum</a>
             <a href="#" class="nav-item" id="nav-uniGuide">University Guide</a>
             <a href="#" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
@@ -39,7 +39,7 @@
         <div class="title">Welcome, Belle 😄</div>
         <div class="box">
             <div class="task-title">Explore our features:</div>
-            <a href="../validation_page/validation_page.html" class="task">
+            <a href="../validation_page/validation_page.php" class="task">
                 <div class="icon">✔️</div>
                 <div class="right">
                     <div class="task-text">Choose Your University</div>
