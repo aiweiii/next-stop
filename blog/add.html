@@ -1,0 +1,137 @@
+<html>
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <script language='JavaScript' type='text/javascript'>
+        function validate_form() {
+
+            // There are 3 ways to access a Form Input Field
+            var s = document.forms['entry_form'].subject.value;     // This works if input field has NAME attribute
+            //var s = document.forms['entry_form']['my_subject'].value; // This works if input field has ID attribute
+            //var s = document.entry_form.subject.value;                 // This works if input field has NAME attribute
+
+            if( s.length < 10 ) {
+                alert("Subject has to be minimum 10 characters long!");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="row">
+        <h1> Standardised Header </h1>
+        <hr>
+    </div>
+
+    
+
+    <div class="container">
+
+        <div class="row">
+            <h2 class="text-center" style="color: teal;"> Create Your Post &#10024; </h2>
+        </div>
+        <br>
+
+        <div class="row">
+
+            <!-- NOTE: We set FORM NAME attribute so we can perform Form Validation using JavaScript -->
+            <form name='entry_form' action='add.php' method='POST' onSubmit="return validate_form()">
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"> Subject </span>
+                    <input type="text" class="form-control" placeholder="Summarise your experience!" aria-label="Username" aria-describedby="basic-addon1" name='subject' size='30' id='my_subject' required>
+                </div>
+                <!-- Subject: <br>
+                <input type='text' name='subject' size='30' id='my_subject' required>
+                <br><br> -->
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"> Details </span>
+                    <input type="text" class="form-control" placeholder="Inlcude details of your experience!" aria-label="Username" aria-describedby="basic-addon1" name='entry' cols='80' rows='5' id='entry_id' required>
+                </div>
+
+                <!-- Details: <br>
+                <small> Inlcude details of your experience!  </small> <br>
+                <textarea name='entry' cols='80' rows='5' id='entry_id' required></textarea>
+                <br> -->
+
+                <!-- <h6 style="color: slateblue;"> Include Tags: </h6>
+                <small> Including the relevant tags will help increase your post's visibility to others! </small>
+                <br><br> -->
+
+                <!-- <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Country
+                    </button>
+                        <ul name='country' class="dropdown-menu">
+                            <li><option value='Korea'>Korea</option></li>
+                            <li><option value='Singapore'>Singapore</option></li>
+                            <li><option value='United Kingdom'>United Kingdom</option></li>
+                        </ul>
+                </div> -->
+
+                <div class=" container text-center">
+
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">@</span>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping"  name='username' id='my_username' required>
+                        </div> <br>
+
+                    Country:
+                        <select name='country'>
+                            <option value='Korea'>Korea</option>
+                            <option value='Singapore'>Singapore</option>
+                            <option value='United Kingdom'>United Kingdom</option>
+                        </select>
+
+                <!-- <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        University
+                    </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                </div> -->
+
+                <div style="background-color: white;"
+
+                    University:
+                        <select name='university'>
+                            <option value='SNU'>SNU</option>
+                            <option value='YSU'>YSU</option>
+                            <option value='NUS'>NUS</option>
+                            <option value='NTU'>NTU</option>
+                            <option value='UOL'>UOL</option>
+                            <option value='UOM'>UOM</option>
+                        </select>
+                    <br>
+                </div>
+
+                <br>
+                <div class="text-center">
+                    <input type='submit' value='Submit My Entry!' class="btn btn-warning">
+                </div>
+
+            </form>
+
+            <hr>
+            <a href='display.php' class="btn btn-dark">Bring me back to <b>Forum</b> </a>
+
+        </div>
+    </div>
+
+
+        <!-- bootstrap -->    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" 
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
