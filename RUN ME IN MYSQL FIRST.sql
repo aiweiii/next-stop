@@ -12,7 +12,7 @@ create table post (
     id integer auto_increment primary key,
     create_timestamp datetime,
     update_timestamp datetime,
-    subject varchar(191),
+    subject varchar(250),
     entry text,
     country varchar(30),
     university varchar(30),
