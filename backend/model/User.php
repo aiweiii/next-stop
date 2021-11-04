@@ -4,6 +4,7 @@ class User {
     private $full_name;
     private $email;
     private $password_hashed;
+    private $university;
 
 
     function __construct($full_name, $email, $password_hashed) {
@@ -26,6 +27,14 @@ class User {
 
     public function setPasswordhashed($hashed){
         $this->password_hashed = $hashed;
+    }
+
+    public function getUniversity(){
+        return $this->university;
+    }
+    
+    public function setUniversity($university){
+        $this->university = $university;
     }
 
 }

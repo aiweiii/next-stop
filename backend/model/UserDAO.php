@@ -66,34 +66,34 @@ class UserDAO {
     }
 
 
-    // function update($user) {
-    //     $result = true;
+    function update($user) {
+        $result = true;
 
-    //     // connect to database
-    //     $connMgr = new ConnectionManager();
-    //     $conn = $connMgr->connect();
+        // connect to database
+        $connMgr = new ConnectionManager();
+        $conn = $connMgr->connect();
         
-    //     // prepare insert
-    //     $sql = "UPDATE useraccount SET password_hash = :passwordHash  WHERE username = :username";
-    //     $stmt = $conn->prepare($sql);
+        // prepare insert
+        $sql = "UPDATE user_info SET university = :university  WHERE fullname = :fullname";
+        $stmt = $conn->prepare($sql);
         
-    //     $username = $user->getUsername();
-    //     $passwordHash = $user->getPasswordHash();
+        $fullname = $user->getFullname();
+        $university = $user->setUniversity();
 
-    //     $stmt->bindParam(":username", $username, PDO::PARAM_STR);
-    //     $stmt->bindParam(":passwordHash", $passwordHash, PDO::PARAM_STR);
+        $stmt->bindParam(":fullname", $fullname, PDO::PARAM_STR);
+        $stmt->bindParam(":university", $university, PDO::PARAM_STR);
         
 
-    //     $result = $stmt->execute();
-    //     if (! $result ){ // encountered error
-    //         $parameters = [ "user" => $user, ];
-    //         $connMgr->handleError( $stmt, $sql, $parameters );
-    //     }
+        $result = $stmt->execute();
+        if (! $result ){ // encountered error
+            $parameters = [ "user" => $user, ];
+            $connMgr->handleError( $stmt, $sql, $parameters );
+        }
         
-    //     // close connections
-    //     $stmt = null;
-    //     $conn = null;        
+        // close connections
+        $stmt = null;
+        $conn = null;        
         
-    //     return $result;
-    // }
+        return $result;
+    }
 }
