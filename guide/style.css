@@ -1,0 +1,29 @@
+
+body {
+    margin: 40px;
+}
+
+@media screen and (max-width: 768px){
+        .flex-container {
+            flex-direction: column;
+        }
+    }
+
+.flex-container {
+    display:flex;
+    margin: 50px 25px;
+}
+
+.main-content {
+    flex: 2;
+    padding: 10px;
+    background-color: lavender;
+    border-radius: 20px ;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 20px;
+}

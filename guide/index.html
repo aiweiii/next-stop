@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <h1>University Guide</h1>
+
+    <main class="flex-container">
+
+        <section class="main-content">
+
+            Enter University Name: <input type="text" id="input" placeholder="University of Manchester" style="height: 50px; width: 70%;">
+            <button type="button" onclick="buttonClicked()">Submit!</button>
+            
+            <div id="map" style="height: 500px"></div>
+
+        </section>
+
+        <aside class="sidebar">
+            <h1 id="uniName">University Name</h1>
+            <h3>University Logo</h3>
+            <h3>University pics and information</h3>
+            <h3>Weather api!</h3>
+            <h3>How many people are enrolled?</h3>
+        </aside>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf_8QgsbouLol-VDIvCW72IIe4bqOD9C8&map_ids=48f8e6a60c8de5e0&libraries=places&callback=initGoogle"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+</body>
+</html>
