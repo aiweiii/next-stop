@@ -142,7 +142,6 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
                         echo "
 
                         <div class='card mb-3 border-warning'>
-                            <img src='...' class='card-img-top' alt='...'>
                             <div class='card-body'>
                                 <h5 class='card-title'>{$post_object->getSubject()}</h5>
                                 <h6 class='card-subtitle mb-2 text-muted' style='display: none;'> Last Updated: {$post_object->getUpdateTimestamp()}</h6>
