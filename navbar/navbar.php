@@ -32,12 +32,15 @@
             <a href="../validation_page/validation_page.php" class="nav-item" id="nav-username"></a>
         </div>
 
-        <div class="nav-login-signup" id="nav-login-signup">
+        <div class="nav-login-signup" id="nav-login-signup-2">
             <a href="../log_in.html" class="nav-login" id="nav-login">Login</a>
             <a href="../sign_up.html" class="nav-signup" id="nav-signup">Sign Up</a>
         </div>
 
-        <a class="username" id="username"></a>
+        <a href="../validation_page/validation_page.php" class="user-profile" id="user-profile">
+            <div class="profile-pic"><?php print_r($_SESSION['username'][0]);?></div>
+            <div class="username" id="username"><?php print_r($_SESSION['username']);?></div>
+        </a>
 
         <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
             <span class="menu menu-small menu-top"></span>
@@ -48,21 +51,19 @@
     <div class="hero"></div>
 
     <script>
-        function showProfile() {
+        //TO DO: if user is registered then showProfile()
+        var username = '<?php echo $username;?>';
+        if (username != null) {
+            //for smaller devices
             document.getElementById("nav-login-signup").innerHTML = '';
             document.getElementById("nav-username").innerHTML = 'Profile';
-            document.getElementById("username").innerHTML = username;
-            document.getElementById("username").style.display = "block";
-            document.getElementById("nav-login-signup").style.display = "none";
-        }
+
+            //for larger devices
+            document.getElementById("user-profile").style.display = 'flex';
+            document.getElementById("nav-login-signup-2").style.display = "none";
+            
+        } 
         
-        
-        //TO DO: if user is registered then showProfile()
-        //if(isset($_SESSION['username'])){
-            //var username = '<?php echo $username;?>';
-            //showProfile()
-        //}
-        showProfile()
         
 
         var navItems = document.getElementById("nav-items");

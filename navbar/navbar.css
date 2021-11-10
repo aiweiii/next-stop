@@ -42,8 +42,21 @@ nav a{
     text-align: center;
 }
 
-.username {
+.user-profile {
     display: none;
+    align-items: baseline;
+}
+
+.profile-pic {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    background: linear-gradient(to bottom, var(--crimson), var(--tangerine));
+    text-align: center;
+    line-height: 30px;
+    font-family: var(--roboto);
 }
 
 /*ANIMATED UNDERLINE START*/
@@ -175,6 +188,10 @@ nav a{
     .nav-items{
         overflow: hidden;
         transition: 0.5s;
+    }
+
+    .user-profile {
+        display: none !important;
     }
 }
 /*FOR SMALLER DEVICES END*/
