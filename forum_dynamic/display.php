@@ -12,7 +12,7 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
         $university = $_POST["university"];
         $filtered_list = $dao->search($country, $uni);    
         // var_dump($person_list);
-    }
+    } 
 
 ?>
 
