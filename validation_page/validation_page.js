@@ -1,6 +1,9 @@
 //if already have uni --> show uni instead of search bar
 var have_uni = true;
 
+
+
+
 if (have_uni) {
     document.getElementById("user_uni").style.display = "flex"
     document.getElementById("search_bar").style.display = "none"
