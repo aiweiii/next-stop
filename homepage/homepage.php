@@ -26,16 +26,22 @@ if (isset($_SESSION['email'])) {
         </div>  
 
         <div class="nav-items" id="nav-items">
-            <a href="homepage.php" class="nav-item" id="nav-home">Home</a>
+            <a href="../homepage/homepage.php" class="nav-item" id="nav-home">Home</a>
             <a href="#" class="nav-item" id="nav-forum">Forum</a>
             <a href="#" class="nav-item" id="nav-uniGuide">University Guide</a>
-            <a href="#" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
+            <a href="../log_in.html" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
+            <a href="../validation_page/validation_page.php" class="nav-item" id="nav-username"></a>
         </div>
 
-        <div class="nav-login-signup">
+        <div class="nav-login-signup" id="nav-login-signup-2">
             <a href="../log_in.html" class="nav-login" id="nav-login">Login</a>
             <a href="../sign_up.html" class="nav-signup" id="nav-signup">Sign Up</a>
         </div>
+
+        <a href="../validation_page/validation_page.php" class="user-profile" id="user-profile">
+            <div class="profile-pic"><?php print_r($_SESSION['username'][0]);?></div>
+            <div class="username" id="username"><?php print_r($_SESSION['username']);?></div>
+        </a>
 
         <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
             <span class="menu menu-small menu-top"></span>
@@ -74,6 +80,18 @@ if (isset($_SESSION['email'])) {
 
 
     <script>
+        var username = '<?php echo $username;?>';
+        if (username != null) {
+            //for smaller devices
+            document.getElementById("nav-login-signup").innerHTML = '';
+            document.getElementById("nav-username").innerHTML = 'Profile';
+
+            //for larger devices
+            document.getElementById("user-profile").style.display = 'flex';
+            document.getElementById("nav-login-signup-2").style.display = "none";
+            
+        } 
+
         var navItems = document.getElementById("nav-items");
         navItems.style.maxHeight = "0px";
         function toggleMenu(){

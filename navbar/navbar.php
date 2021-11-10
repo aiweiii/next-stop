@@ -51,7 +51,6 @@
     <div class="hero"></div>
 
     <script>
-        //TO DO: if user is registered then showProfile()
         var username = '<?php echo $username;?>';
         if (username != null) {
             //for smaller devices
