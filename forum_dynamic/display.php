@@ -9,7 +9,7 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
     if(!empty($_POST)){
         # Page is visited with search criteria specified
         $country = $_POST["country"];
-        $uni = $_POST["uni"];
+        $university = $_POST["university"];
         $filtered_list = $dao->search($country, $uni);    
         // var_dump($person_list);
     }
@@ -30,15 +30,30 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
             .text {
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
-            .somePosition {
-                /* position: fixed; */
-                /* bottom: 50; */
-            }
-            .card-background {
-                back
+
+            /* [NOT USED]codes from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns_responsive */
+            /* Create two equal columns that floats next to each other */
+            .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
             }
 
-            
+            /* Clear floats after the columns */
+            .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+
+            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+            }
+
         </style>
 
         <link rel="stylesheet" href="navbar.css">
@@ -126,7 +141,7 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
                             <!-- end of search filter -->
 
                             <br>
-                            <input class="btn btn-success" type='submit' value='Go!'/>
+                            <input class="btn btn-success" type='submit' value='Go!' onclick="{$dao->search($country, $uni)}"/>
                             <br>
 
                         </div>
@@ -136,7 +151,7 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
             </div>
 
             <br>
-            <div class='col-8'>
+            <div class=' col-8'>
                 <?php
                     if( count($posts) > 0 ) {
                         foreach($posts as $post_object ) {
