@@ -23,7 +23,9 @@
             // If email exists
             // update university for this user
             $user->setUniversity($university);
-            // echo $user->getUniversity();
+            $university = $user->getUniversity();
+            $_SESSION['university'] = $university;
+
             $dao->update($user);
 
             header("Location: ../homepage/homepage.php");
@@ -35,10 +37,10 @@
 
     }
 
-    //TO DO: if selected uni, display uni instead
-    if (isset($_SESSION['university'])) {
-        $university = $_SESSION['university'];
-    }
+    // //TO DO: if selected uni, display uni instead
+    // if (isset($_SESSION['university'])) {
+    //     $university = $_SESSION['university'];
+    // }
 ?>
 
 <head>
