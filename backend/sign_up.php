@@ -74,7 +74,7 @@ require_once "common.php";
 
     // if everything is checked. Create user Object and write to database
     $hashed = password_hash($password, PASSWORD_DEFAULT);
-    $new_user = new User($full_name, $email, $hashed);
+    $new_user = new User($full_name, $email, $hashed, '');
 
     $status = $dao->create($new_user);
 
@@ -85,6 +85,7 @@ if ( $status ) {
     // success; redirect page
     $_SESSION["email"] = $email;
     $_SESSION["username"] = $full_name;
+    $_SESSION["university"] = '';
     // header("Location: ../login.html");
     exit();
 }

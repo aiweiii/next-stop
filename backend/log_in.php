@@ -26,10 +26,13 @@
         // check if the plain text password is valid
         if ($status)
         { 
-            $_SESSION['email'] = $email;
-
+            
             $username = $user->getFullname();
+            $university = $user->getUniversity();
+            
+            $_SESSION['email'] = $email;
             $_SESSION['username'] = $username;
+            $_SESSION['university'] = $university;
             exit;
         }
         else

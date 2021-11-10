@@ -7,10 +7,11 @@ class User {
     private $university;
 
 
-    function __construct($full_name, $email, $password_hashed) {
+    function __construct($full_name, $email, $password_hashed, $university) {
         $this->full_name = $full_name;
         $this->email = $email;
         $this->password_hashed = $password_hashed;
+        $this->university = $university;
     }
 
     public function getFullname(){

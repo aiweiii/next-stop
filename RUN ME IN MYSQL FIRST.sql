@@ -6,7 +6,7 @@ create table user_info
 (email varchar(250) not null primary key,
 fullname varchar(250) not null,
 password_hash varchar(250) not null,
-university varchar(250));
+university varchar(250) not null);
 
 create table post (
     id integer auto_increment primary key,
