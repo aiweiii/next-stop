@@ -64,6 +64,9 @@ form {
     cursor: pointer;
 }
 
+.user-input {
+    margin-right: 10px;
+}
 
 /*credits: https://www.w3schools.com/howto/howto_js_autocomplete.asp*/
 .autocomplete {
