@@ -24,20 +24,6 @@
 <link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="main.css">
 
-<?php 
-    require_once '../backend/common.php';
-
-    if (isset($_SESSION['email'])) {
-        $email = $_SESSION['email'];
-        $username = $_SESSION['username'];
-        $university = $_SESSION['university'];
-
-        // echo $email, $username, $university;
-    } else {
-        // redirect to homepage if never login/signup
-        header("Location: ../homepage/homepage.php");
-    }
-?>
 
 </head>
 <body>
@@ -87,10 +73,17 @@
         </div>
         <br>
 
-        <div class="row">
+        <div class="row" id="app">
 
             <!-- NOTE: We set FORM NAME attribute so we can perform Form Validation using JavaScript -->
             <form name='entry_form' action='add_post.php' method='POST' onSubmit="return validate_form()">
+
+                <p>University: {{university}}</p>
+                <input type="hidden" name='university' id='university' :value="university">
+                <input type="hidden" name='username' id='my_username' :value="username">
+                
+                <p>Country: {{country}}</p>
+                <input type="hidden" name='country' id='country' :value="country">
 
                 <div class="form-group">
                     <label for="exampleFormControlInput1"> Subject </label>
@@ -136,13 +129,13 @@
 
                     <hr>
 
-                    <div class="input-group flex-nowrap" style="width: 25%; margin: auto;">
+                    <!-- <div class="input-group flex-nowrap" style="width: 25%; margin: auto;">
                         <span class=" input-group-text" id="addon-wrapping">@</span>
                         <input type="text" class=" col-md-4 form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping"  name='username' id='my_username' required>
-                    </div> <br>
+                    </div> <br> -->
 
                     <div id="app">
-                        <div class="container">
+                        <!-- <div class="container">
                             Country:
                                 <select name='country' id='country'>
                                     <option v-for="country in countArr" :value="country"> {{country}} </option>
@@ -152,7 +145,7 @@
                                 <select name='university' id='university'>
                                     <option v-for="uni in uniArr" :value="uni"> {{uni}} </option>
                                 </select>
-                        </div>
+                        </div> -->
                     </div><br>
 
                     <input type='submit' value='Submit My Entry!' class="btn btn-warning">
@@ -170,11 +163,33 @@
                 return {
                     uniArr: [],
                     countArr: [],
+                    country: '',
+                    email: '',
+                    username: '',
+                    university: ''
                 }
             },
             //=========== METHODS =========== 
             methods: {
                 addChild() {
+                    var url = "sessionAPI.php";
+                    axios.get(url) 
+                    .then(response => {
+                        var result = response.data;
+
+                        var email = result.email;
+                        var username = result.username;
+                        var university = result.university;
+
+                        this.email = email;
+                        this.username = username;
+                        this.university = university;
+
+                    })
+                    .catch(error => {
+                        console.log(error.message)
+                    })
+
                     var url = "../countries.json";
                     axios.get(url) 
                     .then(response => {
@@ -184,6 +199,11 @@
                         for (let i=0; i<myCountries.length; i++){
                             if (!countries.includes(myCountries[i]['Country'])) {
                                 countries.push(myCountries[i]['Country'])
+
+                            }
+                            // console.log(myCountries[i]['University'], this.university)
+                            if (myCountries[i]['University'] == this.university){
+                                this.country = myCountries[i]['Country']
                             }
                             universities.push(myCountries[i]['University'])
                         }
@@ -196,10 +216,16 @@
                     .catch(error => {
                         console.log(error.message)
                     })
+
+                    
                 }
             },
             created() {
                 this.addChild()
+
+                
+
+
             },
         } )
         const vm = app.mount('#app')

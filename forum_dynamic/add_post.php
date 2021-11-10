@@ -5,6 +5,9 @@ require_once 'common.php';
 $status = false;
 //var_dump($_POST);
 
+// echo '123';
+// echo $_POST['subject'], $_POST['entry'], $_POST['country'], $_POST['university'];
+// echo $_POST['username'];
 if( isset($_POST['subject']) && isset($_POST['entry']) && isset($_POST['country']) && isset($_POST['university']) && isset($_POST['username'])) {
     $subject = $_POST['subject'];
     $entry = $_POST['entry'];
