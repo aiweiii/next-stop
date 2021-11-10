@@ -43,42 +43,14 @@ $university = '*';
         <script src="https://unpkg.com/vue@next"></script>
 
         <style type="text/css">
-            .text {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-            }
 
-            /* [NOT USED]codes from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns_responsive */
-            /* Create two equal columns that floats next to each other */
-            .column {
-            float: left;
-            width: 50%;
-            padding: 10px;
-            height: 300px; /* Should be removed. Only for demonstration */
-            }
-
-            /* Clear floats after the columns */
-            .row:after {
-            content: "";
-            display: table;
-            clear: both;
-            }
-
-            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-            @media screen and (max-width: 600px) {
-            .column {
-                width: 100%;
-            }
-            }
-
-            .sticky-filter {
-                position: sticky;
-                top: 5vh;
-            }
+            
 
         </style>
 
         <link rel="stylesheet" href="../navbar/navbar.css">
         <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="css/display.css">
 
     </head>
 <body>
@@ -139,17 +111,17 @@ $university = '*';
 
     <!-- end of navigation bar -->
 
-    <div class='container'>
+    <div class='big-box'>
 
         <div class="row">
 
             <div class="col-4" >
-                <div class="sticky-filter text-center">
-                    <div style="background-color: #ff93ae; padding: 25%; border-radius: 25px;">
+                <div class="sticky-filter left">
+                    <div class='box'>
 
-                        <a href='add.php' class='btn btn-warning'><h3> Share Your Experience! </h3></a>
+                        <a href='add.php' class='btn share-btn'>Share Your Experience!</a>
 
-                        <div id="app" class="text-center">
+                        <div id="app" class="">
 
                             <br>
                             <!-- search filter -->
@@ -157,7 +129,7 @@ $university = '*';
 
                             <form action="">
 
-                            <div class="row text-center">
+                            <div class="row">
                                 <label for='country'> Choose a Country: </label>
                                     <select name='country' id='country'>
                                         <option value='*'> All </option>
@@ -169,7 +141,7 @@ $university = '*';
 
                             <b> and </b>
 
-                            <div class="row text-center">
+                            <div class="row">
                                 <label for='uni'> Choose a University: </label>
                                     <select name='uni' id='uni' >
                                         <option value='*'> All </option>
