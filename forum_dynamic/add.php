@@ -32,7 +32,7 @@
         $username = $_SESSION['username'];
         $university = $_SESSION['university'];
 
-        echo $email, $username, $university;
+        // echo $email, $username, $university;
     } else {
         // redirect to homepage if never login/signup
         header("Location: ../homepage/homepage.php");
