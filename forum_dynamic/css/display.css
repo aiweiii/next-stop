@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--roboto);
+}
+
+.sticky-filter {
+    position: sticky;
+    top: 5vh;
+}
+
+.big-box {
+    width: 100%;
+    padding: 20px 30px 0px 30px;
+    border-top: solid 1px #cfcfcf;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.left .box {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    padding: 25%;
+}
+
+.share-btn {
+    font-weight: 500;
+    background: var(--crimson);
+    color: white;
+}

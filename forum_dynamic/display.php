@@ -1,18 +1,34 @@
 <?php
 
 require_once 'common.php';
+require_once '../backend/common.php';
+
+if (isset($_SESSION['email'])) {
+    $email = $_SESSION['email'];
+    $username = $_SESSION['username'];
+}
 
 $dao = new PostDAO();
 $posts = $dao->getAll();
 $posts = array_reverse($posts); // Get an Indexed Array of Post objects
+$country = '*';
+$university = '*';
 
-    if(!empty($_POST)){
+    if(isset($_GET["submit"])){
         # Page is visited with search criteria specified
-        $country = $_POST["country"];
-        $university = $_POST["university"];
-        $filtered_list = $dao->search($country, $uni);    
+        $country = $_GET["country"];
+        $university = $_GET["uni"];
+
+        // debug
+        // $country = '*';
+        // $university = 'NUS';
+        // echo '123';
+        // echo $country, $university;
+        $posts = $dao->search($country, $university);
+        $posts = array_reverse($posts); // Get an Indexed Array of Post objects
+
         // var_dump($person_list);
-    }
+    } 
 
 ?>
 
@@ -27,58 +43,41 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
         <script src="https://unpkg.com/vue@next"></script>
 
         <style type="text/css">
-            .text {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-            }
 
-            /* [NOT USED]codes from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns_responsive */
-            /* Create two equal columns that floats next to each other */
-            .column {
-            float: left;
-            width: 50%;
-            padding: 10px;
-            height: 300px; /* Should be removed. Only for demonstration */
-            }
-
-            /* Clear floats after the columns */
-            .row:after {
-            content: "";
-            display: table;
-            clear: both;
-            }
-
-            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-            @media screen and (max-width: 600px) {
-            .column {
-                width: 100%;
-            }
-            }
+            
 
         </style>
 
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="../navbar/navbar.css">
+        <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="css/display.css">
 
     </head>
 <body>
 
-            <!-- navigation bar -->
+    <!-- navigation bar -->
     <nav>
         <div class="nav-logo">
-            <a href="#" id="nav-logo">next stop.</a>
-        </div>
+            <a href="../landing_page/landing_page.html" id="nav-logo">next stop.</a>
+        </div>  
 
         <div class="nav-items" id="nav-items">
             <a href="../homepage/homepage.php" class="nav-item" id="nav-home">Home</a>
-            <a href="display.php" class="nav-item" id="nav-forum">Forum</a>
-            <a href="#" class="nav-item" id="nav-uniGuide">University Guide</a>
-            <a href="#" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
+            <a href="../forum_dynamic/display.php" class="nav-item" id="nav-forum">Forum</a>
+            <a href="../guide/index.html" class="nav-item" id="nav-uniGuide">University Guide</a>
+            <a href="../log_in.html" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
+            <a href="../validation_page/validation_page.php" class="nav-item" id="nav-username"></a>
         </div>
 
-        <div class="nav-login-signup">
-            <a href="./log_in.html" class="nav-login" id="nav-login">Login</a>
-            <a href="./sign_up.html" class="nav-signup" id="nav-signup">Sign Up</a>
+        <div class="nav-login-signup" id="nav-login-signup-2">
+            <a href="../log_in.html" class="nav-login" id="nav-login">Login</a>
+            <a href="../sign_up.html" class="nav-signup" id="nav-signup">Sign Up</a>
         </div>
+
+        <a href="../validation_page/validation_page.php" class="user-profile" id="user-profile">
+            <div class="profile-pic"><?php print_r($_SESSION['username'][0]);?></div>
+            <div class="username" id="username"><?php print_r($_SESSION['username']);?></div>
+        </a>
 
         <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
             <span class="menu menu-small menu-top"></span>
@@ -88,6 +87,17 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
     </nav>
 
     <script>
+        var username = '<?php echo $username;?>';
+        if (username != null) {
+            //for smaller devices
+            document.getElementById("nav-login-signup").innerHTML = '';
+            document.getElementById("nav-username").innerHTML = 'Profile';
+
+            //for larger devices
+            document.getElementById("user-profile").style.display = 'flex';
+            document.getElementById("nav-login-signup-2").style.display = "none";
+        }
+
         var navItems = document.getElementById("nav-items");
         navItems.style.maxHeight = "0px";
         function toggleMenu() {
@@ -101,23 +111,25 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
 
     <!-- end of navigation bar -->
 
-    <div class='container'>
+    <div class='big-box'>
 
         <div class="row">
 
-            <div class="col-4" style="margin-top: 10%;">
-                <div class="sticky-xl-top text-center">
-                    <div style="background-color: #ff93ae; padding: 25%; border-radius: 25px;">
+            <div class="col-4" >
+                <div class="sticky-filter left">
+                    <div class='box'>
 
-                        <a href='add.html' class='btn btn-warning'><h3> Share Your Experience! </h3></a>
+                        <a href='add.php' class='btn share-btn'>Share Your Experience!</a>
 
-                        <div id="app" class="text-center">
+                        <div id="app" class="">
 
                             <br>
                             <!-- search filter -->
                             <h4> Filter Your Search </h4>
 
-                            <div class="row text-center">
+                            <form action="">
+
+                            <div class="row">
                                 <label for='country'> Choose a Country: </label>
                                     <select name='country' id='country'>
                                         <option value='*'> All </option>
@@ -127,11 +139,11 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
                                 </select>
                             </div>
 
-                            <b> or </b>
+                            <b> and </b>
 
-                            <div class="row text-center">
+                            <div class="row">
                                 <label for='uni'> Choose a University: </label>
-                                    <select name='uni' id='uni'>
+                                    <select name='uni' id='uni' >
                                         <option value='*'> All </option>
                                         <!-- <option value="SNU"> SNU </option> -->
                                         <option v-for="uni in uniArr" :value="uni"> {{uni}} </option>
@@ -141,8 +153,11 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
                             <!-- end of search filter -->
 
                             <br>
-                            <input class="btn btn-success" type='submit' value='Go!' onclick="{$dao->search($country, $uni)}"/>
+                            <input class="btn btn-success" type="submit" name="submit" id="" value="Go!">
+                            <!-- <input class="btn btn-success" type='submit' value='Go!' onclick="{$dao->search($country, $uni)}"/> -->
                             <br>
+                            </form>
+
 
                         </div>
 
@@ -170,6 +185,18 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
                             </div>
                             ";
                         }
+                    } else{
+                        // echo $university, $country;
+                        $uni_output = $university;
+                        $country_output = $country;
+
+                        if ($university == '*'){
+                            $uni_output = 'All Universities';
+                        }
+                        if ($country == '*'){
+                            $country_output = 'All Countries';
+                        }
+                        echo "There's no post for " . $uni_output . ' in ' . $country_output . '. Be the first one to post!';
                     }
                 ?>
             </div>
@@ -185,12 +212,14 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
             return {
                 uniArr: [],
                 countArr: [],
+
             }
         },
 
         //=========== METHODS =========== 
         methods: {
             addChild() {
+                
                 var url = "../countries.json";
                 axios.get(url) 
                 .then(response => {
