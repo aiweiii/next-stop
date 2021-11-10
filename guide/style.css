@@ -42,4 +42,13 @@ body {
   display: inline;
 }
 
+.uni-info {
+  height: 100%; 
+  overflow: scroll;
+}
 
+@media only screen and (max-width: 768px) {
+  .uni-info {
+    height: auto;
+  }
+  }
