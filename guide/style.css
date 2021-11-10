@@ -23,11 +23,13 @@ body {
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   padding: 10px;
-  min-width: 60%;
+  min-width: 30%;
+  transition: min-width 0.7s ease;
 }
 
 .controls:focus {
-  border-color: #4d90fe;
+  box-shadow: 0px 0px 0px 2px #4d90fe;
+  min-width: 60%;
 }
 
 .title {
