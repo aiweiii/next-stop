@@ -43,6 +43,26 @@
     border-radius: 4px;
     font-size: 18px;
 }
+
+/*RESPONSIVENESS*/
+@media screen and (max-width: 730px){
+    .part-1 h2{
+        font-size: 3em;
+    }
+    .part-1 .find-out {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 600px){
+    .part-1 h2{
+        font-size: 2.5em;
+    }
+    .part-1 .find-out {
+        font-size: 12px;
+    }
+}
+
+
 /*PART 1 END*/
 
 /*PART 2 START*/
@@ -78,6 +98,13 @@
     -webkit-text-fill-color: transparent;
     display: inline-block
 }
+
+@media screen and (max-width: 730px){
+    .part-2 .number {
+        font-weight: 800;
+        font-size: 10em;
+    }
+}
 /*PART 2 END*/
 
 /*PART 3 START*/
@@ -99,7 +126,7 @@
 
 .part-3 .step-1 .left {
     width: 50%;
-    margin-left: 10%;
+    padding-left: 10%;
     padding-right: 10%;
 }
 
@@ -141,7 +168,7 @@
 
 .step-2 .left{
     width: 50%;
-    margin-left: 10%;
+    padding-left: 10%;
 }
 
 .step-2 .right{
@@ -181,136 +208,100 @@
     background-position: left -50px bottom;
 }
 
-/*PART 4
-credits: https://codepen.io/matheusalmeida/pen/aeLMMr
-*/
-.footer {
+.step-4 {
+    margin-bottom: 140px;
+}
+
+@media screen and (max-width: 950px){
+    .part-3{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .step-1 {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .step-2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    
+    .left {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .right {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .step-3 {
+        margin-top: 100px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .title {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .subtitle {
+        padding-top: 20px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .part-3 p {
+        width: 100%;
+    }
+
+    .right-img-2, .step-2 .right, .step-2 .left, .right-img, .part-3 .step-1 .left {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    height: 15vh;
+    background: var(--light-grey);
     display: flex;
-    flex-flow: row wrap;
-    padding: 30px 30px 20px 30px;
-    color: #2f2f2f;
-    background-color: #fff;
-    border-top: 1px solid #e5e5e5;
-
-    font-family: acumin-pro, system-ui, sans-serif;
-    grid-template-rows: auto 1fr auto;
-    font-size: 14px;
-    background-color: #f4f4f4;
-    align-items: start;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-.footer > * {
-flex:  1 100%;
+footer .logo {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--crimson);
 }
 
-.footer__addr {
-margin-right: 1.25em;
-margin-bottom: 2em;
+footer .credit {
+    font-size: 12px;
+    color: var(--grey);
 }
 
-.footer__logo {
-font-size: 1.5rem;
-color: var(--crimson);
-}
-
-.footer__addr h2 {
-margin-top: 1.3em;
-font-size: 15px;
-font-weight: 400;
-}
-
-.nav__title {
-font-weight: 400;
-font-size: 15px;
-}
-
-.footer address {
-font-style: normal;
-color: #999;
-}
-
-.footer__btn {
-display: flex;
-align-items: center;
-justify-content: center;
-height: 36px;
-max-width: max-content;
-background-color: rgb(33, 33, 33, 0.07);
-border-radius: 100px;
-color: #2f2f2f;
-line-height: 0;
-margin: 0.6em 0;
-font-size: 1rem;
-padding: 0 1.3em;
-}
-
-.footer ul {
-list-style: none;
-padding-left: 0;
-}
-
-.footer li {
-line-height: 2em;
-}
-
-.footer a {
-text-decoration: none;
-}
-
-.footer__nav {
-display: flex;
-    flex-flow: row wrap;
-}
-
-.footer__nav > * {
-flex: 1 50%;
-margin-right: 1.25em;
-}
-
-.nav__ul a {
-color: #999;
-}
-
-.nav__ul--extra {
-column-count: 2;
-column-gap: 1.25em;
-}
-
-.legal {
-display: flex;
-flex-wrap: wrap;
-color: #999;
-}
-
-.legal__links {
-display: flex;
-align-items: center;
-}
-
-.heart {
-color: #2f2f2f;
-}
-
-@media screen and (min-width: 24.375em) {
-.legal .legal__links {
-    margin-left: auto;
-}
-}
-
-@media screen and (min-width: 40.375em) {
-.footer__nav > * {
-    flex: 1;
-}
-
-.nav__item--extra {
-    flex-grow: 2;
-}
-
-.footer__addr {
-    flex: 1 0px;
-}
-
-.footer__nav {
-    flex: 2 0px;
-}
+footer .email {
+    width: 90px;
+    height: 40px;
+    background: var(--crimson);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 40px;
 }

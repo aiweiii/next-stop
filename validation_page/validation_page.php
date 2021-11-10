@@ -1,60 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../navbar/navbar.css">
-    <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="validation_page.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
-
-<body>
-
-    <nav>
-        <div class="nav-logo">
-            <a href="../landing_page/landing_page.html" id="nav-logo">next stop.</a>
-        </div>
-
-        <div class="nav-items" id="nav-items">
-            <a href="../homepage/homepage.php" class="nav-item" id="nav-home">Home</a>
-            <a href="#" class="nav-item" id="nav-forum">Forum</a>
-            <a href="#" class="nav-item" id="nav-uniGuide">University Guide</a>
-            <a href="../sign_up.html" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
-        </div>
-
-        <div class="nav-login-signup">
-            <a href="../log_in.html" class="nav-login" id="nav-login">Login</a>
-            <a href="../sign_up.html" class="nav-signup" id="nav-signup">Sign Up</a>
-        </div>
-
-        <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
-            <span class="menu menu-small menu-top"></span>
-            <span class="menu menu-middle"></span>
-            <span class="menu menu-small menu-bottom"></span>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="title">Choose Your University:</div>
-        <div class="search-bar">
-            <form autocomplete="off" action="">
-                <div class="autocomplete" style="width:100%;">
-                    <input id="myInput" type="text" name="myCountry">
-                    <input type="submit">
-                </form>
-
-                </div>
-            </form>
-        </div>
-        <a class="confirm-btn" id="confirm">Confirm</a>
-        <!-- a href="../homepage/homepage.php" -->
-        <div id="outcome"></div>
-    </div>
-
-    <?php
+<?php
     // session start, get username and email
     require_once '../backend/common.php';
     
@@ -88,7 +35,72 @@
 
     }
 
-    ?>
+    //TO DO: if selected uni, display uni instead
+    if (isset($_SESSION['university'])) {
+        $university = $_SESSION['university'];
+    }
+?>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="validation_page.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="../landing_page/landing_page.html" id="nav-logo">next stop.</a>
+        </div>
+
+        <div class="nav-items" id="nav-items">
+            <a href="../homepage/homepage.php" class="nav-item" id="nav-home">Home</a>
+            <a href="#" class="nav-item" id="nav-forum">Forum</a>
+            <a href="#" class="nav-item" id="nav-uniGuide">University Guide</a>
+            <a href="../sign_up.html" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
+        </div>
+
+        <div class="nav-login-signup">
+            <a href="../log_in.html" class="nav-login" id="nav-login">Login</a>
+            <a href="../sign_up.html" class="nav-signup" id="nav-signup">Sign Up</a>
+        </div>
+
+        <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+            <span class="menu menu-small menu-top"></span>
+            <span class="menu menu-middle"></span>
+            <span class="menu menu-small menu-bottom"></span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title">Profile</div>
+        <div class="name subtitle">Name:</span></div>
+        <div class="user-input user-name"><?php print_r($_SESSION['username']);?></div>
+        <div class="email subtitle">Email:</div>
+        <div class="user-input user-email"><?php print_r($_SESSION['email']);?></div>
+        <div class="subtitle">University:</div>
+        <div class="user-uni" id="user_uni">
+            <div class="user-input"><?php print_r($_SESSION['university']);?></div>
+            <a class="edit-btn" onclick="showSearchBar()">Edit</a>
+        </div>
+        <div class="search-bar" id="search_bar">
+            <form class='search-bar-2' autocomplete="off" action="">
+                <div class="autocomplete" style="width:100%;">
+                    <input class='uni-input' id="myInput" type="text" name="myCountry">
+                    
+                </div>
+                <input class='uni-submit' type="submit">
+            </form>
+        </div>
+        <!-- a href="../homepage/homepage.php" -->
+        <div id="outcome"></div>
+    </div>
+
+
 
     <script>
         var navItems = document.getElementById("nav-items");

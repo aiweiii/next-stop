@@ -1,3 +1,11 @@
+<?php
+require_once '../backend/common.php';
+if (isset($_SESSION['email'])) {
+    $email = $_SESSION['email'];
+    $username = $_SESSION['username'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +44,7 @@
         </div>
     </nav>
     <div class="hero">
-        <div class="title">Welcome, Belle 😄</div>
+        <div class="title">Welcome,<br><?php print_r($_SESSION['username']);?> 😄</div>
         <div class="box">
             <div class="task-title">Explore our features:</div>
             <a href="../validation_page/validation_page.php" class="task">
@@ -46,13 +54,13 @@
                     <div class="task-subtitle">Connect with your peers through the Telegram Groupchat</div>    
                 </div>
             </a>
-            <div class="task">
+            <a href="../forum_dynamic/display.php" class="task" onclick="click_task_2">
                 <div class="icon find">🔍</div>
                 <div class="right">
                     <div class="task-text">Explore the forum</div>
                     <div class="task-subtitle">See what is trending right now</div>    
                 </div>
-            </div>
+            </a>
             <div class="task">
                 <div class="icon find">🔍</div>
                 <div class="right">

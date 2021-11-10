@@ -34,9 +34,16 @@ nav a{
 .nav-items #nav-login-signup{
     display: none;
 }
+.nav-items #nav-username{
+    display: none;
+}
 .nav-item{
     padding: 0 20px;
     text-align: center;
+}
+
+.username {
+    display: none;
 }
 
 /*ANIMATED UNDERLINE START*/
@@ -51,7 +58,7 @@ nav a{
     height: 2px;
     width: 0;
     left: 0px;
-    bottom: -22px;
+    bottom: -23px;
     transition: 0.3s;
 }
 .nav-items a:hover:after{
@@ -142,6 +149,9 @@ nav a{
         display: none;
     }
     .nav-items #nav-login-signup{
+        display: block;
+    }
+    .nav-items #nav-username{
         display: block;
     }
 
