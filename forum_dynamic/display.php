@@ -5,12 +5,22 @@ require_once 'common.php';
 $dao = new PostDAO();
 $posts = $dao->getAll();
 $posts = array_reverse($posts); // Get an Indexed Array of Post objects
+$country = '*';
+$university = '*';
 
-    if(!empty($_POST)){
+    if(isset($_GET["submit"])){
         # Page is visited with search criteria specified
-        $country = $_POST["country"];
-        $university = $_POST["university"];
-        $filtered_list = $dao->search($country, $uni);    
+        $country = $_GET["country"];
+        $university = $_GET["uni"];
+
+        // debug
+        // $country = '*';
+        // $university = 'NUS';
+        // echo '123';
+        // echo $country, $university;
+        $posts = $dao->search($country, $university);
+        $posts = array_reverse($posts); // Get an Indexed Array of Post objects
+
         // var_dump($person_list);
     } 
 
@@ -52,6 +62,11 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
             .column {
                 width: 100%;
             }
+            }
+
+            .sticky-filter {
+                position: sticky;
+                top: 5vh;
             }
 
         </style>
@@ -105,17 +120,19 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
 
         <div class="row">
 
-            <div class="col-4" style="margin-top: 10%;">
-                <div class="sticky-xl-top text-center">
+            <div class="col-4" >
+                <div class="sticky-filter text-center">
                     <div style="background-color: #ff93ae; padding: 25%; border-radius: 25px;">
 
-                        <a href='add.html' class='btn btn-warning'><h3> Share Your Experience! </h3></a>
+                        <a href='add.php' class='btn btn-warning'><h3> Share Your Experience! </h3></a>
 
                         <div id="app" class="text-center">
 
                             <br>
                             <!-- search filter -->
                             <h4> Filter Your Search </h4>
+
+                            <form action="">
 
                             <div class="row text-center">
                                 <label for='country'> Choose a Country: </label>
@@ -127,11 +144,11 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
                                 </select>
                             </div>
 
-                            <b> or </b>
+                            <b> and </b>
 
                             <div class="row text-center">
                                 <label for='uni'> Choose a University: </label>
-                                    <select name='uni' id='uni'>
+                                    <select name='uni' id='uni' >
                                         <option value='*'> All </option>
                                         <!-- <option value="SNU"> SNU </option> -->
                                         <option v-for="uni in uniArr" :value="uni"> {{uni}} </option>
@@ -141,8 +158,11 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
                             <!-- end of search filter -->
 
                             <br>
-                            <input class="btn btn-success" type='submit' value='Go!' onclick="{$dao->search($country, $uni)}"/>
+                            <input class="btn btn-success" type="submit" name="submit" id="" value="Go!">
+                            <!-- <input class="btn btn-success" type='submit' value='Go!' onclick="{$dao->search($country, $uni)}"/> -->
                             <br>
+                            </form>
+
 
                         </div>
 
@@ -170,6 +190,18 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
                             </div>
                             ";
                         }
+                    } else{
+                        // echo $university, $country;
+                        $uni_output = $university;
+                        $country_output = $country;
+
+                        if ($university == '*'){
+                            $uni_output = 'All Universities';
+                        }
+                        if ($country == '*'){
+                            $country_output = 'All Countries';
+                        }
+                        echo "There's no post for " . $uni_output . ' in ' . $country_output . '. Be the first one to post!';
                     }
                 ?>
             </div>
@@ -185,12 +217,14 @@ $posts = array_reverse($posts); // Get an Indexed Array of Post objects
             return {
                 uniArr: [],
                 countArr: [],
+
             }
         },
 
         //=========== METHODS =========== 
         methods: {
             addChild() {
+                
                 var url = "../countries.json";
                 axios.get(url) 
                 .then(response => {

@@ -193,32 +193,61 @@ class PostDAO {
 
     public function search($country, $university){
         $conn = new ConnectionManager();
-        $pdo = $conn->getConnection();
-        $sql = "select * from post where country like :country and university like :university";
+        $pdo = $conn->connect();
+        $sql = "select * from post";
 
-        if ($country === "*" && $university === "*") {
+        // echo $country, $university;
+        if ($country == "*" && $university == "*") {
             $sql = "select * from post";
-        } elseif ($country === "*") {
-            $sql = "select * from post where university like :university";
-        } elseif ($university === "*") {
-            $sql = "select * from post where country like :country";
+
+        } elseif ($country == "*" && $university != "*") {
+            $sql = "select * from post where university = :university";
+
+        } elseif ($university == "*" && $country != "*") {
+            $sql = "select * from post where country = :country";
+            
+        } else {
+            $sql = "select * from post where country = :country and university = :university";
+
         }
+        // debug
+        // echo ' | ';
+        // echo '$country=', $country;
+        // echo ' | ';
+        // echo '$university=', $university;
+        // echo ' | ';
+        // echo $sql;
 
         $stmt = $pdo->prepare($sql);
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        if ($country === "*" && $university === "*") {
-            $stmt->bindParam("uni",$university);
-            $stmt->bindParam("country",$country);
-        } elseif ($country === "*") {
-            $stmt->bindParam("university",$university);
-        } elseif ($uni === "*") {
-            $stmt->bindParam("country",$country);
+        
+        if ($country == "*" && $university != "*") {
+            $stmt->bindParam(":university", $university, PDO::PARAM_STR);
+
+        } elseif ($university == "*" && $country != "*") {
+            $stmt->bindParam(":country", $country, PDO::PARAM_STR);
+            
+        } elseif ($university != "*" && $country != "*") {
+            $stmt->bindParam(":university", $university, PDO::PARAM_STR);
+            $stmt->bindParam(":country", $country, PDO::PARAM_STR);
+
         }
 
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
+        
         $result = [];
         while($row = $stmt->fetch()){
-            $result[] = new POST($row["id"],$row["email"],$row["uni"],$row["country"],$row["fdesc"]);
+            $result[] =
+                new Post(
+                    $row['id'],
+                    $row['create_timestamp'],
+                    $row['update_timestamp'],
+                    $row['subject'],
+                    $row['entry'],
+                    $row['country'],
+                    $row['university'],
+                    $row['username']
+                );
         }
         $stmt = null;
         $pdo = null;

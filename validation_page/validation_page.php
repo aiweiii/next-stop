@@ -28,7 +28,6 @@
 
             $dao->update($user);
 
-            header("Location: ../homepage/homepage.php");
         } else {
             $errors['email'][] = 'This email account does not exist.';
             exit();
@@ -37,10 +36,16 @@
 
     }
 
-    // //TO DO: if selected uni, display uni instead
-    // if (isset($_SESSION['university'])) {
-    //     $university = $_SESSION['university'];
-    // }
+    //TO DO: if selected uni, display uni instead
+    if (isset($_SESSION['university'])) {
+        if ($_SESSION['university'] == '') {
+            $university = 'No University Choosen';
+        } else {
+            $university = $_SESSION['university'];
+        }  
+    } 
+
+
 ?>
 
 <head>
@@ -86,7 +91,7 @@
         <div class="user-input user-email"><?php print_r($_SESSION['email']);?></div>
         <div class="subtitle">University:</div>
         <div class="user-uni" id="user_uni">
-            <div class="user-input"><?php print_r($_SESSION['university']);?></div>
+            <div class="user-input"><?php print_r($university);?></div>
             <a class="edit-btn" onclick="showSearchBar()">Edit</a>
         </div>
         <div class="search-bar" id="search_bar">

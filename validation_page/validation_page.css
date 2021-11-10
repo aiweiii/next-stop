@@ -29,6 +29,7 @@
 .search-bar {
     width: 40%;
     height: 50px;
+    min-width: 350px;
 }
 
 .uni-input {
