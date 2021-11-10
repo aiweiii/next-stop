@@ -1,9 +1,8 @@
-const app = Vue.createApp ( {
-})
+const app = Vue.createApp ({})
 
-const vm = app.mount("#app")
 
-app.component('navbar', {
+//component
+app.component('nav-bar', {
     template: `
     <nav>
         <div class="nav-logo">
@@ -31,3 +30,5 @@ app.component('navbar', {
     `
 })
 
+
+app.mount("#app") //link
