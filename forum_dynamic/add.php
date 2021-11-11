@@ -1,3 +1,14 @@
+<?php
+
+require_once '../backend/common.php';
+
+if (isset($_SESSION['email'])) {
+    $email = $_SESSION['email'];
+    $username = $_SESSION['username'];
+}
+
+?>
+
 <html>
 <head>
     <!-- Bootstrap CSS -->
@@ -21,8 +32,9 @@
         }
     </script>
 
-<link rel="stylesheet" href="navbar.css">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="../navbar/navbar.css">
+<link rel="stylesheet" href="../main.css">
+<link rel="stylesheet" href="css/add.css">
 
 
 </head>
@@ -30,20 +42,26 @@
     <!-- navigation bar -->
     <nav>
         <div class="nav-logo">
-            <a href="#" id="nav-logo">next stop.</a>
-        </div>
+            <a href="../landing_page/landing_page.html" id="nav-logo">next stop.</a>
+        </div>  
 
         <div class="nav-items" id="nav-items">
             <a href="../homepage/homepage.php" class="nav-item" id="nav-home">Home</a>
-            <a href="display.php" class="nav-item" id="nav-forum">Forum</a>
-            <a href="#" class="nav-item" id="nav-uniGuide">University Guide</a>
-            <a href="#" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
+            <a href="../forum_dynamic/display.php" class="nav-item" id="nav-forum">Forum</a>
+            <a href="../guide/index.html" class="nav-item" id="nav-uniGuide">University Guide</a>
+            <a href="../log_in.html" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
+            <a href="../validation_page/validation_page.php" class="nav-item" id="nav-username"></a>
         </div>
 
-        <div class="nav-login-signup">
+        <div class="nav-login-signup" id="nav-login-signup-2">
             <a href="../log_in.html" class="nav-login" id="nav-login">Login</a>
             <a href="../sign_up.html" class="nav-signup" id="nav-signup">Sign Up</a>
         </div>
+
+        <a href="../validation_page/validation_page.php" class="user-profile" id="user-profile">
+            <div class="profile-pic"><?php print_r($_SESSION['username'][0]);?></div>
+            <div class="username" id="username"><?php print_r($_SESSION['username']);?></div>
+        </a>
 
         <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
             <span class="menu menu-small menu-top"></span>
@@ -53,6 +71,17 @@
     </nav>
 
     <script>
+        var username = '<?php echo $username;?>';
+        if (username != null) {
+            //for smaller devices
+            document.getElementById("nav-login-signup").innerHTML = '';
+            document.getElementById("nav-username").innerHTML = 'Profile';
+
+            //for larger devices
+            document.getElementById("user-profile").style.display = 'flex';
+            document.getElementById("nav-login-signup-2").style.display = "none";
+        }
+
         var navItems = document.getElementById("nav-items");
         navItems.style.maxHeight = "0px";
         function toggleMenu() {
@@ -66,10 +95,10 @@
 
     <!-- end of navigation bar -->
 
-    <div class="container">
+    <div class="big-box">
 
         <div class="row">
-            <h2 class="text-center" style="color: #cc8359;"> Create Your Post &#10024; </h2>
+            <h2 class="title"> Create Your Post &#10024; </h2>
         </div>
         <br>
 
@@ -78,20 +107,20 @@
             <!-- NOTE: We set FORM NAME attribute so we can perform Form Validation using JavaScript -->
             <form name='entry_form' action='add_post.php' method='POST' onSubmit="return validate_form()">
 
-                <p>University: {{university}}</p>
+                <p><b>University:</b> {{university}}</p>
                 <input type="hidden" name='university' id='university' :value="university">
                 <input type="hidden" name='username' id='my_username' :value="username">
                 
-                <p>Country: {{country}}</p>
+                <p><b>Country:</b> {{country}}</p>
                 <input type="hidden" name='country' id='country' :value="country">
 
                 <div class="form-group">
-                    <label for="exampleFormControlInput1"> Subject </label>
+                    <label for="exampleFormControlInput1"> <b>Subject</b> </label>
                     <input class="form-control" id="exampleFormControlInput1" placeholder="Summarise your experience!" name='subject' size='30' id='my_subject' required>
                 </div><br>
 
                 <div class='form-group'>
-                    <label for='exampleFormControlTextarea1'> Details </label>
+                    <label for='exampleFormControlTextarea1'> <b>Details</b> </label>
                     <textarea class='form-control' id='exampleFormControlTextarea1' placeholder="Inlcude details of your experience!" rows='3' name='entry' id='entry_id' required></textarea>
                 </div>
 
