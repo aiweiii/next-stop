@@ -50,7 +50,7 @@ if (isset($_SESSION['email'])) {
         <div class="nav-items" id="nav-items">
             <a href="../homepage/homepage.php" class="nav-item" id="nav-home">Home</a>
             <a href="../forum_dynamic/display.php" class="nav-item" id="nav-forum">Forum</a>
-            <a href="../guide/index.html" class="nav-item" id="nav-uniGuide">University Guide</a>
+            <a href="../guide/index.php" class="nav-item" id="nav-uniGuide">University Guide</a>
             <a href="../log_in.html" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
             <a href="../validation_page/validation_page.php" class="nav-item" id="nav-username"></a>
         </div>

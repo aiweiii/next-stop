@@ -54,3 +54,9 @@ body {
     height: auto;
   }
   }
+
+
+/*NAVBAR*/
+a:hover{
+  color: black;
+}
