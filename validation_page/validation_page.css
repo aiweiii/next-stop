@@ -113,3 +113,14 @@ background-color: #e9e9e9;
 background-color: DodgerBlue !important;
 color: #ffffff;
 }
+
+/*LOGOUT*/
+.logout {
+    width: 8%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background: var(--crimson);
+    color: white;
+}
