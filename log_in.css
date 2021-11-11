@@ -3,16 +3,19 @@ input, button{
     width: 100%;
 }
 
-p a {
+.link {
     color: #342A83;
     font-weight: 900;
     transition: 0.3s;
 }
 
-a:hover {
+.link:hover {
     color: #fe8700;
 }
 
+a:hover{
+    color: black;
+}
 
 h3 {
     font-weight: 700;
