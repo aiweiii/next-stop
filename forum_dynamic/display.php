@@ -113,19 +113,18 @@ $university = '*';
 
     <div class='big-box'>
 
-        <div class="row">
+        <div class="row mini-box">
 
-            <div class="col-4" >
+            <div class="col-4 to-expand" >
                 <div class="sticky-filter left">
+                    <a href='add.php' class='btn share-btn'>+ Share Your Experience!</a>
+
                     <div class='box'>
 
-                        <a href='add.php' class='btn share-btn'>Share Your Experience!</a>
+                        <div id="app" class="filter-fnc">
 
-                        <div id="app" class="">
-
-                            <br>
                             <!-- search filter -->
-                            <h4> Filter Your Search </h4>
+                            <h4 class="filter-title"> Filter Your Search </h4>
 
                             <form action="">
 
@@ -139,9 +138,9 @@ $university = '*';
                                 </select>
                             </div>
 
-                            <b> and </b>
+                            <!--<b> and </b>-->
 
-                            <div class="row">
+                            <div class="row choose-uni">
                                 <label for='uni'> Choose a University: </label>
                                     <select name='uni' id='uni' >
                                         <option value='*'> All </option>
@@ -153,7 +152,7 @@ $university = '*';
                             <!-- end of search filter -->
 
                             <br>
-                            <input class="btn btn-success" type="submit" name="submit" id="" value="Go!">
+                            <input class="btn btn-success go-btn" type="submit" name="submit" id="" value="Go!">
                             <!-- <input class="btn btn-success" type='submit' value='Go!' onclick="{$dao->search($country, $uni)}"/> -->
                             <br>
                             </form>
@@ -166,17 +165,22 @@ $university = '*';
             </div>
 
             <br>
-            <div class=' col-8'>
+            <div class='card-to-expand col-8'>
                 <?php
                     if( count($posts) > 0 ) {
                         foreach($posts as $post_object ) {
                             echo "
-                            <div class='card mb-3 border-warning'>
-                                <div class='card-body' style='background-color: #fdd0b6;'>
-                                    <h5 class='card-title'>{$post_object->getSubject()}</h5>
+                            <div class='card mb-3'>
+                                <div class='card-body'>
+                                    <div class='d-flex justify-content-between post-top'>
+                                        <h5 class='card-title'>{$post_object->getSubject()}</h5>
+                                        <div class='details'>
+                                            <span class='badge rounded-pill bg-dark'>{$post_object->getCountry()}</span>
+                                            <span class='badge rounded-pill bg-dark'>{$post_object->getUniversity()}</span>
+                                        </div>
+                                    </div>
+                                    
                                     <h6 class='card-subtitle mb-2 text-muted' style='display: none;'> Last Updated: {$post_object->getUpdateTimestamp()}</h6>
-                                    <h6 class='card-subtitle mb-2 text-muted'> Country: {$post_object->getCountry()}</h6>
-                                    <h6 class='card-subtitle mb-2 text-muted'> University: {$post_object->getUniversity()}</h6>
                                     <p class='card-text'>{$post_object->getEntry()}</p>
                                     <a style='display: none;' href='edit.php?id={$post_object->getID()}'>Edit</a>
                                     <a style='display: none;' href='delete.php?id={$post_object->getID()}'>Delete</a>
@@ -196,7 +200,7 @@ $university = '*';
                         if ($country == '*'){
                             $country_output = 'All Countries';
                         }
-                        echo "There's no post for " . $uni_output . ' in ' . $country_output . '. Be the first one to post!';
+                        echo "<div class='big-text'>Sorry 😢</div>There's no post for <span class='diff_color'>" . $uni_output . "</span> in <span class='diff_color'>" . $country_output . '</span>.<br>Be the first one to <a class="diff_color" href="add.php">post</a>!';
                     }
                 ?>
             </div>

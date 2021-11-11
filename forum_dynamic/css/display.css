@@ -12,8 +12,9 @@
 
 .big-box {
     width: 100%;
-    padding: 20px 30px 0px 30px;
+    padding: 20px 8% 0px 8%;
     border-top: solid 1px #cfcfcf;
+    background: var(--light-grey);
 }
 
 nav a:hover {
@@ -22,11 +23,77 @@ nav a:hover {
 
 .left .box {
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    padding: 25%;
+    padding: 30px 40px 30px 40px;
+    background: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .share-btn {
     font-weight: 500;
     background: var(--crimson);
     color: white;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    margin-bottom: 15px;
+}
+
+.go-btn{
+    width: 100%;
+
+}
+
+.choose-uni {
+    margin-top: 10px;
+}
+
+/*FOR POSTS*/
+.card-body {
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+/*FOR POSTS END*/
+
+/*FOR ERROR*/
+.big-text{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.diff_color {
+    color: var(--crimson);
+}
+/*FOR ERROR END*/
+
+/*FOR SMALLER DEVICES*/
+@media screen and (max-width: 970px) {
+    .post-top{
+        flex-direction: column;
+    }
+
+    .badge{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 690px){
+    
+
+    .mini-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .to-expand{
+        width: 100%;
+    }
+
+    .card-to-expand{
+        width: 100%;
+    }
 }
