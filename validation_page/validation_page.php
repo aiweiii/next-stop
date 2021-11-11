@@ -111,7 +111,8 @@
         </div>
         <!-- a href="../homepage/homepage.php" -->
         <div id="outcome"></div>
-        <a class="logout" href='../logout.php'>Log out</a>
+        <div class="logout-box"><a class="logout" href='../logout.php'>Log out</a></div>
+        
     </div>
 
 
