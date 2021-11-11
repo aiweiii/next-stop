@@ -96,7 +96,7 @@ $university = '*';
             //for larger devices
             document.getElementById("user-profile").style.display = 'flex';
             document.getElementById("nav-login-signup-2").style.display = "none";
-        }
+        } 
 
         var navItems = document.getElementById("nav-items");
         navItems.style.maxHeight = "0px";
@@ -117,7 +117,7 @@ $university = '*';
 
             <div class="col-4 to-expand" >
                 <div class="sticky-filter left">
-                    <a href='add.php' class='btn share-btn'>+ Share Your Experience!</a>
+                    <a href='add.php' class='btn share-btn' id='share_btn'>+ Share Your Experience!</a>
 
                     <div class='box'>
 

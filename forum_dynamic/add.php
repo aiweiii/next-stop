@@ -5,6 +5,8 @@ require_once '../backend/common.php';
 if (isset($_SESSION['email'])) {
     $email = $_SESSION['email'];
     $username = $_SESSION['username'];
+} else {
+    header('location:../sign_up.html');
 }
 
 ?>
@@ -80,7 +82,7 @@ if (isset($_SESSION['email'])) {
             //for larger devices
             document.getElementById("user-profile").style.display = 'flex';
             document.getElementById("nav-login-signup-2").style.display = "none";
-        }
+        } 
 
         var navItems = document.getElementById("nav-items");
         navItems.style.maxHeight = "0px";
