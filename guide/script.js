@@ -145,13 +145,6 @@ function initMap() {
     autocomplete.addListener("place_changed", () => {
         infowindow.close();
 
-        // Render University name
-        let inputVal = document.getElementById("pac-input").value;
-        inputVal = inputVal.split(",")[0];
-        document.getElementById("uniName").innerText = inputVal;
-
-        // Render University description
-        search_students();
 
         // Google Maps start retrieving place details
         const place = autocomplete.getPlace();
@@ -179,6 +172,14 @@ function initMap() {
         infowindowContent.children.namedItem("place-address").textContent =
             place.formatted_address;
         infowindow.open(map, marker);
+
+        
+        // Render University name
+        let inputVal = document.getElementById("place-name").innerText;
+        document.getElementById("uniName").innerText = inputVal;
+
+        // Render University description
+        search_students();
 
         photoUrl = place.photos[0].getUrl({ maxWidth: 1200, maxHeight: 1200 });
         document.getElementById('image').src = photoUrl;
