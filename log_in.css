@@ -76,6 +76,10 @@ button:hover {
     background-color: #342A83;
 }
 
+.pink {
+    color: var(--crimson);
+}
+
 @media only screen and (max-width: 992px) {
     .mobile-display {
         position: fixed;

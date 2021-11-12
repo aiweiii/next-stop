@@ -31,6 +31,37 @@ class UserDAO {
         
         return $user;
     }
+
+    function get_students( $university ) {
+        // connect to database
+        $connMgr = new ConnectionManager();
+        $conn = $connMgr->connect();
+        
+        // prepare select
+        $sql = "SELECT fullname, email, password_hash, university FROM user_info WHERE university = :university";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(":university", $university, PDO::PARAM_STR);
+            
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+        $users = [];
+        while( $row = $stmt->fetch() ) {
+            $users[] =
+                new User(
+                    $row["fullname"], 
+                    $row["email"], 
+                    $row["password_hash"], 
+                    $row["university"]
+                );
+        }
+        
+        // close connections
+        $stmt = null;
+        $conn = null;        
+        
+        return $users;
+    }
     
     function create($user) {
         $result = true;

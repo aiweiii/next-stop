@@ -1,6 +1,6 @@
-alert("test 8")
+// alert("test 8")
 
-function isUniApproved(input,university) {
+function isUniApproved(input, university) {
     university = university.split(" ");
     validity = [];
     validity.length = university.length;
@@ -23,15 +23,15 @@ function isUniApproved(input,university) {
     validity.forEach(bool => {
         if (bool === true) {
             true_count += 1
-        }else{
+        } else {
             false_count += 1
         }
     });
 
-    if (true_count >= (validity.length/2)) {
+    if (true_count >= (validity.length / 2)) {
         console.log('true')
         return true
-    }else{
+    } else {
         console.log('false')
         return false
     }
@@ -63,10 +63,13 @@ function initMap() {
     autocomplete.addListener("place_changed", () => {
         infowindow.close();
 
+        
         // Replace university name
         let inputVal = document.getElementById("pac-input").value;
         inputVal = inputVal.split(",")[0];
         document.getElementById("uniName").innerText = inputVal;
+        
+        search_students();
 
         const place = autocomplete.getPlace();
 
@@ -98,4 +101,34 @@ function initMap() {
         document.getElementById('image').src = photoUrl;
 
     });
+
+    
+}
+
+
+function search_students() {
+    // console.log('yea clicked');
+    var uni = document.getElementById("uniName").innerHTML;
+    // uni = "University of Vienna";
+    
+    // debug
+    // console.log(uni);
+
+    const url = 'get_studentsAPI.php?university=' + uni 
+    // console.log(url);
+    axios.get(url)
+        .then(response => {
+            var result = response.data
+            // console.log(result)
+
+            document.getElementById("students_uni_header").innerText = "Students entering this uni"
+            for (user of result){
+                document.getElementById("students_uni").innerHTML += `<li>${user}</li>`
+            }
+
+        })
+        .catch(error => {
+            // process error object
+            console.log('error')
+        });
 }

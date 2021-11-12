@@ -27,10 +27,13 @@
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
 
+  <!-- Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../navbar/navbar.css">
   <link rel="stylesheet" href="../main.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <title>Place ID Finder</title>
 
 </head>
@@ -97,7 +100,7 @@
     <div class="row g-0" style="height:  calc(100vh - 71px);">
       <!-- Maps -->
       <div class="col-md-6" style="height: 100%;">
-          <input id="pac-input" class="controls" type="text" placeholder="Enter a location" />
+          <input id="pac-input" class="controls" type="text" placeholder="Enter a location"/>
         <div id="map"></div>
         <div id="infowindow-content">
           <span id="place-name" class="title"></span><br />
@@ -108,11 +111,19 @@
 
       <!-- Uni info -->
       <div class="col-md p-4 uni-info">
-        <h2 id="uniName">Uni Name</h2>
+        <h2 id="uniName">Search a university to know more.</h2>
         <p id="desc">HARD CODE DESCRIPTION GOES HERE</p>
-
+        
         <!-- insert your pic here -->
-        <img id="image" src="../img/signup_bg.png" width="100%" class="pb-4" alt="">
+        <img id="image" src="" width="100%" class="pb-4" alt="">
+
+        <!-- people entering this university -->
+        <h4 id="students_uni_header"></h4>
+
+        <p> 
+          <ol id="students_uni">
+          </ol>
+        </p>
 
         <h4>Quiz Goes Here</h4>
       </div>
