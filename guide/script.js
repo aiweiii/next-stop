@@ -54,20 +54,30 @@ function fetchUniFromJson(input) {
     input = input.split(",");
     var firstArr = firstArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // Faculty of Economics and Business
     var secondArr = secondArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // University of Zagreb
-    var country = input[-1];
-    var highest_count = 0;
+    var country = input[-1]; //check if it will return \n
+    var highestCount = 0;
+    var mostAccurateStr = [];
 
     fetch("countries.json")
         .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
         .then(data => {
             // anything you want to do with the data goes between these 2 brackets
             data.forEach(obj => {
-                var currUniArr = obj["University"];
-                currUniArr = currUni.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e)
+                if (obj["Country"] == country) {
+                    var currUniArr = obj["University"];
+                    currUniArr = currUni.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e)
 
-                //compare FIRST ARRAY with SECOND ARRAY's number of 'TRUE' and pick the arr with the higher number of 'TRUE'
-                const first_count = compareArr(firstArr,currUniArr);
-                const second_count = compareArr(secondArr,currUniArr);
+                    //compare FIRST ARRAY with SECOND ARRAY's number of 'TRUE' and pick the arr with the higher number of 'TRUE'
+                    const firstCount = compareArr(firstArr, currUniArr);
+                    const secondCount = compareArr(secondArr, currUniArr);
+
+                    if (firstCount>=secondCount && firstCount>highestCount) {
+                        // if it's equal, just take the first one
+                        mostAccurateArr = firstArr;
+                    } else if (secondCount >= firstCount && secondCount > highestCount) {
+                        mostAccurateArr = secondArr;
+                    }
+                }
 
             });
         })
@@ -85,8 +95,6 @@ function search_students() {
     // console.log(url);
     axios.get(url)
         .then(response => {
-            document.getElementById("students_uni").innerHTML = ``
-
             var result = response.data
             // console.log(result)
 
@@ -99,8 +107,6 @@ function search_students() {
         .catch(error => {
             // process error object
             console.log('error')
-            document.getElementById("null_students").innerHTML = 'No students are exchanging in this university :('
-
         });
 }
 
