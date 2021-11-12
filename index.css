@@ -1,0 +1,307 @@
+* {
+    font-family: var(--roboto);
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--light-grey);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+/*PART 1 START*/
+.part-1 {
+    width: 100%;
+    height: 90vh ;
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .1)), linear-gradient(to right, rgba(28, 26, 27, .7), rgba(28, 26, 27, .01)), url('img/homepage_3.jpg');
+    background-size: cover;
+    background-position: right;
+    margin: 0;
+    padding: 100px;
+}
+
+.part-1 h2{
+    color: white;
+    font-size: 4em;
+    font-weight: 500;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.part-1 .find-out {
+    color: white;
+    padding: 10px 20px;
+    background: rgba(255,68,96,255);
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+/*RESPONSIVENESS*/
+@media screen and (max-width: 730px){
+    .part-1 h2{
+        font-size: 3em;
+    }
+    .part-1 .find-out {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 600px){
+    .part-1 h2{
+        font-size: 2.5em;
+    }
+    .part-1 .find-out {
+        font-size: 12px;
+    }
+}
+
+
+/*PART 1 END*/
+
+/*PART 2 START*/
+.part-2 {
+    width: 100%;
+    height: auto;
+    padding: 150px 20%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('img/homepage_2.png');
+    background-size: cover;
+    background-position: bottom;
+}
+
+
+.title {
+    font-weight: 900;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.part-2 .number {
+    font-weight: 900;
+    font-size: 13em;
+    background: linear-gradient(to right, var(--crimson), var(--tangerine));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block
+}
+
+@media screen and (max-width: 730px){
+    .part-2 .number {
+        font-weight: 800;
+        font-size: 10em;
+    }
+}
+/*PART 2 END*/
+
+/*PART 3 START*/
+.part-3 {
+    width: 100%;
+    height: auto;
+    padding: 5% 10%;
+}
+
+.part-3 .top {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.part-3 .step-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.part-3 .step-1 .left {
+    width: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.part-3 .step-1 .right {
+    width: 50%;
+}
+
+.part-3 .subtitle {
+    color: rgba(201,200,197,255);
+    margin-bottom: 15px;
+}
+
+.part-3 p {
+    font-size: 15px;
+    color: rgba(201,200,197,255);
+    width: 90%;
+    margin-top: 15px;
+}
+
+.icon {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.right-img {
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    margin-left: 10%;
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('img/melbourne.jpg');
+    background-size: cover;
+}
+
+.step-2 {
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-2 .left{
+    width: 50%;
+    padding-left: 10%;
+}
+
+.step-2 .right{
+    width: 50%;
+    margin-left: 10%;
+    padding-right: 10%;
+}
+
+.left-img {
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('img/step2.jpg');
+    background-size: cover;
+    background-position: left -40px bottom;
+}
+
+.right-img-2 {
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    margin-left: 10%;
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('img/step3.jpg');
+    background-size: cover;
+}
+
+.step-3 {
+    margin-top: 140px;
+}
+
+.left-img-2 {
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('img/seoul.jpg');
+    background-size: cover;
+    background-position: left -50px bottom;
+}
+
+.step-4 {
+    margin-bottom: 140px;
+}
+
+@media screen and (max-width: 950px){
+    .part-3{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .step-1 {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .step-2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    
+    .left {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .right {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .step-3 {
+        margin-top: 100px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .title {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .subtitle {
+        padding-top: 20px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .part-3 p {
+        width: 100%;
+    }
+
+    .right-img-2, .step-2 .right, .step-2 .left, .right-img, .part-3 .step-1 .left {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    height: 15vh;
+    background: var(--light-grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer .logo {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--crimson);
+}
+
+footer .credit {
+    font-size: 12px;
+    color: var(--grey);
+}
+
+footer .email {
+    width: 90px;
+    height: 40px;
+    background: var(--crimson);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 40px;
+}
