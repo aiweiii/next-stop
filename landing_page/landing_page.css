@@ -220,13 +220,13 @@
 }
 
 .part-3 .subtitle {
-    color: rgba(201, 200, 197, 255);
+    color: rgb(131, 131, 131);
     margin-bottom: 15px;
 }
 
 .part-3 p {
     font-size: 15px;
-    color: rgba(201, 200, 197, 255);
+    color: rgb(82, 82, 82);
     width: 90%;
     margin-top: 15px;
 }

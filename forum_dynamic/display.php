@@ -136,29 +136,31 @@ $university = '*';
 
                             <div class="row pb-2">
                                 <label for='country'> Choose a Country: </label>
-                                    <select name='country' id='country'  class="form-select ms-2">
+                                <div>
+                                    <select name='country' id='country'  class="form-select">
                                         <option value='*'> All </option>
                                         <!-- <option value="Korea"> Korea </option> -->
                                         <option v-for="country in countArr" :value="country"> {{country}} </option>
                                     </select>
-                                </select>
+                                </div>
                             </div>
 
                             <!--<b> and </b>-->
 
                             <div class="row choose-uni pb-4">
                                 <label for='uni'> Choose a University: </label>
-                                    <select name='uni' id='uni'  class="form-select ms-2">
+                                <div>
+                                    <select name='uni' id='uni'  class="form-select">
                                         <option value='*'> All </option>
                                         <!-- <option value="SNU"> SNU </option> -->
                                         <option v-for="uni in uniArr" :value="uni"> {{uni}} </option>
                                     </select>
-                                </select>
+                                </div>
                             </div>
                             <!-- end of search filter -->
 
                             <br>
-                            <input class="btn btn-success go-btn" type="submit" name="submit" id="" value="Go!">
+                            <input class="btn go-btn" type="submit" name="submit" id="" value="Go!">
                             <!-- <input class="btn btn-success" type='submit' value='Go!' onclick="{$dao->search($country, $uni)}"/> -->
                             <br>
                             </form>
@@ -175,22 +177,33 @@ $university = '*';
                 <?php
                     if( count($posts) > 0 ) {
                         foreach($posts as $post_object ) {
+                            $post_username = $post_object->getUsername();
+                            $first_char = strtoupper($post_username[0]);
                             echo "
                             <div class='card mb-3'>
                                 <div class='card-body'>
-                                    <div class='d-flex justify-content-between post-top'>
-                                        <h5 class='card-title'>{$post_object->getSubject()}</h5>
-                                        <div class='details'>
-                                            <span class='badge rounded-pill bg-dark'>{$post_object->getCountry()}</span>
-                                            <span class='badge rounded-pill bg-dark'>{$post_object->getUniversity()}</span>
+                                <div class='d-flex justify-content-between pb-3'>
+                                    <div class='d-flex align-items-center'>
+                                        <div class='profile-pic-cust fw-bold'>{$first_char}</div>
+                                        <div>
+                                        <div class='username fw-bold fs-8' id='username'>{$post_username}</div>
+                                        <p class='card-text fs-8 p-width text-muted'>Last updated on {$post_object->getUpdateTimestamp()}</p>
+
                                         </div>
+                                    </div>
+                                    <div class='details'>
+                                        <span class='badge rounded-pill bg-blue'>{$post_object->getCountry()}</span>
+                                        <span class='badge rounded-pill bg-blue'>{$post_object->getUniversity()}</span>
+                                    </div>
+                                </div>
+                                    <div class='d-flex justify-content-between post-top'>
+                                        <h5 class='card-title fs-6'>{$post_object->getSubject()}</h5>
                                     </div>
                                     
                                     <h6 class='card-subtitle mb-2 text-muted' style='display: none;'> Last Updated: {$post_object->getUpdateTimestamp()}</h6>
-                                    <p class='card-text'>{$post_object->getEntry()}</p>
+                                    <p class='card-text fs-6'>{$post_object->getEntry()}</p>
                                     <a style='display: none;' href='edit.php?id={$post_object->getID()}'>Edit</a>
                                     <a style='display: none;' href='delete.php?id={$post_object->getID()}'>Delete</a>
-                                    <p class='card-text'><small class='text-muted'>Last updated on {$post_object->getUpdateTimestamp()} by <b>@{$post_object->getUsername()}</b> </small></p>
                                 </div>
                             </div>
                             ";
