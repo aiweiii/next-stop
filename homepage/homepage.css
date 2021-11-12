@@ -17,8 +17,8 @@
 .title {
     font-family: var(--roboto);
     font-weight: bold;
-    font-size: 40px;
-    padding-right: 3%;
+    font-size: 2em;
+    width: 20ch;
 }
 
 .box {

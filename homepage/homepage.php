@@ -53,7 +53,11 @@ if (isset($_SESSION['email'])) {
         </div>
     </nav>
     <div class="hero">
-        <div class="title">Welcome,<br><?php print_r($_SESSION['username']);?> 😄</div>
+        <div class="title">
+            <p> 
+                Welcome,<br><?php print_r($_SESSION['username']);?> 😄
+            </p>
+        </div>
         <div class="box">
             <div class="task-title">Explore our features:</div>
             <a href="../validation_page/validation_page.php" class="task">
