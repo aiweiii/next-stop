@@ -88,20 +88,29 @@ function search_students() {
     var uni = document.getElementById("uniName").innerHTML;
     // uni = "University of Vienna";
 
+    document.getElementById("students_uni").innerHTML = '';
+
     // debug
     // console.log(uni);
 
-    const url = 'get_studentsAPI.php?university=' + uni
+    const url = 'get_studentsAPI.php?university=' + uni;
     // console.log(url);
     axios.get(url)
         .then(response => {
             var result = response.data
             // console.log(result)
 
-            document.getElementById("students_uni_header").innerText = "Students entering this uni"
+            document.getElementById("students_uni_header").innerText = "Students exchanging in this University or Area"
+
+            if (result.length == 0){
+                document.getElementById("null_students").innerText = 'No students exchange here.';
+            }
+
             for (user of result) {
+                document.getElementById("null_students").innerText = '';
                 document.getElementById("students_uni").innerHTML += `<li>${user}</li>`
             }
+
 
         })
         .catch(error => {
