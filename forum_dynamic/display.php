@@ -99,7 +99,9 @@ $university = '*';
             //for larger devices
             document.getElementById("user-profile").style.display = 'flex';
             document.getElementById("nav-login-signup-2").style.display = "none";
-        } 
+        } else {
+            document.getElementById("nav-home").href = '../index.html'
+        }
 
 
         var navItems = document.getElementById("nav-items");
