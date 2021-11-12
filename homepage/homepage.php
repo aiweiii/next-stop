@@ -32,7 +32,7 @@ if (isset($_SESSION['email'])) {
             <a href="../homepage/homepage.php" class="nav-item" id="nav-home">Home</a>
             <a href="../forum_dynamic/display.php" class="nav-item" id="nav-forum">Forum</a>
             <a href="../guide/index.php" class="nav-item" id="nav-uniGuide">University Guide</a>
-            <a href="../log_in.php" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
+            <a href="../log_in.html" class="nav-item" id="nav-login-signup">Login/Sign Up</a>
             <a href="../validation_page/validation_page.php" class="nav-item" id="nav-username"></a>
         </div>
 
@@ -74,7 +74,7 @@ if (isset($_SESSION['email'])) {
                     <div class="task-subtitle">See what is trending right now</div>    
                 </div>
             </a>
-            <a href="../guide/index.html" class="task">
+            <a href="../guide/index.php" class="task">
                 <div class="icon find">🔍</div>
                 <div class="right">
                     <div class="task-text">Explore the University Guides</div>
