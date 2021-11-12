@@ -17,10 +17,9 @@ class ConnectionManager {
 
         // HEROKU
             $servername = 'us-cdbr-east-04.cleardb.com';
-            $username = 'b6bd77d7a28d3b';
-            // $password = 'root'; // -> MAMP server
-            $password = 'f1bdda31'; // -> WAMP server
-            $dbname = 'heroku_38ec8b215cf2e16';
+            $username = 'b127ff0bf1984a';
+            $password = 'a2cb3df1';
+            $dbname = 'heroku_075b689eae6e371';
             
             // Create connection
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);     
