@@ -80,8 +80,9 @@
 
   <div class="container-fluid p-0" >
 
-    <div class="row g-0" style="height:  calc(100vh - 70px);">
+    
 
+    <div class="row g-0" style="height:  calc(100vh - 71px);">
       <!-- Maps -->
       <div class="col-md-8" style="height: 100%;">
           <input id="pac-input" class="controls" type="text" placeholder="Enter a location.." />

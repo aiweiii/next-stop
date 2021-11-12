@@ -3,6 +3,9 @@ require_once '../backend/common.php';
 if (isset($_SESSION['email'])) {
     $email = $_SESSION['email'];
     $username = $_SESSION['username'];
+    $university = $_SESSION['university'];
+} else {
+    $university = '';
 }
 ?>
 
@@ -54,7 +57,7 @@ if (isset($_SESSION['email'])) {
         <div class="box">
             <div class="task-title">Explore our features:</div>
             <a href="../validation_page/validation_page.php" class="task">
-                <div class="icon">🔍</div>
+                <div class="icon" id="verify_uni">🔍</div>
                 <div class="right">
                     <div class="task-text">Choose Your University</div>
                     <div class="task-subtitle">Connect with your peers through the Telegram Groupchat</div>    
@@ -100,6 +103,12 @@ if (isset($_SESSION['email'])) {
             } else {
                 navItems.style.maxHeight = "0px";
             }
+        }
+
+        var university = '<?php echo $university;?>'
+        pic_ele = document.getElementById('verify_uni')
+        if (university != ''){
+            pic_ele.innerHTML = '✔️';
         }
     </script>
 
