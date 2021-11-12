@@ -6,7 +6,7 @@ if (isset($_SESSION['email'])) {
     $email = $_SESSION['email'];
     $username = $_SESSION['username'];
 } else {
-    header('location:../sign_up.html');
+    header('location:../log_in.html');
 }
 
 ?>
