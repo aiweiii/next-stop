@@ -6,7 +6,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 
     background-image: url('index/signup_bg.png');
     background-size: cover;
@@ -94,9 +93,10 @@ input, button{
     .mobile-display {
         position: fixed;
         left: 0px;
-        top: 0px;
+        top: 70px;
         width: 100vw;
         height: 100vh;
+        border: 1px #D1D1D1 solid;
     }
     }
 

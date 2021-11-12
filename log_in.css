@@ -48,7 +48,7 @@ input {
     justify-content: center;
     align-items: center;
     margin: 0;
-    min-height: 100vh;
+    min-height: calc(100vh - 70px);
 
     background-image: url("index/login_bg.svg");
     background-size: cover;
@@ -84,7 +84,7 @@ button:hover {
     .mobile-display {
         position: fixed;
         left: 0px;
-        top: 0px;
+        top: 70px;
         width: 100vw;
         height: 100vh;
     }
