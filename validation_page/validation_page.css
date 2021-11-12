@@ -12,6 +12,34 @@
     border-top: solid 1px #cfcfcf;
 }
 
+.profile-pic-huge:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+.profile-pic-huge {
+    margin-right: 20px;
+    font-size: 10vw;
+    max-width: 20vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    color: white;
+    background: linear-gradient(to bottom, var(--crimson), var(--tangerine));
+    text-align: center;
+    font-family: var(--roboto);
+	box-shadow: 0 0 9px rgba(255, 255, 255, 1)  ; 
+	-webkit-box-shadow: 0 0 9px rgba(255, 255, 255, 1)  ; 
+	-moz-box-shadow: 0 0 9px rgba(255, 255, 255, 1)  ; 
+}
+
+svg {
+    position: absolute;
+    z-index: -1;
+}
+
 .title {
     font-weight: 700;
     font-size: 40px;

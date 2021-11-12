@@ -57,6 +57,10 @@
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="validation_page.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        
 </head>
 
 <body>
@@ -89,29 +93,51 @@
             <span class="menu menu-small menu-bottom"></span>
         </div>
     </nav>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="var(--crimson)" fill-opacity="1" d="M0,192L80,208C160,224,320,256,480,272C640,288,800,288,960,245.3C1120,203,1280,117,1360,74.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
     <div class="container">
-        <div class="title">Profile</div>
-        <div class="name subtitle">Name:</span></div>
-        <div class="user-input user-name"><?php print_r($_SESSION['username']);?></div>
-        <div class="email subtitle">Email:</div>
-        <div class="user-input user-email"><?php print_r($_SESSION['email']);?></div>
-        <div class="subtitle">University:</div>
-        <div class="user-uni" id="user_uni">
-            <div class="user-input"><?php print_r($university);?></div>
-            <a class="edit-btn" onclick="showSearchBar()">Edit</a>
+
+
+        <div class="row">
+            <div class="col">
+                <div class="fs-2 text-white m-0"><?php print_r($_SESSION['username']);?></div>
+                <div class="user-input user-email text-white"><?php print_r($_SESSION['email']);?></div>
+
+
+            </div>
+            <div class="col">
+                <div class="profile-pic-huge"><?php print_r($_SESSION['username'][0]);?></div>
+            </div>
         </div>
-        <div class="search-bar" id="search_bar">
-            <form class='search-bar-2' autocomplete="off" action="">
-                <div class="autocomplete" style="width:100%;">
-                    <input class='uni-input' id="myInput" type="text" name="myCountry">
-                    
+
+
+
+        <div class="row">
+        <div class="fw-bold text-muted">Exchange school</div>
+                <div class="user-uni" id="user_uni">
+                    <div class="user-input fs-5"><?php print_r($university);?></div>
+                    <a class="edit-btn fs-5" onclick="showSearchBar()">Edit</a>
                 </div>
-                <input class='uni-submit' type="submit">
-            </form>
+                <div class="search-bar" id="search_bar">
+                    <form class='search-bar-2' autocomplete="off" action="">
+                        <div class="autocomplete" style="width:100%;">
+                            <input class='uni-input' id="myInput" type="text" name="myCountry">
+                            
+                        </div>
+                        <input class='uni-submit' type="submit">
+                    </form>
+                </div>
+
+                <div class="fw-bold text-muted">Name</div>
+                <div class="user-input fs-5 "><?php print_r($_SESSION['username']);?></div>
+
+                <div class="fw-bold text-muted">Email</div>
+                <div class="user-input fs-5 "><?php print_r($_SESSION['email']);?></div>
+
         </div>
+
         <!-- a href="../homepage/homepage.php" -->
         <div id="outcome"></div>
-        <div class="logout-box"><a class="logout" href='../logout.php'>Log out</a></div>
+        <div class="logout-box pb-5"><a class="logout" href='../logout.php' style="text-decoration: none;">Log out</a></div>
         
     </div>
 
