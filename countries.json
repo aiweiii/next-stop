@@ -2,262 +2,359 @@
     {
         "Continent": "Europe",
         "Country": "Austria",
-        "University": "FHJoanneum"
+        "University": "University of Vienna",
+        "Description": "The University of Vienna was established by its founder Duke Rudolf IV on 12th March 1365, on the model of theUniversities of Bologna and Paris. It is the oldest university in the present-day German linguistic and culturalterritory. \nThe eight faculties of the University of Vienna offer a total of 130 courses of study currently attended by about 90,000 students from 130 countries. It is the largest university of Austria with a teaching staff of more than 4,000 and approximately 3,000 students graduating each year.",
+        "Users":[["Ong Ai Wei","F","Year 2", "SCIS"], ["Gerald Ng","M","Year 2", "SCIS"]]
     },
     {
         "Continent": "Europe",
         "Country": "Austria",
-        "University": "University of Vienna"
+        "University": "Vienna University of Economics and Business",
+        "Description": "The WU is over 100 years old. Its predecessor, the Imperial Export Academy, was established on October 1,1898, with the aim of imparting knowledge to businessmen engaged in foreign trade. Immediately following World War I, the Academy became a public World Trade University (Hochschule fur Welthandel), offering a three-year degree program. Following new legislation in 1966, the range of degrees was expanded to the four currently offered. The University was renamed in 1975, this time to Wirtschaftsuniversität Wien (Vienna University of Economics and Business Administration). In 1983, foreign language teaching was expanded at the WU and basic IT studies were made a compulsory part of its degree programs. The 1980s were a period of enormous growth at the WU – between 1981 and 1987 enrollment doubled, from 8,000 to 16,000 and since 1982 the WU has been housed in its large complex in Augasse, where its modern facilities are among the finest in Austria",
+        "Users":[["Teh Xue Er","F","Year 3", "SCIS"], ["Belle Huang","F","Year 3", "SCIS"],["Jiang Jia Jian","F","Year 3","SCIS"]]
     },
     {
         "Continent": "Europe",
         "Country": "Austria",
-        "University": "Vienna University of Economics and Business"
-    },
-    {
-        "Continent": "Europe",
-        "Country": "Austria",
-        "University": "Vienna University of Economics and Business (School of Law‚Äì Themis)"
-    },
-    {
-        "Continent": "Europe",
-        "Country": "Belgium",
-        "University": "Solvay Brussels School - Economics and Management"
+        "University": "Vienna University of Economics and Business (School of Law‚Äì Themis)",
+        "Description": "The WU is over 100 years old. Its predecessor, the Imperial Export Academy, was established on October 1,1898, with the aim of imparting knowledge to businessmen engaged in foreign trade. Immediately following World War I, the Academy became a public World Trade University (Hochschule fur Welthandel), offering a three-year degree program. Following new legislation in 1966, the range of degrees was expanded to the four currently offered. The University was renamed in 1975, this time to Wirtschaftsuniversität Wien (Vienna University of Economics and Business Administration).",
+        "Users":[["Lim Yu Xuan","F","Year 3", "SCIS"], ["Callie Sim","F","Year 3", "SOB"],["Bay Kang Min","M","Year 3", "SOB"]]
     },
     {
         "Continent": "Europe",
         "Country": "Belgium",
-        "University": "Ghent University"
+        "University": "Solvay Brussels School - Economics and Management",
+        "Description": "Solvay Brussels School – Economics & Management (SBS – EM) is located in the incredibly cosmopolitan Brussels,triple capital of Europe, Belgium and the Flanders region and also host to both NATO and the EU headquarters. Solvay Brussels School is part of Universite Libre du Bruxelles (ULB), which was established in 1834. Known for their strength in Quantitative Finance, they are part of the Q-TEM, a network of like-minded universities strong in this field.",
+        "Users":[["Tan Yun Xian","F","Year 3", "SOB"], ["Ng Jing Wen","F","Year 3", "SOA"],["Pan Jia Qi","F","Year 3","SOE"]]
     },
     {
         "Continent": "Europe",
         "Country": "Belgium",
-        "University": "Katholieke Universiteit Leuven"
+        "University": "Ghent University",
+        "Description": "Ghent University is one of the major universities in the Dutch-speaking region of Europe and has been ranked top 100 universities in the world by both Shanghai AWRU and Times Higher Education ranking. It distinguishes itself as a socially committed and pluralistic, public university, with a broad international perspective. Its Faculty of Economics and Business Administration offers high-quality and socially relevant education, research and scientific services to the community.\nWhile its Faculty of Political and Social Sciences is a relatively young faculty that brings together education, research and service within the research areas of Political Sciences, Communication Sciences and Sociology, its Faculty of Law is one of the four founding faculties of the Ghent University and is highly ranked in QS World Subject Ranking.\nThe university is located in Ghent, a city located in the Flemish region of Belgium and also the capital and largest city of the East Flanders province.",
+        "Users":[["Quek Ngee Xin","F","Year 4","SOE"], ["Wisaam bin Kanaan","M","Year 4","SOA"]]
     },
     {
         "Continent": "Europe",
         "Country": "Belgium",
-        "University": "Université Catholique de Louvain"
+        "University": "Katholieke Universiteit Leuven",
+        "Description": "KU Leuven is one of the oldest and most influential Catholic universities in the world. Since its foundation in 1425 it has been a center of academic excellence. KU Leuven is Belgium’s largest university with a student population of about 27,000.The University is located in Leuven, a small but pleasant town 25 kilometers from Brussels, the capital of Belgium and of the European Union.",
+        "Users":[["Lin Hao Ming","M","Year 4","SOE"], ["Umar Salim","M","Year 4","SOSS"]]
+    },
+    {
+        "Continent": "Europe",
+        "Country": "Belgium",
+        "University": "Université Catholique de Louvain",
+        "Description": "Founded in 1425, the Catholic University of Louvain is one of the oldest universities in Europe. It was split in 1971 into two separate universities, one Dutch-speaking remaining in Leuven (K.U. Leuven), one French-speaking, established in Louvain-la-Neuve and Brussels. Among its former researchers and teachers, there are Erasmus, Mercator, Vesalius, Vives and Lemaitre.\nToday, centers such as the Center for Operation Research and Econometrics (CORE), the Ludwig Institute and the ICP contribute to its international scope. UCL has 130,000 graduates throughout the world.",
+        "Users":[["Koh Zhi En","F","Year 4","SOB"], ["Wisaam bin Kanaan","Year 4","SOSS"],["Lam Jun Cheng","M","Year 3","SCIS"]]
     },
     {
         "Continent": "Europe",
         "Country": "Croatia",
-        "University": "Zagreb School of Economics and Management"
+        "University": "Zagreb School of Economics and Management",
+        "Description": "Founded in 2002, Zagreb School of Economics and Management (ZSEM) provides undergraduate and graduate education in economics, management, finance, marketing, and accounting. ZSEM received its AACSB accreditation in 2013 and is in the process of applying for the EQUIS. It has been voted as the best business school in Croatia for five consecutive years. As a young university with a global outlook, ZSEM prepares its students for the global labour market by offering, among its other Bachelor programmes, a fully English-taught track for its Bachelor in Economics & Management.\nZagreb is its nation’s capital, and the most populous city in Croatia. Zagreb today represents the administrative, economic, cultural, transportation and scientific center of Croatia.",
+        "Users":[["Tang Lin Hui","F","Year 4", "SOE"], ["Lavanya Roy","F","Year 4", "SOSS"],["Xu Si Ling","F","Year 4","SOB"]]
     },
     {
         "Continent": "Europe",
         "Country": "Czech Republic",
-        "University": "University of Economics, Prague"
+        "University": "Prague University of Economics and Business",
+        "Description": "VSE is one of the most renowned European universities in the field of economic education. The Commercial College – Vysoka skola obchodni (VSO) was founded in 1919 as an independent department of the Czech Technical University with specializations: wholesale trade, Banking and the Organization of Industrial Firms.\nIn 1929, VSO was reorganized. The study course is prolonged to four years, a definite incorporation of VSO into the Czech Technical University. In 1934, VSO gained the right to award the degree of Doctor of Commercial Sciences. The Nazis closed down VSO from 1939 to 1945. In 1949, VSO was the University of Political and Economic Sciences with three faculties Economics, Political and Diplomatic and Social Sciences. In 1953, VSE established five faculties: General Economics, Finance and Credit, Statistics, Production Economics and Commerce. From 1990 – 1991 following the Velvet Revolution VSE experienced a general reorganization. In 1998, VSE in Prague became a full member of CEMS. In 1999, it became a full member of PIM. It changed it’s English name from University of Economics, Prague to Prague University of Economics and Business from 1 October 2020.",
+        "Users":[["Chia Rui Min","M","Year 4", "SOE"], ["Pooja Mitter","F","Year 4", "SOSS"]]
     },
     {
         "Continent": "Europe",
         "Country": "Denmark",
-        "University": "Aarhus School of Business, University of Aarhus"
+        "University": "Aarhus School of Business, University of Aarhus",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Denmark",
-        "University": "University of Copenhagen"
+        "University": "University of Copenhagen",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Denmark",
-        "University": "Copenhagen Business School"
+        "University": "Copenhagen Business School",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Denmark",
-        "University": "IT University of Copenhagen"
+        "University": "IT University of Copenhagen",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Finland",
-        "University": "Aalto University School of Business"
+        "University": "Aalto University School of Business",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Finland",
-        "University": "Hanken School of Economics"
+        "University": "Hanken School of Economics",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "France",
-        "University": "KEDGE Business School - Bordeaux Campus"
+        "University": "KEDGE Business School - Bordeaux Campus",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "France",
-        "University": "ESCP Europe"
+        "University": "ESCP Europe",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "France",
-        "University": "ESSEC Business School"
+        "University": "ESSEC Business School",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "France",
-        "University": "HEC School of Management"
+        "University": "HEC School of Management",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "France",
-        "University": "Sciences Po - Paris Campus"
+        "University": "Sciences Po - Paris Campus",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "France",
-        "University": "Universite Paris-Dauphine"
+        "University": "Universite Paris-Dauphine",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "France",
-        "University": "Sciences Po - Reims Campus"
+        "University": "Sciences Po - Reims Campus",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "France",
-        "University": "NEOMA Business School - Rouen Campus"
+        "University": "NEOMA Business School - Rouen Campus",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "France",
-        "University": "Toulouse Business School"
+        "University": "Toulouse Business School",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "Freie Universität Berlin"
+        "University": "Freie Universität Berlin",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "Freie Universität Berlin Law School - Themis"
+        "University": "Freie Universität Berlin Law School - Themis",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "Humboldt-Universität Zu Berlin"
+        "University": "Humboldt-Universität Zu Berlin",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "University of Cologne - Faculty of Management, Economics and Social Sciences"
+        "University": "University of Cologne - Faculty of Management, Economics and Social Sciences",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "European University Viadrina"
+        "University": "European University Viadrina",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "Goethe-University Frankfurt am Main"
+        "University": "Goethe-University Frankfurt am Main",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "University of Konstanz, Germany"
+        "University": "University of Konstanz, Germany",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "University of Mannheim"
+        "University": "University of Mannheim",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "University of Mannheim - Department of Law"
+        "University": "University of Mannheim - Department of Law",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "University of Mannheim ‚Äì School of Business Informatics and Mathematics"
+        "University": "University of Mannheim ‚Äì School of Business Informatics and Mathematics",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "University of Mannheim School of Social Sciences/Humanities"
+        "University": "University of Mannheim School of Social Sciences/Humanities",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "Ludwig-Maximilians-Universität"
+        "University": "Ludwig-Maximilians-Universität",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "Technische Universitat Munchen"
+        "University": "Technische Universitat Munchen",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "European Business School - Germany"
+        "University": "European Business School - Germany",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "Universität Tübingen"
+        "University": "Universität Tübingen",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Germany",
-        "University": "WHU - Otto Beisheim School of Management"
+        "University": "WHU - Otto Beisheim School of Management",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Iceland",
-        "University": "University of Iceland"
+        "University": "University of Iceland",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Ireland",
-        "University": "Trinity College Dublin"
+        "University": "Trinity College Dublin",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Ireland",
-        "University": "University College Dublin"
+        "University": "University College Dublin",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Ireland",
-        "University": "University College Dublin Sutherland School of Law"
+        "University": "University College Dublin Sutherland School of Law",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Italy",
-        "University": "Universitàt Carlo Cattaneo - LIUC"
+        "University": "Universitàt Carlo Cattaneo - LIUC",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Italy",
-        "University": "Bocconi University"
+        "University": "Bocconi University",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Italy",
-        "University": "Universita degli Studi Di Milano"
+        "University": "Universita degli Studi Di Milano",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Italy",
-        "University": "Libera Università Internazionale degli Studi Sociali Guido Carli"
+        "University": "Libera Università Internazionale degli Studi Sociali Guido Carli",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Lithuania",
-        "University": "ISM University of Management and Economics"
+        "University": "ISM University of Management and Economics",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Lithuania",
-        "University": "Vilnius University"
+        "University": "Vilnius University",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Netherlands",
-        "University": "VU University Amsterdam"
+        "University": "VU University Amsterdam",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
@@ -427,192 +524,268 @@
     {
         "Continent": "Europe",
         "Country": "Switzerland",
-        "University": "University of St Gallen (Faculty of Law)"
+        "University": "University of St Gallen (Faculty of Law)",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Switzerland",
-        "University": "University of Zurich"
+        "University": "University of Zurich",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "Switzerland",
-        "University": "University of Zurich - Faculty of Law"
+        "University": "University of Zurich - Faculty of Law",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "University of Amsterdam"
+        "University": "University of Amsterdam",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "VU University Amsterdam"
+        "University": "VU University Amsterdam",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "University of Groningen"
+        "University": "University of Groningen",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "Leiden University"
+        "University": "Leiden University",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "Maastricht University (Law)"
+        "University": "Maastricht University (Law)",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "Maastricht University (UCM)"
+        "University": "Maastricht University (UCM)",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "Maastricht University School of Business and Economics"
+        "University": "Maastricht University School of Business and Economics",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "Erasmus University, School of History, Culture and Communication (ESHCC)"
+        "University": "Erasmus University, School of History, Culture and Communication (ESHCC)",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "Rotterdam School of Management, Erasmus University"
+        "University": "Rotterdam School of Management, Erasmus University",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "Erasmus University Rotterdam, Erasmus School of Economics."
+        "University": "Erasmus University Rotterdam, Erasmus School of Economics.",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "Tilburg University"
+        "University": "Tilburg University",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "The Netherlands",
-        "University": "Tilburg University (School of Law)"
+        "University": "Tilburg University (School of Law)",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Bath"
+        "University": "University of Bath",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Bath Department of Economics"
+        "University": "University of Bath Department of Economics",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Warwick"
+        "University": "University of Warwick",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Edinburgh"
+        "University": "University of Edinburgh",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Exeter"
+        "University": "University of Exeter",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Glasgow"
+        "University": "University of Glasgow",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Surrey"
+        "University": "University of Surrey",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "Leeds University"
+        "University": "Leeds University",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "Leeds University - School of Law"
+        "University": "Leeds University - School of Law",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Leicester - School of Law"
+        "University": "University of Leicester - School of Law",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "City University London"
+        "University": "City University London",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "King's College London "
+        "University": "King's College London ",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "Queen Mary University of London"
+        "University": "Queen Mary University of London",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University College London, School of Management"
+        "University": "University College London, School of Management",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of London (The School of Oriental and African Studies)"
+        "University": "University of London (The School of Oriental and African Studies)",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Manchester"
+        "University": "University of Manchester",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Manchester (Faculty of Law)"
+        "University": "University of Manchester (Faculty of Law)",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Southampton"
+        "University": "University of Southampton",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of Southampton (Faculty of Law)"
+        "University": "University of Southampton (Faculty of Law)",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Europe",
         "Country": "UK",
-        "University": "University of York (Law School)"
+        "University": "University of York (Law School)",
+        "Description": "",
+        "Users": []
     },
     {
         "Continent": "Asia",
         "Country": "Hong Kong",
-        "University": "University of Hong Kong"
+        "University": "University of Hong Kong",
+        "Description": "Evolved from the former Hong Kong College of Medicine which was instituted in 1887. In 1911, The University of Hong Kong was formally founded. From its modest beginnings of only two departments, the University has grown to embrace almost all major areas of teaching and research. It is one of the top Asia universities in the region. Today, the University of Hong Kong has a student population of over 15,000, including 9,415 undergraduates, 5,081 postgraduates and 1,024 international students. The University has an academic staff population of around 900.",
+        "Users":[["Prashanthini Linggam","F","Year 4", "SOE"], ["Li Cheng Boon","M","Year 4", "SCIS"],["Sim Sing Yu","F","Year 4", "SOE"], ["Pan Kai Wen","F","Year 4", "SOA"],["Ong Shu Hui","F","Year 4", "SOE"], ["Chang Jun De","M","Year 4", "SOE"]]
     },
     {
         "Continent": "Asia",
         "Country": "Hong Kong",
-        "University": "City University of Hong Kong"
+        "University": "City University of Hong Kong",
+        "Description": "",
+        "Users":[["Hong Ming En","M","Year 4", "SOB"], ["Lew Xi Ling","F","Year 4", "SCIS"]]
     },
     {
         "Continent": "Asia",
         "Country": "Hong Kong",
-        "University": "Hong Kong University of Science and Technology"
+        "University": "Hong Kong University of Science and Technology",
+        "Description": "",
+        "Users":[["Siu Ziak Loo","M","Year 4", "SOA"], ["Ho Lin Min","F","Year 4", "SOB"]]
     },
     {
         "Continent": "Asia",
