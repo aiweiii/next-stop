@@ -395,10 +395,11 @@ footer .credit {
     color: var(--grey);
 }
 
-footer {
-    height: 40px;
+footer .email {
+    width: 90px;
+    height: 55px;
     color: white;
     border-radius: 15px;
     text-align: center;
-    line-height: 40px;
+    /* line-height: 40px; */
 }
