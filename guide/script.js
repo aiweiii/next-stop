@@ -1,6 +1,4 @@
-// alert("test 8")
-
-function isUniApproved(input, university) {
+function isUniApproved(input,university) {
     university = university.split(" ");
     validity = [];
     validity.length = university.length;
@@ -23,15 +21,15 @@ function isUniApproved(input, university) {
     validity.forEach(bool => {
         if (bool === true) {
             true_count += 1
-        } else {
+        }else{
             false_count += 1
         }
     });
 
-    if (true_count >= (validity.length / 2)) {
+    if (true_count >= (validity.length/2)) {
         console.log('true')
         return true
-    } else {
+    }else{
         console.log('false')
         return false
     }
@@ -52,26 +50,54 @@ function compareArr(arr,uniArr) {
 }
 
 function fetchUniFromJson(input) {
-    var highest_count = 0;
-    input = input.replace("&-,","").split(",");
+    // input is a STRING: "Aarhus University, School of Business and Social Sciences, Fuglesangs Allé, Aarhus Municipality, Denmark"
+    input = input.split(",");
     var firstArr = firstArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // Faculty of Economics and Business
     var secondArr = secondArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // University of Zagreb
+    var country = input[-1];
+    var highest_count = 0;
 
     fetch("countries.json")
         .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
         .then(data => {
             // anything you want to do with the data goes between these 2 brackets
             data.forEach(obj => {
-                var currUniArr = obj["University"]
+                var currUniArr = obj["University"];
                 currUniArr = currUni.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e)
 
                 //compare FIRST ARRAY with SECOND ARRAY's number of 'TRUE' and pick the arr with the higher number of 'TRUE'
-                const first_count = compareArr(firstArr,currUniArr)
-                const second_count
+                const first_count = compareArr(firstArr,currUniArr);
+                const second_count = compareArr(secondArr,currUniArr);
 
             });
         })
+}
 
+function search_students() {
+    // console.log('yea clicked');
+    var uni = document.getElementById("uniName").innerHTML;
+    // uni = "University of Vienna";
+
+    // debug
+    // console.log(uni);
+
+    const url = 'get_studentsAPI.php?university=' + uni
+    // console.log(url);
+    axios.get(url)
+        .then(response => {
+            var result = response.data
+            // console.log(result)
+
+            document.getElementById("students_uni_header").innerText = "Students entering this uni"
+            for (user of result) {
+                document.getElementById("students_uni").innerHTML += <li>${user}</li>
+            }
+
+        })
+        .catch(error => {
+            // process error object
+            console.log('error')
+        });
 }
 
 function initMap() {
@@ -99,20 +125,15 @@ function initMap() {
     });
     autocomplete.addListener("place_changed", () => {
         infowindow.close();
-        
-        search_students();
+
         // Render University name
         document.getElementById("uniName").innerText = input.value;
 
         // Render University description
-
+        search_students();
 
         // Google Maps start retrieving place details
         const place = autocomplete.getPlace();
-
-        place.setComponentRestrictions({
-            country: ["us", "pr", "vi", "gu", "mp"],
-        });
 
         if (!place.geometry || !place.geometry.location) {
             return;
@@ -142,34 +163,4 @@ function initMap() {
         document.getElementById('image').src = photoUrl;
 
     });
-
-    
-}
-
-
-function search_students() {
-    // console.log('yea clicked');
-    var uni = document.getElementById("uniName").innerHTML;
-    // uni = "University of Vienna";
-    
-    // debug
-    // console.log(uni);
-
-    const url = 'get_studentsAPI.php?university=' + uni 
-    // console.log(url);
-    axios.get(url)
-        .then(response => {
-            var result = response.data
-            // console.log(result)
-
-            document.getElementById("students_uni_header").innerText = "Students entering this uni"
-            for (user of result){
-                document.getElementById("students_uni").innerHTML += `<li>${user}</li>`
-            }
-
-        })
-        .catch(error => {
-            // process error object
-            console.log('error')
-        });
 }
