@@ -7,9 +7,11 @@
 ::-webkit-scrollbar {
     width: 20px;
 }
+
 ::-webkit-scrollbar-track {
     background-color: var(--light-grey);
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: var(--grey);
     border-radius: 20px;
@@ -18,9 +20,10 @@
 }
 
 /*PART 1 START*/
+
 .part-1 {
     width: 100%;
-    height: calc(100vh - 64px) ;
+    height: calc(100vh - 64px);
     background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .1)), linear-gradient(to right, rgba(28, 26, 27, .7), rgba(28, 26, 27, .01)), url('img/homepage_3.jpg');
     background-size: cover;
     background-position: right;
@@ -28,7 +31,7 @@
     padding: 100px;
 }
 
-.part-1 h2{
+.part-1 h2 {
     color: white;
     font-size: 4em;
     font-weight: 500;
@@ -39,90 +42,103 @@
 .part-1 .find-out {
     color: white;
     padding: 10px 20px;
-    background: rgba(255,68,96,255);
+    background: rgba(255, 68, 96, 255);
     border-radius: 4px;
     font-size: 18px;
+    text-decoration: none;
+}
+
+.email {
+    text-decoration: none;
+    margin-right: 10vw;
+    padding: 5px 20px;
+    background: var(--crimson);
+    color: white;
+    border-radius: 5px;
 
 }
 
 .find-out, .email {
-    transition: 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .email:hover, .find-out:hover {
     background: var(--tangerine);
-
+    color: white;
 }
 
 /*FOR Carousel start*/
-.carouselbox{
+
+.carouselbox {
     width: 100%;
     height: calc(100vh - 64px);
 }
 
-.carouselbox img{
+.carouselbox img {
     width: 100%;
     height: calc(100vh - 64px);
 }
 
-#ctext{
+#ctext {
     position: absolute;
     top: 10%;
     left: 10%;
     z-index: 20;
     color: black;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 
-#ctext2{
+#ctext2 {
     position: absolute;
     top: 10%;
     right: 10%;
     z-index: 20;
     color: black;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 
-#ctext3{
+#ctext3 {
     position: absolute;
     top: 28%;
     right: 45%;
     z-index: 20;
     color: black;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 
-#ctext4{
+#ctext4 {
     position: absolute;
     bottom: 10%;
     left: 10%;
     z-index: 20;
     color: black;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 
-#ctext5{
+#ctext5 {
     position: absolute;
     top: 10%;
     right: 10%;
     z-index: 20;
     color: white;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
+
 /*FOR Carousel end*/
 
-
 /*RESPONSIVENESS*/
-@media screen and (max-width: 730px){
-    .part-1 h2{
+
+@media screen and (max-width: 730px) {
+    .part-1 h2 {
         font-size: 3em;
     }
     .part-1 .find-out {
         font-size: 15px;
     }
 }
-@media screen and (max-width: 600px){
-    .part-1 h2{
+
+@media screen and (max-width: 600px) {
+    .part-1 h2 {
         font-size: 2.5em;
     }
     .part-1 .find-out {
@@ -130,10 +146,10 @@
     }
 }
 
-
 /*PART 1 END*/
 
 /*PART 2 START*/
+
 .part-2 {
     width: 100%;
     height: auto;
@@ -147,7 +163,6 @@
     background-size: cover;
     background-position: bottom;
 }
-
 
 .title {
     font-weight: 900;
@@ -167,15 +182,17 @@
     display: inline-block
 }
 
-@media screen and (max-width: 730px){
+@media screen and (max-width: 730px) {
     .part-2 .number {
         font-weight: 800;
         font-size: 10em;
     }
 }
+
 /*PART 2 END*/
 
 /*PART 3 START*/
+
 .part-3 {
     width: 100%;
     height: auto;
@@ -203,13 +220,13 @@
 }
 
 .part-3 .subtitle {
-    color: rgba(201,200,197,255);
+    color: rgba(201, 200, 197, 255);
     margin-bottom: 15px;
 }
 
 .part-3 p {
     font-size: 15px;
-    color: rgba(201,200,197,255);
+    color: rgba(201, 200, 197, 255);
     width: 90%;
     margin-top: 15px;
 }
@@ -234,12 +251,12 @@
     justify-content: space-between;
 }
 
-.step-2 .left{
+.step-2 .left {
     width: 50%;
     padding-left: 10%;
 }
 
-.step-2 .right{
+.step-2 .right {
     width: 50%;
     margin-left: 10%;
     padding-right: 10%;
@@ -280,60 +297,50 @@
     margin-bottom: 140px;
 }
 
-@media screen and (max-width: 950px){
-    .part-3{
+@media screen and (max-width: 950px) {
+    .part-3 {
         margin: 0px;
         padding: 0px;
         width: 100%;
     }
-
     .step-1 {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
     }
-
     .step-2 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 100px;
     }
-    
     .left {
         padding: 0px;
         margin: 0px;
     }
-
     .right {
         padding: 0px;
         margin: 0px;
     }
-
     .step-3 {
         margin-top: 100px;
     }
-
     .icon {
         display: none;
     }
-
     .title {
         width: 100%;
         margin: 0;
         padding: 0;
     }
-
     .subtitle {
         padding-top: 20px;
         width: 100%;
         margin: 0;
     }
-
     .part-3 p {
         width: 100%;
     }
-
     .right-img-2, .step-2 .right, .step-2 .left, .right-img, .part-3 .step-1 .left {
         margin-left: 0;
         margin-right: 0;
@@ -343,29 +350,30 @@
 }
 
 /*Go to top button start*/
+
 #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: lightslategray; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-  }
-  
-  #myBtn:hover {
-    background-color:grey; /* Add a dark-grey background on hover */
-  }
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--crimson);
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: 1px solid rgb(235, 0, 0);
+    opacity: 0.4;
+    transition: 0.3s ease;
+}
 
-/*Go to top button end*/
+#myBtn:hover {
+    opacity: 1;
+}
 
-/*footer*/
 footer {
     width: 100%;
     height: 15vh;
@@ -387,10 +395,8 @@ footer .credit {
     color: var(--grey);
 }
 
-footer .email {
-    width: 90px;
+footer {
     height: 40px;
-    background: var(--crimson);
     color: white;
     border-radius: 15px;
     text-align: center;
