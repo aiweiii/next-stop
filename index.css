@@ -21,7 +21,7 @@
 .part-1 {
     width: 100%;
     height: 90vh ;
-    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .1)), linear-gradient(to right, rgba(28, 26, 27, .7), rgba(28, 26, 27, .01)), url('img/homepage_3.jpg');
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .1)), linear-gradient(to right, rgba(28, 26, 27, .7), rgba(28, 26, 27, .01)), url('landing_page/img/homepage_3.jpg');
     background-size: cover;
     background-position: right;
     margin: 0;
@@ -75,7 +75,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('img/homepage_2.png');
+    background: url('landing_page/img/homepage_2.png');
     background-size: cover;
     background-position: bottom;
 }
@@ -156,7 +156,7 @@
     height: 350px;
     border-radius: 10px;
     margin-left: 10%;
-    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('img/melbourne.jpg');
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('landing_page/img/melbourne.jpg');
     background-size: cover;
 }
 
@@ -181,7 +181,7 @@
     width: 300px;
     height: 350px;
     border-radius: 10px;
-    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('img/step2.jpg');
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('landing_page/img/step2.jpg');
     background-size: cover;
     background-position: left -40px bottom;
 }
@@ -191,7 +191,7 @@
     height: 350px;
     border-radius: 10px;
     margin-left: 10%;
-    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('img/step3.jpg');
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('landing_page/img/step3.jpg');
     background-size: cover;
 }
 
@@ -203,7 +203,7 @@
     width: 300px;
     height: 350px;
     border-radius: 10px;
-    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('img/seoul.jpg');
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .15)), url('landing_page/img/seoul.jpg');
     background-size: cover;
     background-position: left -50px bottom;
 }
