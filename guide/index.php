@@ -99,7 +99,7 @@
     <div class="row g-0" style="height:  calc(100vh - 71px);">
       <!-- Maps -->
       <div class="col-md-8" style="height: 100%;">
-          <input id="pac-input" class="controls" type="text" placeholder="Enter a location.." />
+          <input id="pac-input" class="controls" type="text" placeholder="Enter a location" />
         <div id="map"></div>
         <div id="infowindow-content">
           <span id="place-name" class="title"></span><br />
@@ -110,20 +110,19 @@
 
       <!-- Uni info -->
       <div class="col-md p-4 uni-info">
-      <h2 class="fw-bold mb-4 ">University Guides</h2>
+        <h2 class="fw-bold mb-4 ">University Guides</h2>
 
-        <!-- <p class="text-secondary">Pick your university <a href="">here</a> before you browse.</p> -->
-        <h4>Uni Name</h4>
+        <h4 id="uniName">Uni Name</h4>
         <p>Info</p>
 
         <!-- insert your pic here -->
-        <img src="../img/signup_bg.png" width="100%" class="pb-4" alt="">
+        <img id="image" src="../img/signup_bg.png" width="100%" class="pb-4" alt="">
 
-        <h4>Uni Name</h4>
+        <!-- <h4>Uni Name</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsam iure magnam, id voluptate corporis possimus, voluptatibus, molestias ipsum velit ut inventore voluptatem. Doloribus sit provident laborum iste accusantium. Rem?</p>
 
         <h4>Uni Name</h4>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio quam aspernatur saepe dignissimos dolore repellat accusamus similique blanditiis libero molestias eaque pariatur minus, praesentium, velit ut eum, aliquam aut officia.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio quam aspernatur saepe dignissimos dolore repellat accusamus similique blanditiis libero molestias eaque pariatur minus, praesentium, velit ut eum, aliquam aut officia.</p> -->
 
       </div>
     </div>
