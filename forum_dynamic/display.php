@@ -127,16 +127,16 @@ $university = '*';
 
                     <div class='box'>
 
-                        <div id="app" class="filter-fnc">
+                        <div id="app">
 
                             <!-- search filter -->
-                            <h4 class="filter-title"> Filter Your Search </h4>
+                            <h4 class="filter-title pb-4"> Filter Your Search </h4>
 
                             <form action="">
 
-                            <div class="row">
+                            <div class="row pb-2">
                                 <label for='country'> Choose a Country: </label>
-                                    <select name='country' id='country'>
+                                    <select name='country' id='country'  class="form-select ms-2">
                                         <option value='*'> All </option>
                                         <!-- <option value="Korea"> Korea </option> -->
                                         <option v-for="country in countArr" :value="country"> {{country}} </option>
@@ -146,9 +146,9 @@ $university = '*';
 
                             <!--<b> and </b>-->
 
-                            <div class="row choose-uni">
+                            <div class="row choose-uni pb-4">
                                 <label for='uni'> Choose a University: </label>
-                                    <select name='uni' id='uni' >
+                                    <select name='uni' id='uni'  class="form-select ms-2">
                                         <option value='*'> All </option>
                                         <!-- <option value="SNU"> SNU </option> -->
                                         <option v-for="uni in uniArr" :value="uni"> {{uni}} </option>
