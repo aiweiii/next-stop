@@ -120,7 +120,7 @@
         <!-- people entering this university -->
         <h4 id="students_uni_header"></h4>
 
-        <p> 
+        <p id="null_students"> 
           <ol id="students_uni">
           </ol>
         </p>

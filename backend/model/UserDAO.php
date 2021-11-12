@@ -38,7 +38,7 @@ class UserDAO {
         $conn = $connMgr->connect();
         
         // prepare select
-        $sql = "SELECT fullname, email, password_hash, university FROM user_info WHERE university = :university";
+        $sql = "SELECT fullname, email, password_hash, university FROM user_info WHERE university like :university%";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(":university", $university, PDO::PARAM_STR);
             
