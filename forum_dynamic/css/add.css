@@ -5,3 +5,11 @@
     background: var(--light-grey);
     height: 88vh;
 }
+
+.edit-btn {
+    color: var(--crimson);
+}
+
+.edit-btn:hover {
+    color: var(--tangerine);
+}

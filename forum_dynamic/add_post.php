@@ -28,6 +28,8 @@ if( isset($_POST['subject']) && isset($_POST['entry']) && isset($_POST['country'
     <body>
         <?php
             if( $status ) {
+                header('location: display.php');
+
                 echo "
                     <div class='position-absolute top-50 start-50 translate-middle text-center'>
                         <h1> Thank you for sharing your experience! </h1>

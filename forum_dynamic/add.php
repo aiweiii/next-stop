@@ -109,11 +109,11 @@ if (isset($_SESSION['email'])) {
             <!-- NOTE: We set FORM NAME attribute so we can perform Form Validation using JavaScript -->
             <form name='entry_form' action='add_post.php' method='POST' onSubmit="return validate_form()">
 
-                <p><b>University:</b> {{university}}</p>
+                <p><b>University:</b> <span v-html="universitydisplay"></span></p>
                 <input type="hidden" name='university' id='university' :value="university">
                 <input type="hidden" name='username' id='my_username' :value="username">
                 
-                <p><b>Country:</b> {{country}}</p>
+                <p><b>Country:</b> {{countrydisplay}}</p>
                 <input type="hidden" name='country' id='country' :value="country">
 
                 <div class="form-group">
@@ -197,7 +197,9 @@ if (isset($_SESSION['email'])) {
                     country: '',
                     email: '',
                     username: '',
-                    university: ''
+                    university: '',
+                    universitydisplay: '',
+                    countrydisplay: '',
                 }
             },
             //=========== METHODS =========== 
@@ -211,6 +213,11 @@ if (isset($_SESSION['email'])) {
                         var email = result.email;
                         var username = result.username;
                         var university = result.university;
+
+                        if (university == ''){
+                            this.universitydisplay = 'No university selected yet. Update your <a class="edit-btn" href="../validation_page/validation_page.php">profile page</a> now!'
+                            this.countrydisplay = 'None'
+                        }
 
                         this.email = email;
                         this.username = username;
