@@ -16,14 +16,13 @@ insert into user_info values
 ('yuxuan@smu.edu.sg', 'Yu Xuan', '', 'Maastricht University (UCM)');
 
 create table post (
-    id integer auto_increment primary key,
     create_timestamp datetime,
     update_timestamp datetime,
     subject varchar(250),
     entry text,
     country varchar(30),
     university varchar(30),
-    username varchar(30)
+    username varchar(30) primary key
 );
 
 insert into post values 
