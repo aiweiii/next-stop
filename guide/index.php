@@ -96,7 +96,7 @@
 
     <div class="row g-0" style="height:  calc(100vh - 71px);">
       <!-- Maps -->
-      <div class="col-md-8" style="height: 100%;">
+      <div class="col-md-6" style="height: 100%;">
           <input id="pac-input" class="controls" type="text" placeholder="Enter a location" />
         <div id="map"></div>
         <div id="infowindow-content">
@@ -108,10 +108,8 @@
 
       <!-- Uni info -->
       <div class="col-md p-4 uni-info">
-        <h2 class="fw-bold mb-4 ">University Guides</h2>
-
-        <h4 id="uniName">Uni Name</h4>
-        <p>HARD CODE DESCRIPTION GOES HERE</p>
+        <h2 id="uniName">Uni Name</h2>
+        <p id="desc">HARD CODE DESCRIPTION GOES HERE</p>
 
         <!-- insert your pic here -->
         <img id="image" src="../img/signup_bg.png" width="100%" class="pb-4" alt="">

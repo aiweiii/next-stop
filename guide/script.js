@@ -1,4 +1,4 @@
-alert("test 5")
+alert("test 8")
 
 function isUniApproved(input,university) {
     university = university.split(" ");
@@ -38,8 +38,6 @@ function isUniApproved(input,university) {
 }
 
 function initMap() {
-    let inputVal = document.getElementById("pac-input").value;
-
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -33.8688, lng: 151.2195 },
         zoom: 13,
@@ -65,18 +63,10 @@ function initMap() {
     autocomplete.addListener("place_changed", () => {
         infowindow.close();
 
-        fetch("../countries.json")
-            .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
-            .then(data => {
-                // anything you want to do with the data goes between these 2 brackets
-                data.forEach(obj => {
-                    if (isUniApproved(inputVal, obj["University"])==true) {
-                        console.log('this uni exist in this term')
-                    }
-                });
-            })
-        inputVal = inputVal.split(",")[0]
-        document.getElementById("uniName").innerText = inputVal
+        // Replace university name
+        let inputVal = document.getElementById("pac-input").value;
+        inputVal = inputVal.split(",")[0];
+        document.getElementById("uniName").innerText = inputVal;
 
         const place = autocomplete.getPlace();
 
@@ -104,7 +94,7 @@ function initMap() {
             place.formatted_address;
         infowindow.open(map, marker);
 
-        photoUrl = place.photos[0].getUrl({ maxWidth: 1000, maxHeight: 1000 });
+        photoUrl = place.photos[0].getUrl({ maxWidth: 1200, maxHeight: 1200 });
         document.getElementById('image').src = photoUrl;
 
     });

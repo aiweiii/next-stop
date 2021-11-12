@@ -9,7 +9,8 @@ class ConnectionManager {
                 // $cleardb_server = $cleardb_url["us-cdbr-east-04.cleardb.com"];
                 // $cleardb_username = $cleardb_url["b6bd77d7a28d3b"];
                 // $cleardb_password = $cleardb_url["f1bdda31"];
-                // $cleardb_db = substr($cleardb_url["path"],1);
+                // // $cleardb_db = substr($cleardb_url["path"],1);
+                // $cleardb_db = substr($cleardb_url["heroku_38ec8b215cf2e16"],1);
                 // $active_group = 'default';
                 // $query_builder = TRUE;
                 // // Connect to DB
