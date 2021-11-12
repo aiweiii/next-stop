@@ -73,32 +73,32 @@ function fetchUniFromJson(input) {
         })
 }
 
-// function search_students() {
-//     // console.log('yea clicked');
-//     var uni = document.getElementById("uniName").innerHTML;
-//     // uni = "University of Vienna";
+function search_students() {
+    // console.log('yea clicked');
+    var uni = document.getElementById("uniName").innerHTML;
+    // uni = "University of Vienna";
 
-//     // debug
-//     // console.log(uni);
+    // debug
+    // console.log(uni);
 
-//     const url = 'get_studentsAPI.php?university=' + uni
-//     // console.log(url);
-//     axios.get(url)
-//         .then(response => {
-//             var result = response.data
-//             // console.log(result)
+    const url = 'get_studentsAPI.php?university=' + uni
+    // console.log(url);
+    axios.get(url)
+        .then(response => {
+            var result = response.data
+            // console.log(result)
 
-//             document.getElementById("students_uni_header").innerText = "Students entering this uni"
-//             for (user of result) {
-//                 document.getElementById("students_uni").innerHTML += <li>${user}</li>
-//             }
+            document.getElementById("students_uni_header").innerText = "Students entering this uni"
+            for (user of result) {
+                document.getElementById("students_uni").innerHTML += `<li>${user}</li>`
+            }
 
-//         })
-//         .catch(error => {
-//             // process error object
-//             console.log('error')
-//         });
-// }
+        })
+        .catch(error => {
+            // process error object
+            console.log('error')
+        });
+}
 
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -132,7 +132,7 @@ function initMap() {
         document.getElementById("uniName").innerText = inputVal;
 
         // Render University description
-        // search_students();
+        search_students();
 
         // Google Maps start retrieving place details
         const place = autocomplete.getPlace();
