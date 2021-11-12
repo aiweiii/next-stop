@@ -1,60 +1,62 @@
-function isUniApproved(input,university) {
-    university = university.split(" ");
-    validity = [];
-    validity.length = university.length;
+alert("alert 11")
 
-    input = input.split(',')
-    first_part = input[0];
-    second_part = input[1];
+// function isUniApproved(input,university) {
+//     university = university.split(" ");
+//     validity = [];
+//     validity.length = university.length;
 
-    for (let i = 0; i < university.length; i++) {
-        const word = university[i];
-        if (first_part.includes(word)) {
-            validity[i] = true
-        } else {
-            validity[i] = false
-        }
-    }
+//     input = input.split(',')
+//     first_part = input[0];
+//     second_part = input[1];
 
-    true_count = 0;
-    false_count = 0;
-    validity.forEach(bool => {
-        if (bool === true) {
-            true_count += 1
-        }else{
-            false_count += 1
-        }
-    });
+//     for (let i = 0; i < university.length; i++) {
+//         const word = university[i];
+//         if (first_part.includes(word)) {
+//             validity[i] = true
+//         } else {
+//             validity[i] = false
+//         }
+//     }
 
-    if (true_count >= (validity.length/2)) {
-        console.log('true')
-        return true
-    }else{
-        console.log('false')
-        return false
-    }
-}
+//     true_count = 0;
+//     false_count = 0;
+//     validity.forEach(bool => {
+//         if (bool === true) {
+//             true_count += 1
+//         }else{
+//             false_count += 1
+//         }
+//     });
 
-function compareArr(arr,uniArr) {
+//     if (true_count >= (validity.length/2)) {
+//         console.log('true')
+//         return true
+//     }else{
+//         console.log('false')
+//         return false
+//     }
+// }
 
-    var tfArr = Array.from({ length: uniArr.length }, (v, i) => false)
+// function compareArr(arr,uniArr) {
 
-    for (let i = 0; i < uniArr.length; i++) {
-        let word = arr[i];
-        if (uniArr.includes(word)) {
-            tfArr[i] = true;
-        }
-    }
-    const count = tfArr.filter(Boolean).length;
-    return count
-}
+//     var tfArr = Array.from({ length: uniArr.length }, (v, i) => false)
+
+//     for (let i = 0; i < uniArr.length; i++) {
+//         let word = arr[i];
+//         if (uniArr.includes(word)) {
+//             tfArr[i] = true;
+//         }
+//     }
+//     const count = tfArr.filter(Boolean).length;
+//     return count
+// }
 
 function fetchUniFromJson(input) {
-    // input is a STRING: "Aarhus University, School of Business and Social Sciences, Fuglesangs Allé, Aarhus Municipality, Denmark"
+    // input is a STRING from Google: "Aarhus University, School of Business and Social Sciences, Fuglesangs Allé, Aarhus Municipality, Denmark"
     input = input.split(",");
-    var firstArr = firstArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // Faculty of Economics and Business
-    var secondArr = secondArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // University of Zagreb
-    var country = input[-1]; //check if it will return \n
+    var nameArr = input[0] + input[1];
+    var nameArr = nameArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // Aarhus University, School of Business and Social Sciences
+    var country = input; //check if it will return \n
     var highestCount = 0;
     var mostAccurateStr = [];
 
@@ -63,20 +65,24 @@ function fetchUniFromJson(input) {
         .then(data => {
             // anything you want to do with the data goes between these 2 brackets
             data.forEach(obj => {
+                console.log(obj)
                 if (obj["Country"] == country) {
-                    var currUniArr = obj["University"];
-                    currUniArr = currUni.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e)
 
-                    //compare FIRST ARRAY with SECOND ARRAY's number of 'TRUE' and pick the arr with the higher number of 'TRUE'
-                    const firstCount = compareArr(firstArr, currUniArr);
-                    const secondCount = compareArr(secondArr, currUniArr);
-
-                    if (firstCount>=secondCount && firstCount>highestCount) {
-                        // if it's equal, just take the first one
-                        mostAccurateArr = firstArr;
-                    } else if (secondCount >= firstCount && secondCount > highestCount) {
-                        mostAccurateArr = secondArr;
+                    var currUni = obj["University"];
+                    // direct check on string
+                    if (currUni.includes(input[0]) || currUni.includes(input[1])) {
+                        return currUni
                     }
+                    // //compare FIRST ARRAY with SECOND ARRAY's number of 'TRUE' and pick the arr with the higher number of 'TRUE'
+                    // const firstCount = compareArr(firstArr, currUniArr);
+                    // const secondCount = compareArr(secondArr, currUniArr);
+
+                    // if (firstCount>=secondCount && firstCount>highestCount) {
+                    //     // if it's equal, just take the first one
+                    //     mostAccurateArr = firstArr;
+                    // } else if (secondCount >= firstCount && secondCount > highestCount) {
+                    //     mostAccurateArr = secondArr;
+                    // }
                 }
 
             });
@@ -138,14 +144,15 @@ function initMap() {
 
         // Render University name
         let inputVal = document.getElementById("pac-input").value;
-        inputVal = inputVal.split(",")[0];
-        document.getElementById("uniName").innerText = inputVal;
+        let uni = fetchUniFromJson(inputVal)
+        document.getElementById("uniName").innerText = uni;
 
         // Render University description
         search_students();
 
         // Google Maps start retrieving place details
         const place = autocomplete.getPlace();
+        document.getElementById("uniName").innerText = uni;
 
         if (!place.geometry || !place.geometry.location) {
             return;
