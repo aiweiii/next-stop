@@ -85,6 +85,8 @@ function search_students() {
     // console.log(url);
     axios.get(url)
         .then(response => {
+            document.getElementById("students_uni").innerHTML = ``
+
             var result = response.data
             // console.log(result)
 
@@ -97,6 +99,8 @@ function search_students() {
         .catch(error => {
             // process error object
             console.log('error')
+            document.getElementById("null_students").innerHTML = 'No students are exchanging in this university :('
+
         });
 }
 
