@@ -1,88 +1,3 @@
-function isUniApproved(input,university) {
-    university = university.split(" ");
-    validity = [];
-    validity.length = university.length;
-
-    input = input.split(',')
-    first_part = input[0];
-    second_part = input[1];
-
-    for (let i = 0; i < university.length; i++) {
-        const word = university[i];
-        if (first_part.includes(word)) {
-            validity[i] = true
-        } else {
-            validity[i] = false
-        }
-    }
-
-    true_count = 0;
-    false_count = 0;
-    validity.forEach(bool => {
-        if (bool === true) {
-            true_count += 1
-        }else{
-            false_count += 1
-        }
-    });
-
-    if (true_count >= (validity.length/2)) {
-        console.log('true')
-        return true
-    }else{
-        console.log('false')
-        return false
-    }
-}
-
-function compareArr(arr,uniArr) {
-
-    var tfArr = Array.from({ length: uniArr.length }, (v, i) => false)
-
-    for (let i = 0; i < uniArr.length; i++) {
-        let word = arr[i];
-        if (uniArr.includes(word)) {
-            tfArr[i] = true;
-        }
-    }
-    const count = tfArr.filter(Boolean).length;
-    return count
-}
-
-function fetchUniFromJson(input) {
-    // input is a STRING: "Aarhus University, School of Business and Social Sciences, Fuglesangs Allé, Aarhus Municipality, Denmark"
-    input = input.split(",");
-    var firstArr = firstArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // Faculty of Economics and Business
-    var secondArr = secondArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // University of Zagreb
-    var country = input[-1]; //check if it will return \n
-    var highestCount = 0;
-    var mostAccurateStr = [];
-
-    fetch("countries.json")
-        .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
-        .then(data => {
-            // anything you want to do with the data goes between these 2 brackets
-            data.forEach(obj => {
-                if (obj["Country"] == country) {
-                    var currUniArr = obj["University"];
-                    currUniArr = currUni.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e)
-
-                    //compare FIRST ARRAY with SECOND ARRAY's number of 'TRUE' and pick the arr with the higher number of 'TRUE'
-                    const firstCount = compareArr(firstArr, currUniArr);
-                    const secondCount = compareArr(secondArr, currUniArr);
-
-                    if (firstCount>=secondCount && firstCount>highestCount) {
-                        // if it's equal, just take the first one
-                        mostAccurateArr = firstArr;
-                    } else if (secondCount >= firstCount && secondCount > highestCount) {
-                        mostAccurateArr = secondArr;
-                    }
-                }
-
-            });
-        })
-}
-
 function search_students() {
     // console.log('yea clicked');
     var uni = document.getElementById("uniName").innerHTML;
@@ -145,9 +60,9 @@ function initMap() {
     autocomplete.addListener("place_changed", () => {
         infowindow.close();
 
-
         // Google Maps start retrieving place details
         const place = autocomplete.getPlace();
+        document.getElementById("uniName").innerText = uni;
 
         if (!place.geometry || !place.geometry.location) {
             return;
@@ -173,7 +88,6 @@ function initMap() {
             place.formatted_address;
         infowindow.open(map, marker);
 
-        
         // Render University name
         let inputVal = document.getElementById("place-name").innerText;
         document.getElementById("uniName").innerText = inputVal;
