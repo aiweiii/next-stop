@@ -62,7 +62,10 @@ function initMap() {
 
         // Google Maps start retrieving place details
         const place = autocomplete.getPlace();
-        document.getElementById("uniName").innerText = uni;
+
+        // Render University name
+        document.getElementById("uniName").innerText = place.name;
+
 
         if (!place.geometry || !place.geometry.location) {
             return;
@@ -88,9 +91,6 @@ function initMap() {
             place.formatted_address;
         infowindow.open(map, marker);
 
-        // Render University name
-        let inputVal = document.getElementById("place-name").innerText;
-        document.getElementById("uniName").innerText = inputVal;
 
         // Render University description
         search_students();

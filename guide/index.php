@@ -126,7 +126,27 @@
         <ol id="students_uni">
         </ol>
 
-        <h4>Quiz Goes Here</h4>
+        <!-- Quiz Starts Here -->
+        <!-- Info Box - Ask users if they want to play -->
+        <div class="card text-center border-primary" style="width: 100%;">
+          <img src="img/infoImg1.jpg" class="card-img-top" alt="People Celebrating">
+          <div class="card-body">
+            <h5 class="card-title text-primary fs-2 fw-bold">Quiz Time!</h5>
+            <p class="card-text fs-4">Have what it takes? Test your knowledge on this place!</p>
+            <a href="#" class="btn btn-primary btn-lg col-6">Let's Go!</a>
+          </div>
+        </div>
+
+        <!-- Quiz Box - When user starts to play -->
+        <div class="card text-center border-primary" style="width: 100%;">
+          <img src="img/infoImg1.jpg" class="card-img-top" alt="People Celebrating">
+          <div class="card-body">
+            <h5 class="card-title text-primary fs-2 fw-bold">Quiz Time!</h5>
+            <p class="card-text fs-4">Have what it takes? Test your knowledge on this place!</p>
+            <a href="#" class="btn btn-primary btn-lg col-6">Let's Go!</a>
+          </div>
+        </div>
+
       </div>
     </div>
 
