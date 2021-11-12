@@ -2,26 +2,23 @@ html {
     scroll-behavior: smooth;
 }
 
-.sign_up_position{
+.sign_up_position {
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-image: url('index/signup_bg.png');
     background-size: cover;
     background-position: center;
-
     color: #494949;
     font-size: 1.1em;
     font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
-#sign_up_form{
+#sign_up_form {
     background-color: white;
-
 }
 
-.glassish{
+.glassish {
     background-color: rgba(255, 255, 255, 0.41);
     /* backdrop-filter: blur(4px); */
     display: flex;
@@ -63,7 +60,7 @@ button:hover {
     color: #fe8700;
 }
 
-a:hover{
+a:hover {
     color: black;
 }
 
@@ -76,7 +73,7 @@ input {
     padding: 5px;
 }
 
-input, button{
+input, button {
     border-radius: 5px;
     width: 100%;
 }
@@ -91,22 +88,36 @@ input, button{
 
 @media only screen and (max-width: 992px) {
     .mobile-display {
+        width: 50vw;
+        height: 100vh;
+        border: 1px #D1D1D1 solid;
+        border-radius: 5px;
+    }
+    .picture-div {
+        width: 0;
+    }
+    .glassish {
+        border: 0px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .glassish {
+        backdrop-filter: blur(4px);
+    }
+    .mobile-display {
+        border-top-right-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
+}
+
+@media only screen and (max-width: 798px) {
+    .mobile-display {
         position: fixed;
-        left: 0px;
         top: 70px;
+        left: 0px;
         width: 100vw;
         height: 100vh;
         border: 1px #D1D1D1 solid;
     }
-    }
-
-    @media only screen and (min-width: 992px) {
-        .glassish {
-            backdrop-filter: blur(4px);
-        }
-
-        .mobile-display {
-            border-top-right-radius: 35px;
-            border-bottom-right-radius: 35px;
-        }
-      }
+}
