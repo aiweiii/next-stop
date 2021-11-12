@@ -5,6 +5,8 @@
     if (isset($_SESSION['email'])) {
         $email = $_SESSION['email'];
         $username = $_SESSION['username'];
+    } else {
+      $username = '';
     }
 
 ?>
@@ -34,19 +36,6 @@
 </head>
 
 <body>
-    <script>
-        var username = '<?php echo $username;?>';
-        console.log(username);
-        if (username != null) {
-            //for smaller devices
-            document.getElementById("nav-login-signup").innerHTML = '';
-            document.getElementById("nav-username").innerHTML = 'Profile';
-
-            //for larger devices
-            document.getElementById("user-profile").style.display = 'flex';
-            document.getElementById("nav-login-signup-2").style.display = "none";
-        } 
-    </script>
     <!-- navbar placeholder !!!! -->
     <nav style="border-bottom: solid 1px #cfcfcf;">
       <div class="nav-logo">
@@ -67,8 +56,8 @@
       </div>
 
       <a href="../validation_page/validation_page.php" class="user-profile" id="user-profile">
-          <div class="profile-pic"><?php print_r($_SESSION['username'][0]);?></div>
-          <div class="username" id="username"><?php print_r($_SESSION['username']);?></div>
+          <div class="profile-pic"><?php print_r($username[0]);?></div>
+          <div class="username" id="username"><?php print_r($username);?></div>
       </a>
 
       <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
@@ -77,6 +66,31 @@
           <span class="menu menu-small menu-bottom"></span>
       </div>
   </nav>
+
+  <script>
+        var username = '<?php echo $username;?>';
+        if (username != '') {
+            //for smaller devices
+            document.getElementById("nav-login-signup").innerHTML = '';
+            document.getElementById("nav-username").innerHTML = 'Profile';
+
+            //for larger devices
+            document.getElementById("user-profile").style.display = 'flex';
+            document.getElementById("nav-login-signup-2").style.display = "none";
+        } else {
+            document.getElementById("nav-home").href = '../index.html'
+        }
+
+        var navItems = document.getElementById("nav-items");
+        navItems.style.maxHeight = "0px";
+        function toggleMenu() {
+            if (navItems.style.maxHeight == "0px") {
+                navItems.style.maxHeight = "200px";
+            } else {
+                navItems.style.maxHeight = "0px";
+            }
+        } 
+    </script>
 
   <div class="container-fluid p-0" >
 
@@ -116,20 +130,6 @@
 
   </div>
 
-
-  <script>
-        var navItems = document.getElementById("nav-items");
-        navItems.style.maxHeight = "0px";
-
-        function toggleMenu() {
-            if (navItems.style.maxHeight == "0px") {
-                navItems.style.maxHeight = "200px";
-            } else {
-                navItems.style.maxHeight = "0px";
-            }
-        }
-
-  </script>
 
   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
   <script
