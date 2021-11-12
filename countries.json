@@ -777,140 +777,165 @@
         "Continent": "Asia",
         "Country": "Hong Kong",
         "University": "City University of Hong Kong",
-        "Description": "",
+        "Description": "One of the eight tertiary institutions funded by Hong Kong Special Administrative Region government through the University Grants Committee. The Faculty of Business at City University of Hong Kong offers undergraduate and postgraduate programmes tailormade to suit the specific needs of different professions, as well as research degrees leading to the awards of MPhil and PhD. The Faculty comprises 6 departments namely Accountancy, Economics and Finance, Information systems, Management, Management Sciences and marketing and is one of the largest business schools in Hong Kong. It has some 200 academic staff and eminent scholars recruited from around the world. This diversity ensures our participants have a global vision of the business environment.",
         "Users":[["Hong Ming En","M","Year 4", "SOB"], ["Lew Xi Ling","F","Year 4", "SCIS"]]
     },
     {
         "Continent": "Asia",
         "Country": "Hong Kong",
         "University": "Hong Kong University of Science and Technology",
-        "Description": "",
+        "Description": "The story of the Hong Kong University of Science and Technology begins with the late Sir Edward Youde, Governor of Hong Kong from 1982 to 1986, Sir S.Y. Chung, and others who foresaw the need in the territory for an educational institution to lead the way in the areas of science and technology vital to the region’s economic future. HKUST Business School comprises six departments: Accounting, Economics, Finance, Information & Systems Management, Management of Organizations, and Marketing. There have been eight congregations since the establishment of the business school in 1991. The University campus occupies a 60-hectares (150 acre) site of sweeping natural beauty on the Clear Water Bay peninsula in East Kowloon, less than 30 minutes, driving time from central Hong Kong.",
         "Users":[["Siu Ziak Loo","M","Year 4", "SOA"], ["Ho Lin Min","F","Year 4", "SOB"]]
     },
     {
         "Continent": "Asia",
         "Country": "Hong Kong",
-        "University": "Hong Kong Baptist University"
+        "University": "Hong Kong Baptist University",
+        "Description": "In 1956, Hong Kong Baptist College was founded by the Baptist Convention of Hong Kong as a post-secondary college committed to the provision of whole person education. In 1983, Hong Kong Baptist College became a fullyfunded public tertiary institution. It gained university status in 1994 and was renamed Hong Kong Baptist University (HKBU). Today HKBU encompasses eight Faculties/Schools offering a range of undergraduate programmes, associate degree and higher diploma programmes as well as taught postgraduate programmes and research postgraduate programmes leading to the award of master and doctoral degrees."
     },
     {
         "Continent": "Asia",
         "Country": "Hong Kong",
-        "University": "Chinese University of Hong Kong"
+        "University": "Chinese University of Hong Kong",
+        "Description": "The Chinese University of Hong Kong (CUHK) is a leading comprehensive research university. It has a total of 61 departments under the Faculties of Arts, Business Administration, Education, Engineering, Medicine, Science, Social Science and Law. Currently, it has approximately 21,000 students undertaking undergraduate, postgraduate and doctoral programmes."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "China University of Political Science and Law"
+        "University": "China University of Political Science and Law",
+        "Description": "China University of Political Science and Law is a national public research university specialized in law, arts, history, philosophy, economics, management and foreign languages established in 1952 in Beijing, China. China University of Political Science and Law is a first tier institution within the national key university Project 211 and the Project 985 Innovative Platforms for Key Disciplines as part of the national endeavor to build world-class universities. CUPL is widely considered to be one of the best Chinese universities in legal studies. It is also one of the most competitive and selective universities to enter in China. "
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Fudan University, School of Economics"
+        "University": "Fudan University, School of Economics",
+        "Description": "Fudan consists of seventeen schools, and four independent departments (Physics, Chemistry, Macromolecular Science, and Environmental Science and Engineering). T he University confers bachelor's degrees in 68 academic disciplines, master's degrees in 209 disciplines and doctoral degrees in 175 academic disciplines. Years of learning and discovering have yielded great benefits as well as profits. In return, the multi-pattern development of the high-tech industries helps the University with breathtaking efficiency to industrialize the research outcomes. Meanwhile, a group of University-sponsored enterprises is emerging, filled with passion and ambition. Fudan has thus created its signature style of doing business."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Fudan University, School of Management"
+        "University": "Fudan University, School of Management",
+        "Description": "Fudan consists of seventeen schools, and four independent departments (Physics, Chemistry, Macromolecular Science, and Environmental Science and Engineering). T he University confers bachelor's degrees in 68 academic disciplines, master's degrees in 209 disciplines and doctoral degrees in 175 academic disciplines. Years of learning and discovering have yielded great benefits as well as profits. In return, the multi-pattern development of the high-tech industries helps the University with breathtaking efficiency to industrialize the research outcomes. Meanwhile, a group of University-sponsored enterprises is emerging, filled with passion and ambition. Fudan has thus created its signature style of doing business."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Fudan University, School of Social Development and Public Policy66"
+        "University": "Fudan University, School of Social Development and Public Policy",
+        "Description": "Fudan consists of seventeen schools, and four independent departments (Physics, Chemistry, Macromolecular Science, and Environmental Science and Engineering). T he University confers bachelor's degrees in 68 academic disciplines, master's degrees in 209 disciplines and doctoral degrees in 175 academic disciplines. Years of learning and discovering have yielded great benefits as well as profits. In return, the multi-pattern development of the high-tech industries helps the University with breathtaking efficiency to industrialize the research outcomes. Meanwhile, a group of University-sponsored enterprises is emerging, filled with passion and ambition. Fudan has thus created its signature style of doing business."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Fudan University, School of Software"
+        "University": "Fudan University, School of Software",
+        "Description": "Fudan consists of seventeen schools, and four independent departments (Physics, Chemistry, Macromolecular Science, and Environmental Science and Engineering). T he University confers bachelor's degrees in 68 academic disciplines, master's degrees in 209 disciplines and doctoral degrees in 175 academic disciplines. Years of learning and discovering have yielded great benefits as well as profits. In return, the multi-pattern development of the high-tech industries helps the University with breathtaking efficiency to industrialize the research outcomes. Meanwhile, a group of University-sponsored enterprises is emerging, filled with passion and ambition. Fudan has thus created its signature style of doing business."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Jilin University"
+        "University": "Jilin University",
+        "Description": "Students of Mainland China, Hong Kong, Macau and Taiwan nationality CANNOT apply to this university for ISEP. Jilin University (JLU) is a leading national university under the direct jurisdiction of China's Ministry of Education. Located in Changchun, the capital city of Jilin Province in Northeastern China, the University has eight campuses in five districts which are home to thirty-nine colleges covering eleven academic disciplines, including philosophy, economics, law, literature, education, history, science, engineering, agriculture, medicine, and management. The University boasts sixteen disciplinary areas, five national key laboratories, and eight national bases for the development of basic science. Other resources include five research bases for humanities and social sciences, seven key laboratories sponsored by the Ministry of Education and eleven by other ministries of Chinese government."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Nanjing University"
+        "University": "Nanjing University",
+        "Description": "Founded in 1902, Nanjing University (NJU) is a century-old university and enjoys high reputation both in China and abroad. It is part of the prestigious C9 League of Universities in China. Presently, NJU has over 33,205 full time students, among whom are 14,188 undergraduate students, 15,667 master and doctoral students and 3,350 international students. It is a comprehensive university and offers courses ranging from humanities, business and engineering related disciplines. In terms of ranking, according to the Essential Science Indicators, 16 academic disciplines at NJU are ranked in the top 1% worldwide. NJU has three campuses: Xianlin Campus, Gulou Campus and Pukou Campus."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Nankai University"
+        "University": "Nankai University",
+        "Description": "Students of Mainland China, Hong Kong, Macau and Taiwan nationality CANNOT apply to this university for ISEP. Founded in 1919 by famous educationist Zhang Bo Ling and Yan Xiu in Tianjing city, Nankai University is not only one of top universities in China, but also a famous tertiary educational institute in the world. The university plays an active role in the international education exchange and research. The first Prime Minister of China Zhou En Lai graduated from Nankai University. The campus has a total area of 1.46 million square metres and it is only 137 km from Beijing. The university has 18 schools and currently, it has 28023 students."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Peking University (Guanghua School of Management)"
+        "University": "Peking University (Guanghua School of Management)",
+        "Description": "Founded in 1898, Peking University was originally known as the Imperial University of Peking. It was the first national university covering comprehensive disciplines in China, and has been a leading institution of higher education in China since its establishment. In 1912, the university adopted its present name. At the end of the 20th century, the Chinese government put Peking University at the top of its agenda for promoting higher education, with the aim to build a world-class university in the 21st Century. Peking University has continually played the essential role of pioneers in the course of China's modernization. The university's traditional emphasis on patriotism, progress, democracy, and science, together with its educational standards of diligence, precision, factualism, and innovation, have been passed down from generation to generation."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Peking University (Law School)"
+        "University": "Peking University (Law School)",
+        "Description": "Founded in 1898, Peking University was originally known as the Imperial University of Peking. It was the first national university covering comprehensive disciplines in China, and has been a leading institution of higher education in China since its establishment. In 1912, the university adopted its present name. At the end of the 20th century, the Chinese government put Peking University at the top of its agenda for promoting higher education, with the aim to build a world-class university in the 21st Century. Peking University has continually played the essential role of pioneers in the course of China's modernization. The university's traditional emphasis on patriotism, progress, democracy, and science, together with its educational standards of diligence, precision, factualism, and innovation, have been passed down from generation to generation."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Peking University (School of International Studies)"
+        "University": "Peking University (School of International Studies)",
+        "Description": "Founded in 1898, Peking University was originally known as the Imperial University of Peking. It was the first national university covering comprehensive disciplines in China, and has been a leading institution of higher education in China since its establishment. In 1912, the university adopted its present name. At the end of the 20th century, the Chinese government put Peking University at the top of its agenda for promoting higher education, with the aim to build a world-class university in the 21st Century. Peking University has continually played the essential role of pioneers in the course of China's modernization. The university's traditional emphasis on patriotism, progress, democracy, and science, together with its educational standards of diligence, precision, factualism, and innovation, have been passed down from generation to generation."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Renmin University (School of Business)"
+        "University": "Renmin University (School of Business)",
+        "Description": "Renmin University of China, or Renda, a public research university located in the Haidian District of Beijing, China. Founded by the Communist Party of China, RUC possesses academic strengths in humanities and social sciences, and is regarded highly among Chinese universities."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Renmin University of China"
+        "University": "Renmin University of China",
+        "Description": "Renmin University of China, or Renda, a public research university located in the Haidian District of Beijing, China. Founded by the Communist Party of China, RUC possesses academic strengths in humanities and social sciences, and is regarded highly among Chinese universities."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Renmin University of China (School of Law)"
+        "University": "Renmin University of China (School of Law)",
+        "Description": "Renmin University of China, or Renda, a public research university located in the Haidian District of Beijing, China. Founded by the Communist Party of China, RUC possesses academic strengths in humanities and social sciences, and is regarded highly among Chinese universities."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Shanghai Jiao Tong University"
+        "University": "Shanghai Jiao Tong University",
+        "Description": "Founded in 1918, The School of Management, Shanghai Jiao Tong University, previously known as Railway Management Department is one of the earliest business schools in China. It originated from Nan Yang Business Institute which was founded by Mr. SHENG Xuanhuai with the permission of the government of Qing Dynasty in 1903. In 1996, Aetna International Inc. entered into cooperation with SJTU to develop the school of management. In 2000, the School of Management was officially named as Antai School of Management. In 2006, ASOM Officially renamed as Antai College of Economics and Management. Antai College of Economics and Management is located in Fa Hua campus, which is 15 minutes’ walk from the main campus."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Shanghai Jiaotong University (KoGuan Law School)"
+        "University": "Shanghai Jiaotong University (KoGuan Law School)",
+        "Description": "Founded in 1918, The School of Management, Shanghai Jiao Tong University, previously known as Railway Management Department is one of the earliest business schools in China. It originated from Nan Yang Business Institute which was founded by Mr. SHENG Xuanhuai with the permission of the government of Qing Dynasty in 1903. In 1996, Aetna International Inc. entered into cooperation with SJTU to develop the school of management. In 2000, the School of Management was officially named as Antai School of Management. In 2006, ASOM Officially renamed as Antai College of Economics and Management. Antai College of Economics and Management is located in Fa Hua campus, which is 15 minutes’ walk from the main campus."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Shanghai University of Finance & Economics"
+        "University": "Shanghai University of Finance & Economics",
+        "Description": "Founded in 1918, The School of Management, Shanghai Jiao Tong University, previously known as Railway Management Department is one of the earliest business schools in China. It originated from Nan Yang Business Institute which was founded by Mr. SHENG Xuanhuai with the permission of the government of Qing Dynasty in 1903. In 1996, Aetna International Inc. entered into cooperation with SJTU to develop the school of management. In 2000, the School of Management was officially named as Antai School of Management. In 2006, ASOM Officially renamed as Antai College of Economics and Management. Antai College of Economics and Management is located in Fa Hua campus, which is 15 minutes’ walk from the main campus."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Southwestern University of Finance and Economics (Research Institute of Economics and Management)"
+        "University": "Southwestern University of Finance and Economics (Research Institute of Economics and Management)",
+        "Description": "Southwestern University of Finance and Economics (SWUFE) is a specialised finance, economics and business university located in Chengdu, China. SWUFE is one of the three specialised universities in finance and economics in China. As a training base for the development of the financial industry as well as the socio-economic development of western China, SWUFE is known as China’s financial talent pool. SMU students will have the opportunity to study at the Research Institute of Economics and Management (RIEM). RIEM was established in 2006 in dedication to high quality teaching and research in economics, finance and management."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Sun Yat Sen University, Business School"
+        "University": "Sun Yat Sen University, Business School",
+        "Description": "Sun Yat-Sen University, previously named Guangdong University, was founded by Mr Sun Yat-Sen in 1924. He combined the National Normal University, Guangdong Law University and Guangdong Agricultural University to form Guangdong University. In 1926, Guangdong University was changed to Sun Yat-Sen University in memory of Mr Sun Yat-Sen. Located on the bank of the Zhujiang River and the cost of Southern Sea in the capital city of Guangdong Province - Guangzhou, Sun Yat-Sen University has a total area of 5.04 sq km. It is one of the key universities in China. Since its establishment, it has grown from the initial 7 schools into 19 schools in three campuses. It has a total student population of 40,400, among whom, 1970 PhDs, 5440 masters, 1250 post graduates and 17,100 undergraduates and 450 foreign students. It also has more major affiliated hospitals. It has been active in the academic exchange with foreign universities and academic institutions."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Sun Yat Sen University, School of Government"
+        "University": "Sun Yat Sen University, School of Government",
+        "Description": "Sun Yat-Sen University, previously named Guangdong University, was founded by Mr Sun Yat-Sen in 1924. He combined the National Normal University, Guangdong Law University and Guangdong Agricultural University to form Guangdong University. In 1926, Guangdong University was changed to Sun Yat-Sen University in memory of Mr Sun Yat-Sen. Located on the bank of the Zhujiang River and the cost of Southern Sea in the capital city of Guangdong Province - Guangzhou, Sun Yat-Sen University has a total area of 5.04 sq km. It is one of the key universities in China. Since its establishment, it has grown from the initial 7 schools into 19 schools in three campuses. It has a total student population of 40,400, among whom, 1970 PhDs, 5440 masters, 1250 post graduates and 17,100 undergraduates and 450 foreign students. It also has more major affiliated hospitals. It has been active in the academic exchange with foreign universities and academic institutions."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Tsinghua University, School of Economics and Management"
+        "University": "Tsinghua University, School of Economics and Management",
+        "Description":"Tsinghua University was established in 1911, originally under the name “Tsinghua Xuetang”. The school was renamed \"Tsinghua School\" in 1912. The university section was founded in 1925. The name “National Tsinghua University” was adopted in 1928. The faculty greatly valued the interaction between Chinese and Western cultures, the sciences and humanities, the ancient and modern. Tsinghua scholars Wang Guowei, Liang Qichao, Chen Yinque and Zhao Yuanren, renowned as the \"Four Tutors\" in the Institute of Chinese Classics, advocated this belief and had a profound impact on Tsinghua's later development. Since China opened up to the world in 1978, Tsinghua University has developed at a breathtaking pace into a comprehensive research university. At present, the university has 14 schools and 56 departments with faculties in science, engineering, humanities, law, medicine, history, philosophy, economics, management, education and art. The University has now over 25,900 students, including 13,100 undergraduates and 12,800 graduate students. As one of China’s most renowned universities, Tsinghua has become an important institution for fostering talent and scientific research."
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Tsinghua University, School of Law"
+        "University": "Tsinghua University, School of Law",
+        "Description": ""
     },
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Tsinghua University, School of Social Sciences"
+        "University": "Tsinghua University, School of Social Sciences",
+        "Description": ""
     },
     {
         "Continent": "Asia",
