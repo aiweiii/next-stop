@@ -34,6 +34,19 @@
 </head>
 
 <body>
+    <script>
+        var username = '<?php echo $username;?>';
+        console.log(username);
+        if (username != null) {
+            //for smaller devices
+            document.getElementById("nav-login-signup").innerHTML = '';
+            document.getElementById("nav-username").innerHTML = 'Profile';
+
+            //for larger devices
+            document.getElementById("user-profile").style.display = 'flex';
+            document.getElementById("nav-login-signup-2").style.display = "none";
+        } 
+    </script>
     <!-- navbar placeholder !!!! -->
     <nav style="border-bottom: solid 1px #cfcfcf;">
       <div class="nav-logo">
@@ -104,18 +117,6 @@
 
 
   <script>
-        var username = '<?php echo $username;?>';
-        if (username != null) {
-            //for smaller devices
-            document.getElementById("nav-login-signup").innerHTML = '';
-            document.getElementById("nav-username").innerHTML = 'Profile';
-
-            //for larger devices
-            document.getElementById("user-profile").style.display = 'flex';
-            document.getElementById("nav-login-signup-2").style.display = "none";
-            
-        } 
-
         var navItems = document.getElementById("nav-items");
         navItems.style.maxHeight = "0px";
 
