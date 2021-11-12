@@ -42,6 +42,16 @@
     background: rgba(255,68,96,255);
     border-radius: 4px;
     font-size: 18px;
+
+}
+
+.find-out, .email {
+    transition: 0.3s ease;
+}
+
+.email:hover, .find-out:hover {
+    background: var(--tangerine);
+
 }
 
 /*RESPONSIVENESS*/
