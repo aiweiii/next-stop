@@ -74,7 +74,7 @@ if (isset($_SESSION['email'])) {
                     <div class="task-subtitle">See what is trending right now</div>    
                 </div>
             </a>
-            <a href="../guide/index.html" class="task">
+            <a href="../guide/index.php" class="task">
                 <div class="icon find">🔍</div>
                 <div class="right">
                     <div class="task-text">Explore the University Guides</div>

@@ -121,9 +121,10 @@
         <h4 id="students_uni_header"></h4>
 
         <p id="null_students"> 
-          <ol id="students_uni">
-          </ol>
         </p>
+        
+        <ol id="students_uni">
+        </ol>
 
         <h4>Quiz Goes Here</h4>
       </div>

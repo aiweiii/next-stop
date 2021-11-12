@@ -33,12 +33,14 @@ class UserDAO {
     }
 
     function get_students( $university ) {
+        $university = '%' . $university . '%';
+
         // connect to database
         $connMgr = new ConnectionManager();
         $conn = $connMgr->connect();
         
         // prepare select
-        $sql = "SELECT fullname, email, password_hash, university FROM user_info WHERE university like :university%";
+        $sql = "SELECT fullname, email, password_hash, university FROM user_info WHERE university LIKE :university";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(":university", $university, PDO::PARAM_STR);
             
