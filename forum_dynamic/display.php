@@ -100,7 +100,7 @@ $university = '*';
             document.getElementById("user-profile").style.display = 'flex';
             document.getElementById("nav-login-signup-2").style.display = "none";
         } else {
-            document.getElementById("nav-home").href = '../index.html'
+            document.getElementById("nav-home").href = '../log_in.html'
         }
 
 

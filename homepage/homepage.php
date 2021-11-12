@@ -5,7 +5,7 @@ if (isset($_SESSION['email'])) {
     $username = $_SESSION['username'];
     $university = $_SESSION['university'];
 } else {
-    $university = '';
+    header("Location: ../log_in.html");
 }
 ?>
 
