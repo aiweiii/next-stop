@@ -1,12 +1,17 @@
 .hero {
     width: 100%;
-    height: 89vh;
+    height: calc(100vh - 70px);
     font-family: var(--roboto);
     display: flex;
     align-items: stretch;
     padding: 50px 8% 20px 8%;
     border-top: solid 1px #cfcfcf;
     background: var(--light-grey);
+    /* background-image: url("bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
 }
 
 .title {
@@ -109,9 +114,35 @@ progress {
     .title {
         margin-bottom: 30px;
     }
+
+    .pencil {
+        display: none;
+    }
+
+    .stroke {
+        display: none;
+    }
 }
 
 
 .nav-items a:after{
     bottom: -26px;
+}
+
+.pencil {
+    position: fixed;
+    bottom: 17vh;
+    right: 2vh;
+    max-height: 60vh;
+    transform: rotate(-25deg)
+}
+
+.stroke {
+    position: fixed;
+    bottom: 0;
+    right: 43vh;
+}
+
+body {
+    overflow: hidden;
 }

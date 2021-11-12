@@ -60,7 +60,7 @@ if (isset($_SESSION['email'])) {
                 <div class="icon" id="verify_uni">🔍</div>
                 <div class="right">
                     <div class="task-text">Choose Your University</div>
-                    <div class="task-subtitle">Connect with your peers through the Telegram Groupchat</div>    
+                    <div class="task-subtitle">Update your profile page</div>    
                 </div>
             </a>
             <a href="../forum_dynamic/display.php" class="task">
@@ -79,6 +79,8 @@ if (isset($_SESSION['email'])) {
             </a>
         </div>
     </div>
+    <img class="stroke" src="bg.png" alt="">
+    <img class="pencil" src="pencil.png" alt="">
 
 
 
