@@ -20,7 +20,7 @@
 /*PART 1 START*/
 .part-1 {
     width: 100%;
-    height: 90vh ;
+    height: calc(100vh - 64px) ;
     background: linear-gradient(rgba(100, 100, 100, 0.5), rgb(248, 34, 87, .1)), linear-gradient(to right, rgba(28, 26, 27, .7), rgba(28, 26, 27, .01)), url('img/homepage_3.jpg');
     background-size: cover;
     background-position: right;
@@ -42,6 +42,16 @@
     background: rgba(255,68,96,255);
     border-radius: 4px;
     font-size: 18px;
+
+}
+
+.find-out, .email {
+    transition: 0.3s ease;
+}
+
+.email:hover, .find-out:hover {
+    background: var(--tangerine);
+
 }
 
 /*RESPONSIVENESS*/
