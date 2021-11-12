@@ -123,7 +123,7 @@ if (isset($_SESSION['email'])) {
 
                 <div class='form-group'>
                     <label for='exampleFormControlTextarea1'> <b>Details</b> </label>
-                    <textarea class='form-control' id='exampleFormControlTextarea1' placeholder="Inlcude details of your experience!" rows='3' name='entry' id='entry_id' required></textarea>
+                    <textarea class='form-control' id='exampleFormControlTextarea1' placeholder="Include details of your experience!" rows='3' name='entry' id='entry_id' required></textarea>
                 </div>
 
                 <!-- <div class="input-group mb-3">
