@@ -1185,42 +1185,50 @@
     {
         "Continent": "AustraliaOceania",
         "Country": "Australia",
-        "University": "Australian National University"
+        "University": "Australian National University",
+        "Description": "The Australian National University (ANU) is one of the world’s most highly-respected universities. It has been consistently ranked first in the Southern Hemisphere by the QS World University Rankings. As the only Australian member of the International Alliance of Research Universities (IARU), ANU students and staff have many opportunities for collaboration and exchange that contribute to the University’s rich intellectual climate. ANU has links with leading universities in the US, UK, Europe and Asia. ANU is also a member of the Group of Eight (Go8), which is a coalition of leading Australian universities, comprehensive in general and professional education and distinguished by depth and breadth in research. "
     },
     {
         "Continent": "AustraliaOceania",
         "Country": "Australia",
-        "University": "Monash University"
+        "University": "Monash University",
+        "Description": "Monash University is an Australian public research university based in Melbourne, Australia, and is the second oldest university in the State of Victoria. Monash is a member of Australia's Group of Eight, a coalition of Australia's eight leading research Universities, a member of the ASAIHL, and is the only Australian member of the influential M8 Alliance of Academic Health Centers, Universities and National Academies. Monash is one of two Australian universities to be ranked in the École des Mines de Paris (Mines ParisTech) ranking on the basis of the number of alumni listed among CEOs in the 500 largest worldwide companies "
     },
     {
         "Continent": "AustraliaOceania",
         "Country": "Australia",
-        "University": "The University of Queensland"
+        "University": "The University of Queensland",
+        "Description": "The University of Queensland (UQ) is one of Australia’s leading research and teaching institutions. We strive for excellence through the creation, preservation, transfer and application of knowledge. For more than a century, we have educated and worked with outstanding people to deliver knowledge leadership for a better world."
     },
     {
         "Continent": "AustraliaOceania",
         "Country": "Australia",
-        "University": "University of Melbourne, Faculty of Arts"
+        "University": "University of Melbourne, Faculty of Arts",
+        "Description": "Studying at the University of Melbourne provides students with a rich academic and social experience on a wonderful campus in the midst of a city with a great lifestyle. Melbourne, the capital of the state of Victoria, is Australia's second-largest city. It is vibrant, culturally diverse and characterised by its friendly people and atmosphere. The University of Melbourne is five minutes from the centre of Melbourne, a leafy campus with cafés, shops and spectacular architecture. With great public transportation, you'll feel right at home anywhere in the city. "
     },
     {
         "Continent": "AustraliaOceania",
         "Country": "Australia",
-        "University": "University of Melbourne, Faculty of Business and Economics (FBE)"
+        "University": "University of Melbourne, Faculty of Business and Economics (FBE)",
+        "Description": "Studying at the University of Melbourne provides students with a rich academic and social experience on a wonderful campus in the midst of a city with a great lifestyle. Melbourne, the capital of the state of Victoria, is Australia's second-largest city. It is vibrant, culturally diverse and characterised by its friendly people and atmosphere. The University of Melbourne is five minutes from the centre of Melbourne, a leafy campus with cafés, shops and spectacular architecture. With great public transportation, you'll feel right at home anywhere in the city. "
     },
     {
         "Continent": "AustraliaOceania",
         "Country": "Australia",
-        "University": "University of New South Wales"
+        "University": "University of New South Wales",
+        "Description": "UNSW was established in 1949 as part of a post World War II education boom in Australia. UNSW quickly became a leader in the areas of science, engineering and technology. In its short history, UNSW has soared to becoming one of the most respected universities in Australia and the Pacific region and proudly describes itself as “Australia’s most international campus,” with almost five percent of the campus coming from overseas. The campus itself services approximately 26,000 students. Every nation in the Pacific Rim is represented, as well as drawing a healthy number of students from Europe, the Americas and Africa. Despite its size UNSW boasts a 12:1 student/faculty ratio. UNSW occupies an 85-acre, hilltop site in the Kensington area of Sydney. UNSW is about 20 minutes east of downtown Sydney and about 5 minutes west of Coogee (coo-g) Beach. "
     },
     {
         "Continent": "AustraliaOceania",
         "Country": "Australia",
-        "University": "University of New South Wales, Faculty of Law"
+        "University": "University of New South Wales, Faculty of Law",
+        "Description": "UNSW was established in 1949 as part of a post World War II education boom in Australia. UNSW quickly became a leader in the areas of science, engineering and technology. In its short history, UNSW has soared to becoming one of the most respected universities in Australia and the Pacific region and proudly describes itself as “Australia’s most international campus,” with almost five percent of the campus coming from overseas. The campus itself services approximately 26,000 students. Every nation in the Pacific Rim is represented, as well as drawing a healthy number of students from Europe, the Americas and Africa. Despite its size UNSW boasts a 12:1 student/faculty ratio. UNSW occupies an 85-acre, hilltop site in the Kensington area of Sydney. UNSW is about 20 minutes east of downtown Sydney and about 5 minutes west of Coogee (coo-g) Beach. "
     },
     {
         "Continent": "AustraliaOceania",
         "Country": "Australia",
-        "University": "University of Sydney"
+        "University": "University of Sydney",
+        "Description": "The University of Sydney (USYD), founded in 1850, is Australia's first university, and has an international reputation for outstanding teaching, as a centre of research excellence and as an active and engaged community leader. The University has 45,000 students (8,000 international students) and 13 Faculties (/Schools). USYD continues to rise in global rankings, confirming its place within the top 40 universities in the world: the University’s humanities teaching and research was ranked fifth best in the world in the UK’s Times Higher Education Supplement (THES) World University Rankings published in October 2006, while the University as a whole was ranked 35th in the world in the same league table. In the Newsweek global 100 for 2006, the University of Sydney was one of two Australian universities placed in the top 50 in the world. "
     },
     {
         "Continent": "America",
@@ -1445,7 +1453,8 @@
     {
         "Continent": "CentralAsia",
         "Country": "Kazakhstan",
-        "University": "KIMEP University"
+        "University": "KIMEP University",
+        "Description": "KIMEP University has a license to offer academic programs from the Ministry of Education and Science of the Republic of Kazakhstan. The last visit of an attestation commission from the Ministry, on April 14-16 2008, resulted in KIMEP University being awarded five-year attestation for all its degree programs. KIMEP University currently offers fifteen degree programs, including undergraduate programs in Business Administration, Economics, Political Science and International Relations, Public Administration and Journalism, and masters programs in Business Administration, Economics, Law, and Teaching English as a Foreign Language. KIMEP University also offers a doctoral program in Business Administration. An Executive MBA program and a wide range of certificate programs and short courses are also offered. All KIMEP University degree programs are taught in English. KIMEP University faculty is made up of both Kazakhstani and expatriate scholars, the vast majority of whom earned their Masters and Doctoral Degrees from European and North American Universities. KIMEP is home to the largest concentration of Western Ph.D. holders of any institution of higher education in the CIS"
     },
     {
         "Continent": "Africa",
@@ -1456,6 +1465,7 @@
     {
         "Continent": "Africa",
         "Country": "South Africa",
-        "University": "University of Pretoria, South Africa"
+        "University": "University of Pretoria, South Africa",
+        "Description": "UP is the leading research university in South Africa and one of the largest in the country. The University has six campuses as well as a number of other sites of operation, such as the Pretoria Academic Hospital. Central administration is located at the Hatfield campus. The University of Pretoria offers more than 1800 academic programmes in two of the official languages, namely Afrikaans and English. (Some programmes and modules are offered only in English.) In 1996, the University of Pretoria became the university with the highest research output in South Africa and have maintained this status. The academic programmes of the University are offered in the nine faculties stated below, as well as a business school. The faculties comprise a total of 140 departments and 85 centres, institutes and bureaus. UP is at the forefront of tertiary education in the country and collaborate with world-class partners to ensure continued excellence in learning and teaching. "
     }
 ]
