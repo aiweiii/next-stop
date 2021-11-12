@@ -37,6 +37,43 @@ function isUniApproved(input, university) {
     }
 }
 
+function compareArr(arr,uniArr) {
+
+    var tfArr = Array.from({ length: uniArr.length }, (v, i) => false)
+
+    for (let i = 0; i < uniArr.length; i++) {
+        let word = arr[i];
+        if (uniArr.includes(word)) {
+            tfArr[i] = true;
+        }
+    }
+    const count = tfArr.filter(Boolean).length;
+    return count
+}
+
+function fetchUniFromJson(input) {
+    var highest_count = 0;
+    input = input.replace("&-,","").split(",");
+    var firstArr = firstArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // Faculty of Economics and Business
+    var secondArr = secondArr.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e); // University of Zagreb
+
+    fetch("countries.json")
+        .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
+        .then(data => {
+            // anything you want to do with the data goes between these 2 brackets
+            data.forEach(obj => {
+                var currUniArr = obj["University"]
+                currUniArr = currUni.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").split(" ").filter(e => e)
+
+                //compare FIRST ARRAY with SECOND ARRAY's number of 'TRUE' and pick the arr with the higher number of 'TRUE'
+                const first_count = compareArr(firstArr,currUniArr)
+                const second_count
+
+            });
+        })
+
+}
+
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -33.8688, lng: 151.2195 },
@@ -62,16 +99,20 @@ function initMap() {
     });
     autocomplete.addListener("place_changed", () => {
         infowindow.close();
-
-        
-        // Replace university name
-        let inputVal = document.getElementById("pac-input").value;
-        inputVal = inputVal.split(",")[0];
-        document.getElementById("uniName").innerText = inputVal;
         
         search_students();
+        // Render University name
+        document.getElementById("uniName").innerText = input.value;
 
+        // Render University description
+
+
+        // Google Maps start retrieving place details
         const place = autocomplete.getPlace();
+
+        place.setComponentRestrictions({
+            country: ["us", "pr", "vi", "gu", "mp"],
+        });
 
         if (!place.geometry || !place.geometry.location) {
             return;
