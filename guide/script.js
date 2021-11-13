@@ -49,7 +49,6 @@ function search_students() {
                 document.getElementById("students_uni").innerHTML += `<li>${user}</li>`
             }
 
-
         })
         .catch(error => {
             // process error object
@@ -106,7 +105,6 @@ function initMap() {
 
         // Google Maps start retrieving place details
         const place = autocomplete.getPlace();
-        console.log(input.value);
         checkInput(input.value);
 
         // Render University name

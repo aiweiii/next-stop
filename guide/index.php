@@ -99,7 +99,7 @@
     <div class="row g-0" style="height:  calc(100vh - 71px);">
       <!-- Maps -->
       <div class="col-md-6" style="height: 100%;">
-          <input id="pac-input" class="control" type="text" placeholder="Enter a location"/>
+          <input id="pac-input" class="controls" type="text" placeholder="Enter a location"/>
         <div id="map"></div>
         <div id="infowindow-content">
           <span id="place-name" class="title"></span><br />
@@ -118,13 +118,13 @@
 
         <div id="uni-info" style="display: none;">
           <h2 id="uniName"></h2>
-          <p id="desc">HARD CODE DESCRIPTION GOES HERE</p>
+          <p id="desc">Osaka University is a national university located in Osaka, Japan. It is the sixth oldest university in Japan as the Osaka Prefectural Medical College, and one of Japan's National Seven Universities. It is the 4th best ranked higher education institution in Japan (96th worldwide) in 2016 by the Academic Ranking of World Universities.</p>
 
           <!-- insert your pic here -->
           <img id="image" src="" width="100%" class="pb-4" alt="">
 
           <!-- people entering this university -->
-          <h4 id="students_uni_header"></h4>
+          <h3 class="pt-3" id="students_uni_header"></h3>
 
           <p id="null_students">
           </p>
@@ -133,29 +133,40 @@
           </ol>
 
           <!-- Quiz Starts Here -->
-          <div>
+          <div class="pt-3">
             <div class="score">
               <span id="user-score">0</span>
               <span id="total-score">/ 5</span>
             </div>
 
-            <div class='welcome'>
+          <!-- Welcome Box -->
+          <div id="welcome-area" style="display:inline">
+            <div class="card text-center border-primary" style="width: 100%;">
+              <img src="img/infoImg1.jpg" class="card-img-top" alt="People Celebrating">
+              <div class="card-body">
+                <h5 class="card-title text-primary fs-2 fw-bold">Quiz Time!</h5>
+                <p class="card-text fs-4 text-muted" id="region"></p>
+                <p class="card-text fs-4">Have what it takes? Test your knowledge on this place!</p>
+                <button class="btn btn-primary btn-lg col-6" id="start">Let's Go!</button>
+              </div>
+            </div>
+          </div>
 
+            <div class="card text-center" id="question-area" style="width: 100%; display:none">
+              <div class="card-body">
+                <h5 class="card-title" id="question-text"></h5>
+              </div>
+              <div class="options list-group list-group-flush">
+                <button type="button" class="list-group-item list-group-item-action" id="option1">option1</button>
+                <button type="button" class="list-group-item list-group-item-action" id="option2">option2</button>
+                <button type="button" class="list-group-item list-group-item-action" id="option3">option3</button>
+                <button type="button" class="list-group-item list-group-item-action" id="option4">option4</button>
+              </div>
             </div>
 
-            <div class='content' id="question-area">
-              <div id="question-text"></div>
-                <div class="options">
-                  <button class="btn btn-option" id="option1">option 1</button>
-                  <button class="btn btn-option" id="option2">option 2</button>
-                  <button class="btn btn-option" id="option3">option 3</button>
-                  <button class="btn btn-option" id="option4">option 4</button>
-                </div>
-            </div>
-
-            <div class="controls">
-              <button class="btn btn-restart" id="restart">Restart</button>
-              <button class="btn btn-next" id="next">Next</button>
+            <div class="mx-auto">
+              <button class="btn btn-warning" id="restart">Restart</button>
+              <button class="btn btn-dark" id="next">Next</button>
             </div>
           </div>
         </div>
