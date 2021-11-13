@@ -104,7 +104,7 @@
 
 
             </div>
-            <div class="col">
+            <div class="col-4">
                 <div class="profile-pic-huge"><?php print_r($_SESSION['username'][0]);?></div>
             </div>
         </div>
@@ -112,7 +112,7 @@
 
 
         <div class="row">
-        <div class="fw-bold text-muted">Exchange school</div>
+        <div class="fw-bold text-muted">Exchange School</div>
                 <div class="user-uni" id="user_uni">
                     <div class="user-input fs-5"><?php print_r($university);?></div>
                     <a class="edit-btn fs-5" onclick="showSearchBar()">Edit</a>
