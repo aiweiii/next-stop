@@ -139,7 +139,6 @@ $university = '*';
                                 <div>
                                     <select name='country' id='country'  class="form-select" v-model="country_selected">
                                         <option value='*'> All </option>
-                                        <!-- <option value="Korea"> Korea </option> -->
                                         <option v-for="country in countArr" :value="country"> {{country}} </option>
                                     </select>
                                 </div>
@@ -152,7 +151,6 @@ $university = '*';
                                 <div>
                                     <select name='uni' id='uni'  class="form-select" v-model="university_selected">
                                         <option value='*'> All </option>
-                                        <!-- <option value="SNU"> SNU </option> -->
                                         <option v-for="uni in uniArr" :value="uni"> {{uni}} </option>
                                     </select>
                                 </div>
@@ -179,6 +177,10 @@ $university = '*';
                         foreach($posts as $post_object ) {
                             $post_username = $post_object->getUsername();
                             $first_char = strtoupper($post_username[0]);
+
+                            // echo "debug: {$post_object->getCountry()}";
+                            // var_dump($post_object);
+
                             echo "
                             <div class='card mb-3'>
                                 <div class='card-body'>
