@@ -61,8 +61,12 @@
     transition: background 0.3s ease;
 }
 
-.email:hover, .find-out:hover {
+.email:hover {
     color: var(--tangerine);
+}
+
+.find-out:hover {
+    background-color: var(--tangerine);
 }
 
 /*FOR Carousel start*/
