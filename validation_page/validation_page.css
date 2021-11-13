@@ -97,15 +97,16 @@ form {
 }
 
 /*show uni detail*/
-.user-uni {
-    width: auto;
-    display: none;
+
+.edit-link {
+    cursor: pointer;
+    text-decoration: none;
+    transform: translateY(-7px);
+    transition: 0.3s ease;
 }
 
-.user-uni a {
-    text-decoration: underline;
-    color: var(--crimson);
-    cursor: pointer;
+.edit-link:hover {
+    transform: translateY(-12px);
 }
 
 .user-input {
@@ -201,5 +202,11 @@ color: #ffffff;
     svg {
         display: none;
     }
+
+    .no-flex {
+        flex-direction: column;
+    }
+
+    
 
 }

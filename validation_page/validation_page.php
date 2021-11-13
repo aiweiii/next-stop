@@ -120,26 +120,21 @@
 
 
                 <div class="fw-bold text-muted">Exchange School</div>
-                <div class="row">
-                    <div class="col-md">
+                <div class="d-flex no-flex">
 
                         <div class="user-uni" id="user_uni">
-                            <div class="user-input fs-5"><?php print_r($university);?></div>
-                            <a class="edit-btn fs-5" onclick="showSearchBar()">Edit</a>
+                            <div class="user-input fs-5 text-nowrap p-0"><?php print_r($university);?></div>
+                            <a class="edit-link fs-5 me-5" onclick="showSearchBar()">✏️</a>
                         </div>
-                    </div>
 
-                    <div class="col-8">
-
-                        <div class="search-bar w-100" id="search_bar">
-                            <form class='search-bar-2' autocomplete="off" action="">
-                                <div class="autocomplete" style="width:100%;">
-                                    <input class='uni-input' id="myInput" type="text" name="myCountry">
-                                    
-                                </div>
-                                <input class='uni-submit' type="submit">
-                            </form>
-                        </div>
+                            <div class="search-bar w-100" id="search_bar">
+                                <form class='search-bar-2' autocomplete="off" action="">
+                                    <div class="autocomplete" style="width:100%;">
+                                        <input class='uni-input' id="myInput" type="text" name="myCountry">
+                                        
+                                    </div>
+                                    <input class='uni-submit' type="submit">
+                                </form>
                 </div>
                 </div>
 
