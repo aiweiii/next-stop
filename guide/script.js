@@ -1,4 +1,3 @@
-alert("hello 123");
 
 function search_students() {
     // console.log('yea clicked');
