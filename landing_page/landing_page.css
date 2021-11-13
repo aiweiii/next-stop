@@ -51,32 +51,29 @@
 .email {
     text-decoration: none;
     margin-right: 10vw;
-    padding: 5px 20px;
-    background: var(--crimson);
-    color: white;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: var(--crimson);
     border-radius: 5px;
-
 }
 
 .find-out, .email {
     transition: background 0.3s ease;
 }
 
-.email:hover, .find-out:hover {
-    background: var(--tangerine);
-    color: white;
+.email:hover {
+    color: var(--tangerine);
+}
+
+.find-out:hover {
+    background-color: var(--tangerine);
 }
 
 /*FOR Carousel start*/
 
-.carouselbox {
-    width: 100%;
-    height: calc(100vh - 64px);
-}
 
 .carouselbox img {
     width: 100%;
-    height: calc(100vh - 64px);
 }
 
 #ctext {
@@ -91,10 +88,53 @@
 #ctext2 {
     position: absolute;
     top: 10%;
-    right: 10%;
+    right: 5%;
+    width: 50ch;
+    text-align: center;
+    padding: 20px;
     z-index: 20;
     color: black;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    background-color: rgba(255, 255, 255, 0.664);
+}
+
+/* blockquote -> class .sidekick css credits: https://codepen.io/Rases/pen/pogVVwp */
+.sidekick {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 47ch;
+    padding:  2rem;
+    border-left: 0.2em solid  var(--crimson);
+    font-size: 1.3em;
+    background-color: white;
+    line-height: 1.5em;
+    opacity: 0.9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+
+}
+
+.sidekick:before, .sidekick:after {
+    font-family: Calibri;
+    color: var(--crimson);
+    font-size: 34px;
+}
+
+.sidekick:before {
+    content: '\201c';
+}
+
+.sidekick:after {
+    content: '\201e'
+}
+
+.sidekick cite {
+    font-size: 50%;
+    text-align: center;
+    top: 50%
+}
+
+.sidekick cite:before {
+    content: ' \2015 '
 }
 
 #ctext3 {
@@ -393,13 +433,4 @@ footer .logo {
 footer .credit {
     font-size: 12px;
     color: var(--grey);
-}
-
-footer .email {
-    width: 90px;
-    height: 55px;
-    color: white;
-    border-radius: 15px;
-    text-align: center;
-    /* line-height: 40px; */
 }
