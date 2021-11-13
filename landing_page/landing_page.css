@@ -4,19 +4,8 @@
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    width: 20px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--light-grey);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--grey);
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
+nav a:hover{
+    color: black;
 }
 
 /*PART 1 START*/
@@ -48,6 +37,10 @@
     text-decoration: none;
 }
 
+.email-area {
+    margin-top: 25px;
+}
+
 .email {
     text-decoration: none;
     margin-right: 10vw;
@@ -72,7 +65,12 @@
 /*FOR Carousel start*/
 
 
-.carouselbox img {
+.carouselbox {
+    width: 100%;
+    padding: 0 3% 3% 3%;
+}
+
+.carousel-img {
     width: 100%;
 }
 
@@ -337,6 +335,43 @@
     margin-bottom: 140px;
 }
 
+.call-for-action {
+    background-color: var(--crimson);
+    color: white;
+}
+
+/* scroll credits: https://www.youtube.com/watch?v=yCyD5AZegLk */
+.scrolling {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+    padding: 4rem;
+}
+.scrolling h2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 4em;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	transform: translateX(100%);
+	animation: scrolling 15s linear infinite;
+}
+@keyframes scrolling {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+/* scroll end */
+
 @media screen and (max-width: 950px) {
     .part-3 {
         margin: 0px;
@@ -405,7 +440,7 @@
     padding: 10px 20px;
     border-radius: 50%;
     font-size: 18px;
-    border: 1px solid rgb(235, 0, 0);
+    border: 1px solid rgb(219, 219, 219);
     opacity: 0.4;
     transition: 0.3s ease;
 }
