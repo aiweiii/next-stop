@@ -244,17 +244,19 @@ if (isset($_SESSION['email'])) {
                                 countries.push(myCountries[i]['Country'])
 
                             }
-                            // console.log(myCountries[i]['University'], this.university)
-                            if (myCountries[i]['University'] == this.university){
-                                this.country = myCountries[i]['Country']
+                            // console.log(myCountries[i]['University'])
+                            // console.log(this.universitydisplay)
+                            if (myCountries[i]['University'] == this.universitydisplay){
+                                this.countrydisplay = myCountries[i]['Country']
                             }
                             universities.push(myCountries[i]['University'])
+                            // console.log(universities)
                         }
                         this.uniArr = universities;
                         this.countArr = countries;
                         // console.log(this.uniVar);
                         // console.log(this.countryVar);
-                        return universities, countries
+                        // return universities, countries
                     })
                     .catch(error => {
                         console.log(error.message)
