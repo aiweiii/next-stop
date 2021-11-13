@@ -111,12 +111,12 @@
       <!-- Uni info -->
       <div class="col-md p-4 sidebar">
 
-        <div class="d-flex flex-column align-items-center mt-5 instruction">
-          <img src="img/welcome.jpg" alt="Welcome!" width=100%>
-          <h2 class="pt-5" id="instructionText">Begin by Searching for a Partner University!</h2>
+        <div class="d-flex flex-column align-items-center mt-5" id="instruction" style="display: inline;">
+          <img id="instructionImage" style="display: block" src="img/welcome.jpg" alt="Welcome!" width=100%>
+          <h2 class="pt-5" id="instructionText" style="display: block">Begin by Searching for a Partner University!</h2>
         </div>
 
-        <div class="uni-info">
+        <div id="uni-info" style="display: none;">
           <h2 id="uniName"></h2>
           <p id="desc">HARD CODE DESCRIPTION GOES HERE</p>
 

@@ -49,14 +49,6 @@ body {
   overflow: scroll;
 }
 
-.instruction{
-  display:block;
-}
-
-.uni-info {
-  display: none;
-}
-
 @media only screen and (max-width: 768px) {
   .uni-info {
     height: auto;

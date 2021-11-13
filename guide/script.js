@@ -1,11 +1,24 @@
 
 function checkInput(input) {
+    var verified = false;
     ['Univers', 'Campus', 'School', 'College'].forEach(word => {
-        if (input.includes(word)) {
-            document.getElementById("instructions").style.display = "none";
-            document.getElementById("uni-info").style.display = "block";
+        if (!verified && input.includes(word)) {
+            verified = true;
+            document.getElementById("instruction").style.display = "none";
+            document.getElementById("instructionImage").style.display = "none";
+            document.getElementById("instructionText").style.display = "none";
+            document.getElementById("uni-info").style.display = "inline";
         }
     });
+
+    if (verified == false) {
+        document.getElementById("instruction").style.display = "inline";
+        document.getElementById("instructionImage").style.display = "inline";
+        document.getElementById("instructionText").style.display = "inline";
+        document.getElementById("instructionImage").src = "img/lost.jpg";
+        document.getElementById("instructionText").innerText = "Yikes! Seems like this isn't a University!";
+        document.getElementById("uni-info").style.display = "none";
+    }
 }
 
 function search_students() {
@@ -93,6 +106,8 @@ function initMap() {
 
         // Google Maps start retrieving place details
         const place = autocomplete.getPlace();
+        console.log(input.value);
+        checkInput(input.value);
 
         // Render University name
         document.getElementById("uniName").innerText = place.name;
