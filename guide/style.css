@@ -9,7 +9,7 @@ body {
 
 }
 
-.control {
+.controls {
   background-color: #fff;
   border-radius: 2px;
   border: 1px solid transparent;
@@ -56,7 +56,7 @@ body {
   }
 
 /* QUIZ */
-.options button{
+/* .options button{
   display:block
 }
 
@@ -68,7 +68,7 @@ body {
 .controls{
   padding:10px;
   order:4;
-}
+} */
 
 .score{
   font-size: large;
@@ -83,14 +83,14 @@ body {
   color: #f6490f;
 }
 
-.content{
+/* .content{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+} */
 
-.btn{
+/* .btn{
   font-size: large;
   font-weight: bold;
   box-shadow: 0 6px 12px -px rgba(#f27813,.15);
@@ -100,12 +100,12 @@ body {
   color: beige;
   margin: 6px;
   cursor: pointer;
-}
+} */
 
-.btn:hover{
+/* .btn:hover{
   color: black;
   padding:15px;
-}
+} */
 
 .hide{
   display:none;

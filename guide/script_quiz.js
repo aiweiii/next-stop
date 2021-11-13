@@ -1,4 +1,5 @@
 
+const startBtn = document.getElementById("start");
 const restartBtn = document.getElementById("restart");
 const nextBtn = document.getElementById("next");
 const optOneBtn = document.getElementById("option1");
@@ -63,14 +64,18 @@ let questions = [
     }
 ]
 
-function quizWelcome() {
-
+function welcomeQuiz() {
+    startBtn.onclick = () => {
+        document.getElementById("welcome-area").style.display = "none";
+        document.getElementById("question-area").style.display = "inline";
+        start();
+    }
 }
 
-function beginQuiz() {
+function start() {
     currentQuestion = 0;
     questionText.innerHTML = questions[currentQuestion].question;
-    optOneBtn.innerHTML = questions[currentQuestion].answers[0].option;
+    optOneBtn.innerText = questions[currentQuestion].answers[0].option;
     optOneBtn.onclick = () => {
         // if this option is true
         if (questions[currentQuestion].answers[0].answer) {
@@ -131,7 +136,7 @@ function restart() {
     optFourBtn.classList.remove('hide');
     score = 0;
     userScore.innerHTML = score;
-    beginQuiz();
+    start();
 }
 
 function next() {
@@ -191,6 +196,3 @@ function next() {
         }
     }
 }
-
-
-beginQuiz();
