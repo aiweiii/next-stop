@@ -137,7 +137,7 @@ $university = '*';
                             <div class="row pb-2">
                                 <label for='country'> Choose a Country: </label>
                                 <div>
-                                    <select name='country' id='country'  class="form-select">
+                                    <select name='country' id='country'  class="form-select" v-model="country_selected">
                                         <option value='*'> All </option>
                                         <!-- <option value="Korea"> Korea </option> -->
                                         <option v-for="country in countArr" :value="country"> {{country}} </option>
@@ -150,7 +150,7 @@ $university = '*';
                             <div class="row choose-uni pb-4">
                                 <label for='uni'> Choose a University: </label>
                                 <div>
-                                    <select name='uni' id='uni'  class="form-select">
+                                    <select name='uni' id='uni'  class="form-select" v-model="university_selected">
                                         <option value='*'> All </option>
                                         <!-- <option value="SNU"> SNU </option> -->
                                         <option v-for="uni in uniArr" :value="uni"> {{uni}} </option>
@@ -235,6 +235,8 @@ $university = '*';
             return {
                 uniArr: [],
                 countArr: [],
+                university_selected: '*',
+                country_selected: '*'
 
             }
         },
