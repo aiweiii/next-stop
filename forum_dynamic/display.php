@@ -178,8 +178,8 @@ $university = '*';
                             $post_username = $post_object->getUsername();
                             $first_char = strtoupper($post_username[0]);
 
-                            echo "debug: {$post_object->getCountry()}";
-                            var_dump($post_object);
+                            // echo "debug: {$post_object->getCountry()}";
+                            // var_dump($post_object);
 
                             echo "
                             <div class='card mb-3'>
