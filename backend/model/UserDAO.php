@@ -132,3 +132,5 @@ class UserDAO {
         return $result;
     }
 }
+
+?>

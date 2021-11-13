@@ -8,6 +8,8 @@ if (isset($_SESSION['email'])) {
 } else {
     header('location:../log_in.html');
 }
+//  echo $_SESSION['university'];
+
 
 ?>
 
@@ -109,9 +111,11 @@ if (isset($_SESSION['email'])) {
             <!-- NOTE: We set FORM NAME attribute so we can perform Form Validation using JavaScript -->
             <form name='entry_form' action='add_post.php' method='POST' onSubmit="return validate_form()">
 
-                <p><b>University:</b> <span v-html="universitydisplay"></span></p>
+                <p><b>University:</b> <span v-html="universitydisplay"></span></p> 
+                <!-- <?php echo $_SESSION['university'] ?> -->
                 <input type="hidden" name='university' id='university' :value="university">
                 <input type="hidden" name='username' id='my_username' :value="username">
+
                 
                 <p><b>Country:</b> {{countrydisplay}}</p>
                 <input type="hidden" name='country' id='country' :value="country">
@@ -221,7 +225,7 @@ if (isset($_SESSION['email'])) {
 
                         this.email = email;
                         this.username = username;
-                        this.university = university;
+                        this.universitydisplay = university;
 
                     })
                     .catch(error => {
@@ -232,6 +236,7 @@ if (isset($_SESSION['email'])) {
                     axios.get(url) 
                     .then(response => {
                         var myCountries = response.data;
+                        // console.log(response.data)
                         var universities = []
                         var countries = []
                         for (let i=0; i<myCountries.length; i++){
@@ -239,11 +244,13 @@ if (isset($_SESSION['email'])) {
                                 countries.push(myCountries[i]['Country'])
 
                             }
-                            // console.log(myCountries[i]['University'], this.university)
-                            if (myCountries[i]['University'] == this.university){
-                                this.country = myCountries[i]['Country']
+                            // console.log(myCountries[i]['University'])
+                            // console.log(this.universitydisplay)
+                            if (myCountries[i]['University'] == this.universitydisplay){
+                                this.countrydisplay = myCountries[i]['Country']
                             }
                             universities.push(myCountries[i]['University'])
+                            // console.log(universities)
                         }
                         this.uniArr = universities;
                         this.countArr = countries;
