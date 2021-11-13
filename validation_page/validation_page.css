@@ -185,6 +185,7 @@ color: #ffffff;
 
 .change-color {
     color: white;
+    font-size: 3rem;
 }
 
 
@@ -207,6 +208,6 @@ color: #ffffff;
         flex-direction: column;
     }
 
-    
+
 
 }

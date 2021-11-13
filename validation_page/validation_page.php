@@ -99,7 +99,7 @@
 
         <div class="row">
             <div class="col-md pb-5">
-                <h1 class="text-sm change-color">Profile Page</h1>
+                <h1 class="text-sm change-color fw-bold">Profile Page</h1>
 
             </div>
             <div class="col-4 pb-5 centering-on-collapse">
