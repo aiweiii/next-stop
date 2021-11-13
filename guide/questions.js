@@ -1,120 +1,49 @@
+
 // creating an array and passing the number, questions, options, and answers
 let europeQuestions = [
     {
         question: "Which is the most visited attraction in Europe?",
-        answer: "The Louvre, France",
-        options: [
-            "Eiffel Tower, France",
-            "Colosseum, Italy",
-            "The Louvre, France",
-            "Stonehenge, England"
+        answers: [
+            {option:"Eiffel Tower, France", answer:false},
+            {option:"Colosseum, Italy", answer: false },
+            {option:"The Louvre, France", answer: true },
+            {option:"Stonehenge, England", answer: false }
         ]
     },
     {
         question: "How many languages are spoken in Europe?",
-        answer: "200",
-        options: [
-            "5",
-            "50",
-            "200",
-            "More than 300"
+        answers: [
+            { option: "5", answer: false },
+            { option: "50", answer: false },
+            { option: "200", answer: true },
+            { option: "More than 300", answer: false }
+        ]
+    },
+    {
+        question: "3rd question?",
+        answers: [
+            { option: "5", answer: false },
+            { option: "50", answer: false },
+            { option: "200", answer: true },
+            { option: "More than 300", answer: false }
+        ]
+    },
+    {
+        question: "4th question",
+        answers: [
+            { option: "5", answer: false },
+            { option: "50", answer: false },
+            { option: "200", answer: true },
+            { option: "More than 300", answer: false }
+        ]
+    },
+    {
+        question: "5th question",
+        answers: [
+            { option: "5", answer: false },
+            { option: "50", answer: false },
+            { option: "200", answer: true },
+            { option: "More than 300", answer: false }
         ]
     }
 ]
-
-let asiaQuestions = [
-    {
-        numb: 1,
-        question: "What does HTML stand for?",
-        answer: "Hyper Text Markup Language",
-        options: [
-            "Hyper Text Preprocessor",
-            "Hyper Text Markup Language",
-            "Hyper Text Multiple Language",
-            "Hyper Tool Multi Language"
-        ]
-    },
-    {
-        numb: 1,
-        question: "What does HTML stand for?",
-        answer: "Hyper Text Markup Language",
-        options: [
-            "Hyper Text Preprocessor",
-            "Hyper Text Markup Language",
-            "Hyper Text Multiple Language",
-            "Hyper Tool Multi Language"
-        ]
-    },
-]
-
-let questions = [
-    {
-        numb: 1,
-        question: "What does HTML stand for?",
-        answer: "Hyper Text Markup Language",
-        options: [
-            "Hyper Text Preprocessor",
-            "Hyper Text Markup Language",
-            "Hyper Text Multiple Language",
-            "Hyper Tool Multi Language"
-        ]
-    },
-    {
-        numb: 2,
-        question: "What does CSS stand for?",
-        answer: "Cascading Style Sheet",
-        options: [
-            "Common Style Sheet",
-            "Colorful Style Sheet",
-            "Computer Style Sheet",
-            "Cascading Style Sheet"
-        ]
-    },
-    {
-        numb: 3,
-        question: "What does PHP stand for?",
-        answer: "Hypertext Preprocessor",
-        options: [
-            "Hypertext Preprocessor",
-            "Hypertext Programming",
-            "Hypertext Preprogramming",
-            "Hometext Preprocessor"
-        ]
-    },
-    {
-        numb: 4,
-        question: "What does SQL stand for?",
-        answer: "Structured Query Language",
-        options: [
-            "Stylish Question Language",
-            "Stylesheet Query Language",
-            "Statement Question Language",
-            "Structured Query Language"
-        ]
-    },
-    {
-        numb: 5,
-        question: "What does XML stand for?",
-        answer: "eXtensible Markup Language",
-        options: [
-            "eXtensible Markup Language",
-            "eXecutable Multiple Language",
-            "eXTra Multi-Program Language",
-            "eXamine Multiple Language"
-        ]
-    },
-    // you can uncomment the below codes and make duplicate as more as you want to add question
-    // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
-
-    //   {
-    //   numb: 6,
-    //   question: "Your Question is Here",
-    //   answer: "Correct answer of the question is here",
-    //   options: [
-    //     "Option 1",
-    //     "option 2",
-    //     "option 3",
-    //     "option 4"
-    //   ]
-    // },
-];

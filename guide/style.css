@@ -9,7 +9,7 @@ body {
 
 }
 
-.controls {
+.control {
   background-color: #fff;
   border-radius: 2px;
   border: 1px solid transparent;
@@ -44,9 +44,17 @@ body {
   display: inline;
 }
 
-.uni-info {
+.sidebar {
   height: 100%; 
   overflow: scroll;
+}
+
+.instruction{
+  display:block;
+}
+
+.uni-info {
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -55,6 +63,61 @@ body {
   }
   }
 
+/* QUIZ */
+.options button{
+  display:block
+}
+
+.options{
+  padding: 10px;
+  order:3;
+}
+
+.controls{
+  padding:10px;
+  order:4;
+}
+
+.score{
+  font-size: large;
+  font-weight: bold;
+}
+
+#user-score{
+  color: #ef9614;
+}
+
+#total-score{
+  color: #f6490f;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn{
+  font-size: large;
+  font-weight: bold;
+  box-shadow: 0 6px 12px -px rgba(#f27813,.15);
+  background: #ef9614;
+  border-radius: 4px;
+  padding: 10px;
+  color: beige;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  color: black;
+  padding:15px;
+}
+
+.hide{
+  display:none;
+}
 
 /*NAVBAR*/
 a:hover{

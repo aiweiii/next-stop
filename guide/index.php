@@ -99,7 +99,7 @@
     <div class="row g-0" style="height:  calc(100vh - 71px);">
       <!-- Maps -->
       <div class="col-md-6" style="height: 100%;">
-          <input id="pac-input" class="controls" type="text" placeholder="Enter a location"/>
+          <input id="pac-input" class="control" type="text" placeholder="Enter a location"/>
         <div id="map"></div>
         <div id="infowindow-content">
           <span id="place-name" class="title"></span><br />
@@ -109,43 +109,60 @@
       </div>
 
       <!-- Uni info -->
-      <div class="col-md p-4 uni-info">
-        <h2 id="uniName">Search a university to know more.</h2>
-        <p id="desc">HARD CODE DESCRIPTION GOES HERE</p>
-        
-        <!-- insert your pic here -->
-        <img id="image" src="" width="100%" class="pb-4" alt="">
+      <div class="col-md p-4 sidebar">
 
-        <!-- people entering this university -->
-        <h4 id="students_uni_header"></h4>
+        <div class="d-flex flex-column align-items-center mt-5 instruction">
+          <img src="img/welcome.jpg" alt="Welcome!" width=100%>
+          <h2 class="pt-5" id="instructionText">Begin by Searching for a Partner University!</h2>
+        </div>
 
-        <p id="null_students"> 
-        </p>
-        
-        <ol id="students_uni">
-        </ol>
+        <div class="uni-info">
+          <h2 id="uniName"></h2>
+          <p id="desc">HARD CODE DESCRIPTION GOES HERE</p>
 
-        <!-- Quiz Starts Here -->
-        <!-- Info Box - Ask users if they want to play -->
-        <div id="info-box">
-          <div class="card text-center border-primary" style="width: 100%;">
-            <img src="img/infoImg1.jpg" class="card-img-top" alt="People Celebrating">
-            <div class="card-body">
-              <h5 class="card-title text-primary fs-2 fw-bold">Quiz Time!</h5>
-              <p class="card-text fs-4 text-muted" id="region"></p>
-              <p class="card-text fs-4">Have what it takes? Test your knowledge on this place!</p>
-              <button class="btn btn-primary btn-lg col-6" id="start_btn">Let's Go!</button>
+          <!-- insert your pic here -->
+          <img id="image" src="" width="100%" class="pb-4" alt="">
+
+          <!-- people entering this university -->
+          <h4 id="students_uni_header"></h4>
+
+          <p id="null_students">
+          </p>
+
+          <ol id="students_uni">
+          </ol>
+
+          <!-- Quiz Starts Here -->
+          <div>
+            <div class="score">
+              <span id="user-score">0</span>
+              <span id="total-score">/ 5</span>
+            </div>
+
+            <div class='welcome'>
+
+            </div>
+
+            <div class='content' id="question-area">
+              <div id="question-text"></div>
+                <div class="options">
+                  <button class="btn btn-option" id="option1">option 1</button>
+                  <button class="btn btn-option" id="option2">option 2</button>
+                  <button class="btn btn-option" id="option3">option 3</button>
+                  <button class="btn btn-option" id="option4">option 4</button>
+                </div>
+            </div>
+
+            <div class="controls">
+              <button class="btn btn-restart" id="restart">Restart</button>
+              <button class="btn btn-next" id="next">Next</button>
             </div>
           </div>
         </div>
 
-        <!-- Quiz Box - When user starts to play -->
-        <div id="quiz-box">
-        </div>
 
       </div>
     </div>
-
   </div>
 
 

@@ -1,4 +1,13 @@
 
+function checkInput(input) {
+    ['Univers', 'Campus', 'School', 'College'].forEach(word => {
+        if (input.includes(word)) {
+            document.getElementById("instructions").style.display = "none";
+            document.getElementById("uni-info").style.display = "block";
+        }
+    });
+}
+
 function search_students() {
     // console.log('yea clicked');
     var uni = document.getElementById("uniName").innerHTML;
@@ -89,8 +98,8 @@ function initMap() {
         document.getElementById("uniName").innerText = place.name;
 
         // Retrieve University's Country's Region and tags it to region tag
-        let countryChosen = input.value.split(",").slice(-1);
-        document.getElementById("region").innerText = getRegion(countryChosen);
+        // let countryChosen = input.value.split(",").slice(-1);
+        // document.getElementById("region").innerText = getRegion(countryChosen);
 
         if (!place.geometry || !place.geometry.location) {
             return;
@@ -110,8 +119,6 @@ function initMap() {
         });
         marker.setVisible(true);
         infowindowContent.children.namedItem("place-name").textContent = place.name;
-        infowindowContent.children.namedItem("place-id").textContent =
-            place.place_id;
         infowindowContent.children.namedItem("place-address").textContent =
             place.formatted_address;
         infowindow.open(map, marker);
