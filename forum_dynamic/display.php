@@ -255,6 +255,10 @@ $university = '*';
                         }
                         universities.push(myCountries[i]['University'])
                     }
+
+                    universities.sort();
+                    countries.sort();
+
                     this.uniArr = universities;
                     this.countArr = countries;
                     // console.log(this.uniVar);
