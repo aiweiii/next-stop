@@ -45,7 +45,42 @@
         }  
     } 
 
+    // if(isset($_POST['signup'])){
+        
 
+    //     // -----------------------------------------------------------------------------------------------------------
+    //     $image = $_FILES['profile_page'];
+    //     $fileName = $_FILES['profile_page']['name'];
+    //     $fileTmpName = $_FILES['profile_page']['tmp_name'];
+    //     $fileSize = $_FILES['profile_page']['size'];
+    //     $fileError = $_FILES['profile_page']['error'];
+    //     $fileType = $_FILES['profile_page']['type'];
+
+
+    //     $fileExt = explode('.',$fileName);
+    //     $fileActualExt = strtolower(end($fileExt));
+    //     $allowed = ['jpg','jpeg','png'];
+    //     // ------------------------------------------ UPLOAD PICTURE RESTRICTIONS -----------------------------------
+    //     if (in_array($fileActualExt,$allowed)){
+    //         if($fileError == 0) {
+    //             if($fileSize < 50000000){
+    //                 $fileNameNew = uniqid('',true) . "." . $fileActualExt;
+    //                 // var_dump($fileNameNew);
+    //                 $fileDestination = "uploads/" . $fileNameNew;
+    //                 move_uploaded_file($fileTmpName, $fileDestination);
+    //             }else{
+    //                 $message = "Your file is too big";
+    //             }
+    //         }
+    //         else{
+    //             $message = "There was an error uploading your file!";
+    //         }
+    //     }
+    //     else{
+    //         $message= "You cannot upload files of this type!";
+    //     }
+
+    // }
 ?>
 
 <head>
@@ -107,6 +142,12 @@
             </div>
         </div>
 
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="Upload Image" name="submit">
+</form>
 
 
         <div class="row">
