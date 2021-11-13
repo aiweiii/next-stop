@@ -33,7 +33,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../navbar/navbar.css">
   <link rel="stylesheet" href="../main.css">
-  <script src="script.js" defer></script>
   <title>Place ID Finder</title>
 
 </head>
@@ -128,19 +127,20 @@
 
         <!-- Quiz Starts Here -->
         <!-- Info Box - Ask users if they want to play -->
-        <div class="card text-center border-primary" style="width: 100%;">
-          <img src="img/infoImg1.jpg" class="card-img-top" alt="People Celebrating">
-          <div class="card-body">
-            <h5 class="card-title text-primary fs-2 fw-bold">Quiz Time!</h5>
-            <p class="card-text fs-4 text-muted" id="region"></p>
-            <p class="card-text fs-4">Have what it takes? Test your knowledge on this place!</p>
-            <button class="btn btn-primary btn-lg col-6" id="start_btn">Let's Go!</button>
+        <div id="info-box">
+          <div class="card text-center border-primary" style="width: 100%;">
+            <img src="img/infoImg1.jpg" class="card-img-top" alt="People Celebrating">
+            <div class="card-body">
+              <h5 class="card-title text-primary fs-2 fw-bold">Quiz Time!</h5>
+              <p class="card-text fs-4 text-muted" id="region"></p>
+              <p class="card-text fs-4">Have what it takes? Test your knowledge on this place!</p>
+              <button class="btn btn-primary btn-lg col-6" id="start_btn">Let's Go!</button>
+            </div>
           </div>
         </div>
 
         <!-- Quiz Box - When user starts to play -->
-        <div id="questionBody">
-
+        <div id="quiz-box">
         </div>
 
       </div>
@@ -150,9 +150,11 @@
 
 
   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf_8QgsbouLol-VDIvCW72IIe4bqOD9C8&callback=initMap&libraries=places&v=weekly&channel=2"
-    async></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf_8QgsbouLol-VDIvCW72IIe4bqOD9C8&callback=initMap&libraries=places&v=weekly&channel=2" async></script>
+
+  <script src="script.js" defer></script>
+  <script src="script_quiz.js" defer></script>
+  <script src="questions.js" defer></script>
 </body>
 
 </html>
