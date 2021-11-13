@@ -112,13 +112,11 @@ if (isset($_SESSION['email'])) {
             <form name='entry_form' action='add_post.php' method='POST' onSubmit="return validate_form()">
 
                 <p><b>University:</b> <span v-html="universitydisplay"></span></p> 
-                <!-- <?php echo $_SESSION['university'] ?> -->
-                <input type="hidden" name='university' id='university' :value="university">
+                <input type="hidden" name='university' id='university' :value="universitydisplay">
                 <input type="hidden" name='username' id='my_username' :value="username">
 
-                
                 <p><b>Country:</b> {{countrydisplay}}</p>
-                <input type="hidden" name='country' id='country' :value="country">
+                <input type="hidden" name='country' id='country' :value="countrydisplay">
 
                 <div class="form-group">
                     <label for="exampleFormControlInput1"> <b>Subject</b> </label>
