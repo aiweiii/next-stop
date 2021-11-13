@@ -276,6 +276,7 @@ $university = '*';
         created() {
             this.addChild()
         },
+
     } )
     const vm = app.mount('#app')
 

@@ -98,13 +98,11 @@
 
 
         <div class="row">
-            <div class="col">
-                <div class="fs-2 text-white m-0"><?php print_r($_SESSION['username']);?></div>
-                <div class="user-input user-email text-white"><?php print_r($_SESSION['email']);?></div>
-
+            <div class="col-md pb-5">
+                <h1 class="text-sm change-color">Profile Page</h1>
 
             </div>
-            <div class="col-4">
+            <div class="col-4 pb-5 centering-on-collapse">
                 <div class="profile-pic-huge"><?php print_r($_SESSION['username'][0]);?></div>
             </div>
         </div>
@@ -112,20 +110,7 @@
 
 
         <div class="row">
-        <div class="fw-bold text-muted">Exchange School</div>
-                <div class="user-uni" id="user_uni">
-                    <div class="user-input fs-5"><?php print_r($university);?></div>
-                    <a class="edit-btn fs-5" onclick="showSearchBar()">Edit</a>
-                </div>
-                <div class="search-bar" id="search_bar">
-                    <form class='search-bar-2' autocomplete="off" action="">
-                        <div class="autocomplete" style="width:100%;">
-                            <input class='uni-input' id="myInput" type="text" name="myCountry">
-                            
-                        </div>
-                        <input class='uni-submit' type="submit">
-                    </form>
-                </div>
+        
 
                 <div class="fw-bold text-muted">Name</div>
                 <div class="user-input fs-5 "><?php print_r($_SESSION['username']);?></div>
@@ -133,11 +118,36 @@
                 <div class="fw-bold text-muted">Email</div>
                 <div class="user-input fs-5 "><?php print_r($_SESSION['email']);?></div>
 
+
+                <div class="fw-bold text-muted">Exchange School</div>
+                <div class="row">
+                    <div class="col-md">
+
+                        <div class="user-uni" id="user_uni">
+                            <div class="user-input fs-5"><?php print_r($university);?></div>
+                            <a class="edit-btn fs-5" onclick="showSearchBar()">Edit</a>
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+
+                        <div class="search-bar w-100" id="search_bar">
+                            <form class='search-bar-2' autocomplete="off" action="">
+                                <div class="autocomplete" style="width:100%;">
+                                    <input class='uni-input' id="myInput" type="text" name="myCountry">
+                                    
+                                </div>
+                                <input class='uni-submit' type="submit">
+                            </form>
+                        </div>
+                </div>
+                </div>
+
         </div>
 
         <!-- a href="../homepage/homepage.php" -->
         <div id="outcome"></div>
-        <div class="logout-box pb-5"><a class="logout" href='../logout.php' style="text-decoration: none;">Log out</a></div>
+        <div class="logout-box my-5 pb-5"><a class="logout btn btn-warning p-2 w-100" href='../logout.php' style="text-decoration: none;">Log out</a></div>
         
     </div>
 
