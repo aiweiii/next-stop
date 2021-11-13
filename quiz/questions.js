@@ -1,4 +1,52 @@
 // creating an array and passing the number, questions, options, and answers
+let europeQuestions = [
+    {
+        question: "Which is the most visited attraction in Europe?",
+        answer: "The Louvre, France",
+        options: [
+            "Eiffel Tower, France",
+            "Colosseum, Italy",
+            "The Louvre, France",
+            "Stonehenge, England"
+        ]
+    },
+    {
+        question: "How many languages are spoken in Europe?",
+        answer: "200",
+        options: [
+            "5",
+            "50",
+            "200",
+            "More than 300"
+        ]
+    }
+]
+
+let asiaQuestions = [
+    {
+        numb: 1,
+        question: "What does HTML stand for?",
+        answer: "Hyper Text Markup Language",
+        options: [
+            "Hyper Text Preprocessor",
+            "Hyper Text Markup Language",
+            "Hyper Text Multiple Language",
+            "Hyper Tool Multi Language"
+        ]
+    },
+    {
+        numb: 1,
+        question: "What does HTML stand for?",
+        answer: "Hyper Text Markup Language",
+        options: [
+            "Hyper Text Preprocessor",
+            "Hyper Text Markup Language",
+            "Hyper Text Multiple Language",
+            "Hyper Tool Multi Language"
+        ]
+    },
+]
+
 let questions = [
     {
         numb: 1,

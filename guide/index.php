@@ -18,7 +18,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>University Guide</title>
 
   <!-- Bootstrap CSS, JS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -132,19 +132,15 @@
           <img src="img/infoImg1.jpg" class="card-img-top" alt="People Celebrating">
           <div class="card-body">
             <h5 class="card-title text-primary fs-2 fw-bold">Quiz Time!</h5>
+            <p class="card-text fs-4 text-muted" id="region"></p>
             <p class="card-text fs-4">Have what it takes? Test your knowledge on this place!</p>
-            <a href="#" class="btn btn-primary btn-lg col-6">Let's Go!</a>
+            <button class="btn btn-primary btn-lg col-6" id="start_btn">Let's Go!</button>
           </div>
         </div>
 
         <!-- Quiz Box - When user starts to play -->
-        <div class="card text-center border-primary" style="width: 100%;">
-          <img src="img/infoImg1.jpg" class="card-img-top" alt="People Celebrating">
-          <div class="card-body">
-            <h5 class="card-title text-primary fs-2 fw-bold">Quiz Time!</h5>
-            <p class="card-text fs-4">Have what it takes? Test your knowledge on this place!</p>
-            <a href="#" class="btn btn-primary btn-lg col-6">Let's Go!</a>
-          </div>
+        <div id="questionBody">
+
         </div>
 
       </div>

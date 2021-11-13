@@ -1,3 +1,5 @@
+alert("hello 123");
+
 function search_students() {
     // console.log('yea clicked');
     var uni = document.getElementById("uniName").innerHTML;
@@ -34,6 +36,27 @@ function search_students() {
         });
 }
 
+function getRegion(country) {
+    country = country[0].trim();
+    if (["Austria", "Belgium", "Czech Republic", "Denmark", "Finland", "France", "Germany", "Iceland", "Ireland", "Italy", "Lithuania", "Netherlands", "Norway", "Poland", "Russia", "Spain", "Sweden", "Switzerland", "UK"].includes(country)) {
+        return "Europe";
+    } else if (["Hong Kong", "China", "India", "Indonesia", "Japan", "Philippines", "South Korea", "Taiwan", "Thailand"].includes(country)){
+        return "Asia";
+    } else if (country == "Australia") {
+        return "Australia";
+    } else if (["Canada", "USA", "Brazil", "Mexico", "Peru"].includes(country)) {
+        return "America";
+    } else if (["Israel", "Turkey"].includes(country)) {
+        return "MiddleEast";
+    } else if (["Kazakhstan"].includes(country)) {
+        return "CentralAsia";
+    } else if (["South Africa"].includes(country)) {
+        return "Africa";
+    } else {
+        return "Oops! We didn't prepare any questions for this place!"
+    }
+}
+
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -33.8688, lng: 151.2195 },
@@ -66,6 +89,9 @@ function initMap() {
         // Render University name
         document.getElementById("uniName").innerText = place.name;
 
+        // Retrieve University's Country's Region and tags it to region tag
+        let countryChosen = input.value.split(",").slice(-1);
+        document.getElementById("region").innerText = getRegion(countryChosen);
 
         if (!place.geometry || !place.geometry.location) {
             return;
