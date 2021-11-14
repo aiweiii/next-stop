@@ -82,34 +82,47 @@ function getDescription(google_name,country) {
     country = country[0].trim();
     var json_name;
     var description;
-    google_name = google_name.split(" ");
-
+    var google_arr = google_name.replaceAll("&", "").replaceAll("-", "").replaceAll(",", "").replace("University","").replace("The","").replace("of","").split(" ").filter(e => e)
+    var counter = 0;
     var highest_count = 0;
+    var desc;
+    console.log(google_name);
+    console.log(typeof google_name);
+    console.log();
+    console.log(country);
+    console.log(typeof country);
 
     fetch("../countries.json")
         .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
         .then(data => {
             // anything you want to do with the data goes between these 2 brackets
-            data.forEach(uniObj => {
-                if (uniObj["Country"]==country) {
+
+            for (let index = 0; index < data.length; index++) {
+                const uniObj = data[index];
+                if (uniObj["Country"] == country) {
                     json_name = uniObj["University"];
                     json_name = json_name.split(" ");
 
-                    let compare = (google_name, json_name) => google_name.filter(v => json_name.includes(v)).length;
+                    // let compare = (google_arr, json_name) => google_arr.filter(v => json_name.includes(v)).length;
+                    for (let i = 0; i < google_arr.length; i++) {
+                        for (let j = 0; j < json_name.length; j++) {
+                            if (json_name[j] == google_arr[i]) {
+                                counter += 1
+                            }
+                        }
+                    }
 
-                    console.log(google_name);
-                    console.log(json_name);
-                    console.log(compare.length);
-                    console.log();
-
-                    if (compare.length > highest_count) {
-                        highest_count = compare.length;
+                    if (counter > highest_count) {
+                        highest_count = counter;
                         description = uniObj["Description"];
                     }
                 }
-            });
+
+            }
+
+            desc = description;
+            return desc;
         })
-    return description;
 }
 
 function initMap() {
@@ -151,7 +164,9 @@ function initMap() {
 
         // Retrieve University's Description and tag it to the 'desc' tag
         var google_name = document.getElementById("uniName").innerText;
-        console.log(getDescription(google_name,countryChosen));
+        document.getElementById("desc").innerText = getDescription(google_name,countryChosen);
+        var ele = getDescription(google_name, countryChosen);
+        console.log("hel" + ele);
 
         if (!place.geometry || !place.geometry.location) {
             return;
