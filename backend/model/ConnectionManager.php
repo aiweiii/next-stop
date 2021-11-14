@@ -3,28 +3,25 @@
 class ConnectionManager {
 
     function connect() {
-        // LOCAL HOST
-            // $servername = "localhost";
-            // $username = "root";
-            // $password = "";
-            // $dbname = "wad2_proj";
-            
-            // // Create connection
-            // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);     
-            // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            // return $conn;
-            // // if fail, exception will be thrown
+        // // FOR LOCALHOST
+        //     $servername = "localhost";
+        //     $username = "root";
+        //     $password = "";
+        //     $dbname = "wad2_proj";
+        //     // Create connection
+        //     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);     
+        //     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //     return $conn;
+        //     // if fail, exception will be thrown
 
-        // HEROKU
+        // FOR CLOUD
             $servername = 'us-cdbr-east-04.cleardb.com';
             $username = 'b127ff0bf1984a';
             $password = 'a2cb3df1';
             $dbname = 'heroku_075b689eae6e371';
-            
             // Create connection
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);     
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // if fail, exception will be thrown
-
             // Return connection object
             return $conn;
 
