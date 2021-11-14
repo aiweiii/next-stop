@@ -111,8 +111,9 @@ function initMap() {
         document.getElementById("uniName").innerText = place.name;
 
         // Retrieve University's Country's Region and tags it to region tag
-        // let countryChosen = input.value.split(",").slice(-1);
-        // document.getElementById("region").innerText = getRegion(countryChosen);
+        let countryChosen = input.value.split(",").slice(-1);
+        console.log("country chosen: " + countryChosen);
+        document.getElementById("region").innerText = getRegion(countryChosen);
 
         if (!place.geometry || !place.geometry.location) {
             return;

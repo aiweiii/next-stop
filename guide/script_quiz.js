@@ -16,53 +16,24 @@ restartBtn.addEventListener('click',restart)
 nextBtn.addEventListener('click',next)
 
 // IMPT DETERMINE QUESTIONS BEFORE THAT
-let questions = [
-    {
-        question: "1. Which is the largest religious monument in the World?",
-        answers: [
-            { option: "Borobudur - Central Java, Indonesia", answer: false },
-            { option: "Spring Temple Buddha - Henan, China", answer: false },
-            { option: "Karnak Temple Complex - Luxor, Egypt", answer: false },
-            { option: "Angkor Wat - Siem Reap, Cambodia", answer: true }
-        ]
-    },
-    {
-        question: "2. How many rooms does The Forbidden City in Beijing, China, contains?",
-        answers: [
-            { option: "20", answer: false },
-            { option: "50", answer: false },
-            { option: "600", answer: false },
-            { option: "9000", answer: true }
-        ]
-    },
-    {
-        question: "3. Which country still has a reigning emperor?",
-        answers: [
-            { option: "Thailand", answer: false },
-            { option: "Japan", answer: true },
-            { option: "United Kingdom", answer: false },
-            { option: "None left", answer: false }
-        ]
-    },
-    {
-        question: "4. Which kind of park does not exist in South Korea?",
-        answers: [
-            { option: "Elephant-themed park", answer: true },
-            { option: "Toilet-themed park", answer: false },
-            { option: "Sex-themed park", answer: false },
-            { option: "Penis-themed park", answer: false }
-        ]
-    },
-    {
-        question: "5. What is the Vietnamese currency?",
-        answers: [
-            { option: "Rupee", answer: false },
-            { option: "Dong", answer: true },
-            { option: "Peso", answer: false },
-            { option: "Lao kip", answer: false }
-        ]
+
+function getQuestions(region) {
+    if (region == "Europe") {
+        return europe;
+    } else if (region == "Asia") {
+        return asia;
+    } else if (region == "Australia") {
+        return australia;
+    } else if (region == "America") {
+        return america;
+    } else if (region == "MiddleEast") {
+        return middleEast;
+    } else if (region == "CentralAsia") {
+        return centralAsia;
+    } else if (region == "Africa") {
+        return africa;
     }
-]
+}
 
 function welcomeQuiz() {
     startBtn.onclick = () => {
@@ -73,6 +44,10 @@ function welcomeQuiz() {
 }
 
 function start() {
+    const regionChosen = document.getElementById("region").innerText;
+    console.log(regionChosen);
+    var questions = getQuestions(regionChosen);
+
     currentQuestion = 0;
     questionText.innerHTML = questions[currentQuestion].question;
     // document.getElementById("questionImage").src = "hackanm.gif";

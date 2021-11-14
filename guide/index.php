@@ -190,9 +190,10 @@
   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf_8QgsbouLol-VDIvCW72IIe4bqOD9C8&callback=initMap&libraries=places&v=weekly&channel=2" async></script>
 
-  <script src="script.js" defer></script>
-  <script src="script_quiz.js" defer></script>
-  <script src="questions.js" defer></script>
+  <script src="questions.js" ></script>
+  <script src="script.js" ></script>
+  <script src="script_quiz.js" ></script>
+
 </body>
 
 </html>
