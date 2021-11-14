@@ -120,6 +120,8 @@ function restart() {
     optFourBtn.classList.remove('hide');
     score = 0;
     userScore.innerHTML = score;
+    document.getElementById("welcome-area").style.display = "inline";
+    document.getElementById("submit-area").style.display = "none";
     welcomeQuiz();
 }
 
@@ -134,6 +136,9 @@ function end() {
 }
 
 function next() {
+    if (currentQuestion==4) {
+        document.getElementById("next").style.display = "none";
+    }
     for (let i = 1; i < 5; i++) {
         document.getElementById("option" + i).setAttribute("class", "list-group-item list-group-item-action list-hover");
     }
@@ -156,55 +161,53 @@ function next() {
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
         userScore.innerHTML = score;
-        if (currentQuestion==3) {
+        if (currentQuestion==4) {
             document.getElementById("end").style.display = "inline";
         }
-
-
     }
     optTwoBtn.innerHTML = questions[currentQuestion].answers[1].option;
     optTwoBtn.onclick = () => {
-        if (questions[currentQuestion].answers[1].answer) {
-            if (score < 5) {
-                score++;
-            }
+        if (correct_option == 1) {
+            score++;
+            document.getElementById("option2").setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        } else {
+            document.getElementById("option2").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
+            var number = correct_option + 1;
+            document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
         userScore.innerHTML = score;
-        if (currentQuestion < 4) {
-            next()
-        } else {
-            document.getElementById("question-area").style.display = "none";
-            document.getElementById("submit-area").style.display = "inline";
+        if (currentQuestion == 4) {
+            document.getElementById("end").style.display = "inline";
         }
     }
     optThreeBtn.innerHTML = questions[currentQuestion].answers[2].option;
     optThreeBtn.onclick = () => {
-        if (questions[currentQuestion].answers[2].answer) {
-            if (score < 5) {
-                score++;
-            }
+        if (correct_option == 2) {
+            score++;
+            document.getElementById("option3").setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        } else {
+            document.getElementById("option3").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
+            var number = correct_option + 1;
+            document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
         userScore.innerHTML = score;
-        if (currentQuestion < 4) {
-            next()
-        } else {
-            document.getElementById("question-area").style.display = "none";
-            document.getElementById("submit-area").style.display = "inline";
+        if (currentQuestion == 4) {
+            document.getElementById("end").style.display = "inline";
         }
     }
     optFourBtn.innerHTML = questions[currentQuestion].answers[3].option;
     optFourBtn.onclick = () => {
-        if (questions[currentQuestion].answers[3].answer) {
-            if (score < 5) {
-                score++;
-            }
+        if (correct_option == 3) {
+            score++;
+            document.getElementById("option4").setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        } else {
+            document.getElementById("option4").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
+            var number = correct_option + 1;
+            document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
         userScore.innerHTML = score;
-        if (currentQuestion < 4) {
-            next()
-        } else {
-            document.getElementById("question-area").style.display = "none";
-            document.getElementById("submit-area").style.display = "inline";
+        if (currentQuestion == 4) {
+            document.getElementById("end").style.display = "inline";
         }
     }
 }

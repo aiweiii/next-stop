@@ -110,9 +110,12 @@ function initMap() {
         // Render University name
         document.getElementById("uniName").innerText = place.name;
 
-        // Retrieve University's Country's Region and tags it to region tag
+        // Retrieve University's Country's Region and tags it to 'region' tag
         let countryChosen = input.value.split(",").slice(-1);
         document.getElementById("region").innerText = getRegion(countryChosen);
+
+        // Retrieve University's Description and tag it to the 'desc' tag
+
 
         if (!place.geometry || !place.geometry.location) {
             return;
