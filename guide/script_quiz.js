@@ -69,6 +69,9 @@ function start() {
             var number = correct_option+1;
             document.getElementById("option"+number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
+        }
         userScore.innerHTML = score;
         document.getElementById("next").style.display = "inline";
 
@@ -83,6 +86,9 @@ function start() {
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
+        }
         userScore.innerHTML = score;
         document.getElementById("next").style.display = "inline";
     }
@@ -96,6 +102,9 @@ function start() {
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
+        }
         userScore.innerHTML = score;
         document.getElementById("next").style.display = "inline";
     }
@@ -108,6 +117,9 @@ function start() {
             document.getElementById("option4").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
         }
         userScore.innerHTML = score;
         document.getElementById("next").style.display = "inline";
@@ -143,7 +155,10 @@ function end() {
 }
 
 function next() {
-    if (currentQuestion==4) {
+    for (let i = 1; i < 5; i++) {
+        document.getElementById("option" + i).disabled = false;
+    }
+    if (currentQuestion==3) {
         document.getElementById("next").style.display = "none";
     }
     for (let i = 1; i < 5; i++) {
@@ -167,6 +182,9 @@ function next() {
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
+        }
         userScore.innerHTML = score;
         if (currentQuestion==4) {
             document.getElementById("end").style.display = "inline";
@@ -181,6 +199,9 @@ function next() {
             document.getElementById("option2").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
         }
         userScore.innerHTML = score;
         if (currentQuestion == 4) {
@@ -197,6 +218,9 @@ function next() {
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
+        }
         userScore.innerHTML = score;
         if (currentQuestion == 4) {
             document.getElementById("end").style.display = "inline";
@@ -211,6 +235,9 @@ function next() {
             document.getElementById("option4").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
         }
         userScore.innerHTML = score;
         if (currentQuestion == 4) {
