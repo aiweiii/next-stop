@@ -9,7 +9,7 @@ const optFourBtn = document.getElementById("option4");
 const userScore = document.getElementById("user-score");
 const questionText = document.getElementById("question-text");
 
-let currentQuestion = 0;
+var currentQuestion = 0;
 var score = 0;
 
 startBtn.addEventListener('click', start);
@@ -53,11 +53,9 @@ function start() {
     const regionChosen = document.getElementById("region").innerText;
     var questions = getQuestions(regionChosen);
 
-    currentQuestion = 0;
     questionText.innerHTML = questions[currentQuestion].question;
     // document.getElementById("questionImage").src = "hackanm.gif";
     let correct_option = questions[currentQuestion].correct;
-
 
     optOneBtn.innerText = questions[currentQuestion].answers[0].option;
     optOneBtn.onclick = () => {
@@ -124,6 +122,8 @@ function start() {
         userScore.innerHTML = score;
         document.getElementById("next").style.display = "inline";
     }
+
+
 }
 
 function restart() {
@@ -155,10 +155,12 @@ function end() {
 }
 
 function next() {
+    currentQuestion++;
+
     for (let i = 1; i < 5; i++) {
         document.getElementById("option" + i).disabled = false;
     }
-    if (currentQuestion==3) {
+    if (currentQuestion == 4) {
         document.getElementById("next").style.display = "none";
     }
     for (let i = 1; i < 5; i++) {
@@ -168,8 +170,10 @@ function next() {
     const regionChosen = document.getElementById("region").innerText;
     var questions = getQuestions(regionChosen);
     let correct_option = questions[currentQuestion].correct;
+    console.log(questions);
+    console.log(currentQuestion);
+    console.log(correct_option);
 
-    currentQuestion++;
 
     questionText.innerHTML = questions[currentQuestion].question;
     optOneBtn.innerHTML = questions[currentQuestion].answers[0].option;
@@ -244,6 +248,8 @@ function next() {
             document.getElementById("end").style.display = "inline";
         }
     }
+
+
 }
 
 welcomeQuiz();
