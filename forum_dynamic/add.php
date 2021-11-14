@@ -193,23 +193,23 @@ if (isset($_SESSION['email'])) {
                     .then(response => {
                         var myCountries = response.data;
                         // console.log(response.data)
-                        var universities = []
-                        var countries = []
+                        // var universities = []
+                        // var countries = []
                         for (let i=0; i<myCountries.length; i++){
-                            if (!countries.includes(myCountries[i]['Country'])) {
-                                countries.push(myCountries[i]['Country'])
-                            }
+                            // if (!countries.includes(myCountries[i]['Country'])) {
+                            //     countries.push(myCountries[i]['Country'])
+                            // }
                             // console.log(myCountries[i]['University'])
                             // console.log(this.universitydisplay)
                             if (myCountries[i]['University'] == this.universitydisplay){
-                                country = myCountries[i]['Country']
+                                this.countrydisplay = myCountries[i]['Country']
                             }
-                            universities.push(myCountries[i]['University'])
+                            // universities.push(myCountries[i]['University'])
                             // console.log(universities)
                         }
-                        this.countrydisplay = country
-                        this.uniArr = universities;
-                        this.countArr = countries;
+                        // this.countrydisplay = country
+                        // this.uniArr = universities;
+                        // this.countArr = countries;
                         // console.log(this.uniArr);
                         // console.log(this.countArr);
                         // return universities, countries
