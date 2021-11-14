@@ -5,6 +5,7 @@ function checkInput(input) {
         if (!verified && input.includes(word)) {
             verified = true;
             document.getElementById("instruction").style.display = "none";
+            document.getElementById("instruction").style.cssText += 'height:0px !important';
             document.getElementById("instructionImage").style.display = "none";
             document.getElementById("instructionText").style.display = "none";
             document.getElementById("uni-info").style.display = "inline";
@@ -110,9 +111,12 @@ function initMap() {
         // Render University name
         document.getElementById("uniName").innerText = place.name;
 
-        // Retrieve University's Country's Region and tags it to region tag
+        // Retrieve University's Country's Region and tags it to 'region' tag
         let countryChosen = input.value.split(",").slice(-1);
         document.getElementById("region").innerText = getRegion(countryChosen);
+
+        // Retrieve University's Description and tag it to the 'desc' tag
+
 
         if (!place.geometry || !place.geometry.location) {
             return;

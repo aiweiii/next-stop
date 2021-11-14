@@ -1,5 +1,9 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
+.height-styling {
+  height: 100%;
+}
+
 #map {
   height: 100%;
 }
@@ -49,9 +53,18 @@ body {
   overflow: scroll;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .uni-info {
     height: auto;
+  }
+
+  .sidebar {
+    height: initial; 
+    overflow: initial;
+  }
+
+  .height-styling {
+    height: 50%;
   }
   }
 
