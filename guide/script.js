@@ -78,6 +78,31 @@ function getRegion(country) {
     }
 }
 
+function getDescription(google_name) {
+    var json_name;
+    var description;
+    google_name = google_name.split(" ");
+
+    highest_count = 0;
+
+    fetch("countries.json")
+        .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
+        .then(data => {
+            // anything you want to do with the data goes between these 2 brackets
+            data.forEach(uniObj => {
+                json_name = uniObj["University"];
+                json_name = json_name.split(" ");
+                let compare = (google_name, json_name) => google_name.filter(v => json_name.includes(v)).length;
+
+                if (compare > highest_count) {
+                    highest_count = compare;
+                    description = uniObj["Description"]
+                }
+            });
+        })
+    return description;
+}
+
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -33.8688, lng: 151.2195 },
@@ -116,6 +141,7 @@ function initMap() {
         document.getElementById("region").innerText = getRegion(countryChosen);
 
         // Retrieve University's Description and tag it to the 'desc' tag
+        console.log(getDescription(place.name));
 
 
         if (!place.geometry || !place.geometry.location) {

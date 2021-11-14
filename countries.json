@@ -831,18 +831,6 @@
     {
         "Continent": "Asia",
         "Country": "China",
-        "University": "Tsinghua University, School of Law",
-        "Description": ""
-    },
-    {
-        "Continent": "Asia",
-        "Country": "China",
-        "University": "Tsinghua University, School of Social Sciences",
-        "Description": ""
-    },
-    {
-        "Continent": "Asia",
-        "Country": "China",
         "University": "Wuhan University",
         "Description": "Students of Mainland China, Hong Kong, Macau and Taiwan nationality CANNOT apply to this university for ISEP. Wuhan University is located in the capital of Hubei province Wuhan City which is known as 'the thoroughfare leading to nice provinces'. The university dates back to Ziqiang Institute founded in 1893 by the Hubei and Hunan Governor Zhang Zhidong. Later, it changed its name several times before it was named national Wuhan University in July 1928. Approved by the State Council, Wuhan in August 2000, an amalgamation of the original Wuhan University, Wuhan Water Conservancy and Power University, Wuhan Survey-and-Cartography Science-and-Technology University and Hubei Medical University. The new Wuhan University (named Wuhan University hereinafter) has a vast range of prospects of development because it is a combination of 4 first-rate. It is a comprehensive university with 85 undergraduate degree programs. There are more than 5,000 faculty staff and 40,000 students (including 8,000 postgraduates)"
     },
@@ -867,38 +855,14 @@
     {
         "Continent": "Asia",
         "Country": "India",
-        "University": "NALSAR University of Law",
-        "Description": ""
-    },
-    {
-        "Continent": "Asia",
-        "Country": "India",
         "University": "National Law School of India University",
         "Description": "The National Law School of India University (NLS) is an institution for under-graduate and graduate legal education. Based in Nagarbhavi, a quiet suburb in the western extremities of the city of Bangalore, the NLS was established in 1987 after a statute was enacted for that purpose by the Legislative Assembly of the State of Karnataka. Historically legal education in India was open only to graduates and seen merely as professional training. Dismayed at the quality of legal education in conventional universities, several members of the legal fraternity debated a new system of legal education through the 1970s and 1980s. NLS has been rated as the best law school in India for 9 out of past 10 years by India today. It admits 80 students for its 5-year B.A., LL.B. (Hons.) In addition to the five-year B.A., LL.B. (Hons.) under-graduate course, it also offers a post-graduate degree (LL.M.) in business laws and human rights, and distance learning programmes, including Masters Degree in Business Law and Postgraduate Diploma programs in Human Rights Law, Medical Law, Environmental Law and IP Law."
-    },
-    {
-        "Continent": "Asia",
-        "Country": "Indonesia",
-        "University": "Universitas Gadjah Mada",
-        "Description": ""
     },
     {
         "Continent": "Asia",
         "Country": "Japan",
         "University": "Chuo University",
         "Description": "Chuo University was founded as Igirisu Horitsu Gakko (the English Law School) in 1885 and has since carried on a strong tradition of providing practical education based on British empiricism and rationalism, as well as maintaining the founding spirit of nurturing human resources in a dynamic and supportive atmosphere. Chuo University is a private university in Tokyo, renowned for its law school. The University has four campuses, six faculties, ten graduate schools, and nine research institutes. It also operates four high schools and two junior high schools."
-    },
-    {
-        "Continent": "Asia",
-        "Country": "Japan",
-        "University": "Doshisha University",
-        "Description": ""
-    },
-    {
-        "Continent": "Asia",
-        "Country": "Japan",
-        "University": "Graduate School of Economics and Faculty of Economics, Kyoto University",
-        "Description": ""
     },
     {
         "Continent": "Asia",
@@ -1103,12 +1067,6 @@
         "Country": "Taiwan",
         "University": "National Chengchi University (College of Law)",
         "Description": "Established in 1927, National Chengchi University (NCCU) is noted for its humanities and social sciences disciplines and currently housing 9 colleges, including liberal arts, science, social sciences, law, commerce, foreign languages & literature, communication, international affairs and education; 33 departments, 2 BA modules (Undergraduate Program in European Languages and College of Communication Undergraduate Degree Program), and 48 graduate institutes (including master’s module), with 32 graduate institutes offering PhD programs, 16 on-the-job master’s programs, and 5 English-taught degree programs (International Master’s Program in Taiwan Studies, International Master’s Program in China Studies, International Master of Business Administration, International Master’s Program in International Communication Studies, and International Doctor Program in Asia-Pacific Studies). There are more than 15000 students, 600 full-time teachers and 40 research fellows at NCCU."
-    },
-    {
-        "Continent": "Asia",
-        "Country": "Taiwan",
-        "University": "National Chiao Tung University",
-        "Description": ""
     },
     {
         "Continent": "Asia",
@@ -1341,12 +1299,6 @@
     {
         "Continent": "America",
         "Country": "USA",
-        "University": "North Carolina State University",
-        "Description": ""
-    },
-    {
-        "Continent": "America",
-        "Country": "USA",
         "University": "Northeastern University",
         "Description": "Founded in 1898, Northeastern University is a private research university located in the heart of Boston, and a leader in interdisciplinary research, urban engagement, and the integration of classroom learning with real-world experience. Their signature cooperative education program, one of the largest and most innovative in the world, is ranked among the best in the nation by U.S. News & World Report. Northeastern University offers a comprehensive range of undergraduate and graduate programs leading to degrees through the doctorate in six undergraduate colleges, eight graduate schools, and two part-time divisions."
     },
@@ -1361,12 +1313,6 @@
         "Country": "USA",
         "University": "Oregon State University",
         "Description": "Oregon State University (OSU; student pop. 20,000) is a coeducational, public and research university. The university offers undergraduate, graduate and doctoral degrees and a multitude of research opportunities. There are over 200 academic degree programmes offered through the university. OSU's programs in nuclear engineering, ecology, forestry, public health, biochemistry, zoology, oceanography, food science and pharmacy are recognized nationally as top tier programs. Over 200,000 people have attended OSU since its founding. The Carnegie Foundation classifies Oregon State University as a 'very high research activity; university. Oregon State is one of 73 land-grant universities currently operating throughout the world. The school is also recognized as a sea-grant, space-grant and sun-grant institution, making it one of only two US institutions to retain all four designations and the only public university to do so (Cornell is the only other with similar designations). In addition to Oregon State's many federally designated areas of research, the university receives more funding for research, annually, than all the state's other public higher educational institutions combined."
-    },
-    {
-        "Continent": "America",
-        "Country": "USA",
-        "University": "Pitzer College",
-        "Description": ""
     },
     {
         "Continent": "America",
