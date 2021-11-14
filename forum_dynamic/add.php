@@ -213,16 +213,16 @@ if (isset($_SESSION['email'])) {
                     axios.get(url) 
                     .then(response => {
                         var result = response.data;
+                        // console.log(response.data)
 
                         var email = result.email;
                         var username = result.username;
                         var university = result.university;
 
                         if (university == ''){
-                            this.universitydisplay = 'No university selected yet. Update your <a class="edit-btn" href="../validation_page/validation_page.php">profile page</a> now!'
+                            university = 'No university selected yet. Update your <a class="edit-btn" href="../validation_page/validation_page.php">profile page</a> now!'
                             this.countrydisplay = 'None'
                         }
-
                         this.email = email;
                         this.username = username;
                         this.universitydisplay = university;
@@ -242,7 +242,6 @@ if (isset($_SESSION['email'])) {
                         for (let i=0; i<myCountries.length; i++){
                             if (!countries.includes(myCountries[i]['Country'])) {
                                 countries.push(myCountries[i]['Country'])
-
                             }
                             // console.log(myCountries[i]['University'])
                             // console.log(this.universitydisplay)
@@ -254,15 +253,14 @@ if (isset($_SESSION['email'])) {
                         }
                         this.uniArr = universities;
                         this.countArr = countries;
-                        // console.log(this.uniVar);
-                        // console.log(this.countryVar);
+                        // console.log(this.uniArr);
+                        // console.log(this.countArr);
                         // return universities, countries
                     })
                     .catch(error => {
                         console.log(error.message)
                     })
 
-                    
                 }
             },
             created() {
