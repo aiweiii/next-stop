@@ -31,7 +31,7 @@ var europe = [
     },
     {
         question: "4. Which is the most visited country in the world?",
-        correct: 1,
+        correct: 0,
         answers: [
             { option: "France", answer: true },
             { option: "Spain", answer: false },
