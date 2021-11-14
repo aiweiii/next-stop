@@ -46,6 +46,9 @@ function welcomeQuiz() {
 }
 
 function start() {
+    for (let i = 1; i < 5; i++) {
+        document.getElementById("option" + i).setAttribute("class", "list-group-item list-group-item-action list-hover");
+    }
     document.getElementById("restart").style.display = "inline";
     const regionChosen = document.getElementById("region").innerText;
     var questions = getQuestions(regionChosen);

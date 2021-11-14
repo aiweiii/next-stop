@@ -83,7 +83,7 @@ function getDescription(google_name) {
     var description;
     google_name = google_name.split(" ");
 
-    highest_count = 0;
+    var highest_count = 0;
 
     fetch("countries.json")
         .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
