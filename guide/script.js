@@ -120,8 +120,7 @@ function getDescription(google_name,country) {
 
             }
 
-            desc = description;
-            return desc;
+            document.getElementById("desc").innerText = description;
         })
 }
 
@@ -164,9 +163,7 @@ function initMap() {
 
         // Retrieve University's Description and tag it to the 'desc' tag
         var google_name = document.getElementById("uniName").innerText;
-        document.getElementById("desc").innerText = getDescription(google_name,countryChosen);
-        var ele = getDescription(google_name, countryChosen);
-        console.log("hel" + ele);
+        getDescription(google_name,countryChosen);
 
         if (!place.geometry || !place.geometry.location) {
             return;
