@@ -12,6 +12,7 @@
 
 .big-box {
     width: 100%;
+    min-height: 88vh;
     padding: 20px 8% 0px 8%;
     border-top: solid 1px #cfcfcf;
     background: var(--light-grey);
