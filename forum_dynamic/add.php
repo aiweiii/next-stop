@@ -40,6 +40,8 @@ if (isset($_SESSION['email'])) {
 <link rel="stylesheet" href="../main.css">
 <link rel="stylesheet" href="css/add.css">
 
+<title> New Post </title>
+
 
 </head>
 <body>
