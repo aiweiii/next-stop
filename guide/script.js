@@ -116,6 +116,10 @@ function getDescription(google_name,country) {
             }
 
             document.getElementById("desc").innerText = description;
+
+            if (typeof(description) == "undefined"){
+            document.getElementById("desc").innerText = 'Not a partner university.';
+            }
         })
 }
 
@@ -158,15 +162,7 @@ function initMap() {
 
         // Retrieve University's Description and tag it to the 'desc' tag
         var google_name = document.getElementById("uniName").innerText;
-        // if (typeof (getDescription(google_name, countryChosen))==undefined) {
-        //     document.getElementById("desc").innerText = "Not a partner university."
-        // }
         getDescription(google_name,countryChosen);
-        console.log(document.getElementById("desc").textContent);
-        if (document.getElementById("desc").textContent == 'undefined'){
-            document.getElementById("desc").innerText = "Not a partner university."
-        }
-        // console.log(typeof getDescription(google_name, countryChosen));
 
         if (!place.geometry || !place.geometry.location) {
             return;
