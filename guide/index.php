@@ -123,6 +123,8 @@
           <!-- insert your pic here -->
           <img id="image" src="" width="100%" class="pb-4" alt="">
 
+          <hr>
+
           <!-- people entering this university -->
           <h3 class="pt-3" id="students_uni_header"></h3>
 
@@ -131,6 +133,8 @@
 
           <ol id="students_uni">
           </ol>
+
+          <hr>
 
           <!-- Quiz Starts Here -->
           <div class="my-3">
