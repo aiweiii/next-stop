@@ -49,6 +49,86 @@ if (isset($_SESSION['email'])) {
     <!-- country  -->
     <input type="hidden" name='country' id='country' :value="countrydisplay">
 
+    <script>
+        const app = Vue.createApp( {
+            //=========== DATA PROPERTIES ===========
+            data() {
+                return {
+                    uniArr: [],
+                    countArr: [],
+                    country: '',
+                    email: '',
+                    username: '',
+                    university: '',
+                    universitydisplay: '',
+                    countrydisplay: '',
+                }
+            },
+            //=========== METHODS =========== 
+            methods: {
+                addChild() {
+                    var url = "sessionAPI.php";
+                    axios.get(url) 
+                    .then(response => {
+                        var result = response.data;
+                        // console.log(response.data)
+
+                        var email = result.email;
+                        var username = result.username;
+                        var university = result.university;
+
+                        if (university == ''){
+                            university = 'No university selected yet. Update your <a class="edit-btn" href="../validation_page/validation_page.php">profile page</a> now!'
+                            this.countrydisplay = 'None'
+                        }
+                        this.email = email;
+                        this.username = username;
+                        this.universitydisplay = university;
+
+                    })
+                    .catch(error => {
+                        console.log(error.message)
+                    })
+
+                    var url = "../countries.json";
+                    axios.get(url) 
+                    .then(response => {
+                        var myCountries = response.data;
+                        // console.log(response.data)
+                        var universities = []
+                        var countries = []
+                        for (let i=0; i<myCountries.length; i++){
+                            if (!countries.includes(myCountries[i]['Country'])) {
+                                countries.push(myCountries[i]['Country'])
+                            }
+                            // console.log(myCountries[i]['University'])
+                            // console.log(this.universitydisplay)
+                            if (myCountries[i]['University'] == this.universitydisplay){
+                                this.countrydisplay = myCountries[i]['Country']
+                            }
+                            universities.push(myCountries[i]['University'])
+                            // console.log(universities)
+                        }
+                        this.uniArr = universities;
+                        this.countArr = countries;
+                        // console.log(this.uniArr);
+                        // console.log(this.countArr);
+                        // return universities, countries
+                    })
+                    .catch(error => {
+                        console.log(error.message)
+                    })
+
+                }
+            },
+            created() {
+                this.addChild()
+
+            },
+        } )
+        const vm = app.mount('#app')
+        </script>
+
     <!-- navigation bar -->
     <nav>
         <div class="nav-logo">
@@ -195,88 +275,7 @@ if (isset($_SESSION['email'])) {
         </div>
     </div>
 
-    <script defer>
-        const app = Vue.createApp( {
-            //=========== DATA PROPERTIES ===========
-            data() {
-                return {
-                    uniArr: [],
-                    countArr: [],
-                    country: '',
-                    email: '',
-                    username: '',
-                    university: '',
-                    universitydisplay: '',
-                    countrydisplay: '',
-                }
-            },
-            //=========== METHODS =========== 
-            methods: {
-                addChild() {
-                    var url = "sessionAPI.php";
-                    axios.get(url) 
-                    .then(response => {
-                        var result = response.data;
-                        // console.log(response.data)
 
-                        var email = result.email;
-                        var username = result.username;
-                        var university = result.university;
-
-                        if (university == ''){
-                            university = 'No university selected yet. Update your <a class="edit-btn" href="../validation_page/validation_page.php">profile page</a> now!'
-                            this.countrydisplay = 'None'
-                        }
-                        this.email = email;
-                        this.username = username;
-                        this.universitydisplay = university;
-
-                    })
-                    .catch(error => {
-                        console.log(error.message)
-                    })
-
-                    var url = "../countries.json";
-                    axios.get(url) 
-                    .then(response => {
-                        var myCountries = response.data;
-                        // console.log(response.data)
-                        var universities = []
-                        var countries = []
-                        for (let i=0; i<myCountries.length; i++){
-                            if (!countries.includes(myCountries[i]['Country'])) {
-                                countries.push(myCountries[i]['Country'])
-                            }
-                            // console.log(myCountries[i]['University'])
-                            // console.log(this.universitydisplay)
-                            if (myCountries[i]['University'] == this.universitydisplay){
-                                this.countrydisplay = myCountries[i]['Country']
-                            }
-                            universities.push(myCountries[i]['University'])
-                            // console.log(universities)
-                        }
-                        this.uniArr = universities;
-                        this.countArr = countries;
-                        // console.log(this.uniArr);
-                        // console.log(this.countArr);
-                        // return universities, countries
-                    })
-                    .catch(error => {
-                        console.log(error.message)
-                    })
-
-                }
-            },
-            created() {
-                this.addChild()
-
-                
-
-
-            },
-        } )
-        const vm = app.mount('#app')
-        </script>
 
 
         <!-- bootstrap -->    
