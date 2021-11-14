@@ -158,11 +158,14 @@ function initMap() {
 
         // Retrieve University's Description and tag it to the 'desc' tag
         var google_name = document.getElementById("uniName").innerText;
-        if (typeof (getDescription(google_name, countryChosen))==undefined) {
+        // if (typeof (getDescription(google_name, countryChosen))==undefined) {
+        //     document.getElementById("desc").innerText = "Not a partner university."
+        // }
+        getDescription(google_name,countryChosen);
+        if (document.getElementById("desc").innerText == 'undefined'){
             document.getElementById("desc").innerText = "Not a partner university."
         }
-        getDescription(google_name,countryChosen);
-        console.log(typeof getDescription(google_name, countryChosen));
+        // console.log(typeof getDescription(google_name, countryChosen));
 
         if (!place.geometry || !place.geometry.location) {
             return;

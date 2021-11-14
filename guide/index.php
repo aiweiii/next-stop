@@ -118,7 +118,7 @@
 
         <div id="uni-info" style="display: none;">
           <h2 id="uniName"></h2>
-          <p id="desc">Osaka University is a national university located in Osaka, Japan. It is the sixth oldest university in Japan as the Osaka Prefectural Medical College, and one of Japan's National Seven Universities. It is the 4th best ranked higher education institution in Japan (96th worldwide) in 2016 by the Academic Ranking of World Universities.</p>
+          <p id="desc">empty</p>
 
           <!-- insert your pic here -->
           <img id="image" src="" width="100%" class="pb-4" alt="">
