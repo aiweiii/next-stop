@@ -112,7 +112,6 @@ function initMap() {
 
         // Retrieve University's Country's Region and tags it to region tag
         let countryChosen = input.value.split(",").slice(-1);
-        console.log("country chosen: " + countryChosen);
         document.getElementById("region").innerText = getRegion(countryChosen);
 
         if (!place.geometry || !place.geometry.location) {

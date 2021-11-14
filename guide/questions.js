@@ -95,7 +95,6 @@ var asia = [
     }
 ]
 
-
 // everything here onwards is not done!! just template only!
 
 var australia = [

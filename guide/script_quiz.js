@@ -1,6 +1,5 @@
 const startBtn = document.getElementById("start");
 const restartBtn = document.getElementById("restart");
-const nextBtn = document.getElementById("next");
 const optOneBtn = document.getElementById("option1");
 const optTwoBtn = document.getElementById("option2");
 const optThreeBtn = document.getElementById("option3");
@@ -13,7 +12,6 @@ var score = 0;
 
 startBtn.addEventListener('click', start)
 restartBtn.addEventListener('click',restart)
-nextBtn.addEventListener('click',next)
 
 // IMPT DETERMINE QUESTIONS BEFORE THAT
 
@@ -45,7 +43,6 @@ function welcomeQuiz() {
 
 function start() {
     const regionChosen = document.getElementById("region").innerText;
-    console.log(regionChosen);
     var questions = getQuestions(regionChosen);
 
     currentQuestion = 0;
@@ -105,7 +102,6 @@ function start() {
 
 function restart() {
     currentQuestion = 0;
-    nextBtn.classList.remove('hide');
     optOneBtn.classList.remove('hide');
     optTwoBtn.classList.remove('hide');
     optThreeBtn.classList.remove('hide');
@@ -116,11 +112,10 @@ function restart() {
 }
 
 function next() {
+    const regionChosen = document.getElementById("region").innerText;
+    var questions = getQuestions(regionChosen);
+
     currentQuestion++;
-    if (currentQuestion>=4) {
-        // hide the NEXT button?
-        nextBtn.classList.add('hide');
-    }
 
     questionText.innerHTML = questions[currentQuestion].question;
     optOneBtn.innerHTML = questions[currentQuestion].answers[0].option;
