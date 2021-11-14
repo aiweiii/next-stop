@@ -70,18 +70,27 @@ body {
   order:4;
 } */
 
-.score{
+/* .score{
   font-size: large;
   font-weight: bold;
+} */
+
+.text-theme-color{
+  color: #F82257;
 }
 
-#user-score{
-  color: #ef9614;
+.border-theme-color{
+  border-color: #F82257;
 }
 
-#total-score{
+.btn-major{
+  background-color: #F82257;
+  color: white;
+}
+
+/* #total-score{
   color: #f6490f;
-}
+} */
 
 /* .content{
   display: flex;
@@ -109,6 +118,10 @@ body {
 
 .hide{
   display:none;
+}
+
+.list-hover:hover{
+  background-color: #F9F8F7;
 }
 
 /*NAVBAR*/

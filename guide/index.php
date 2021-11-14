@@ -133,43 +133,53 @@
           </ol>
 
           <!-- Quiz Starts Here -->
-          <div class="pt-3">
-            <div class="score">
-              <span id="user-score">0</span>
-              <span id="total-score">/ 5</span>
+          <div class="my-3">
+            <div class="score p-1 border rounded-3 text-center bg-dark text-white fw-bold" style="width: 25%;">Score:
+              <span class="text-theme-color" id="user-score">0</span>
+              <span class="text-white" id="total-score">/ 5</span>
             </div>
 
           <!-- Welcome Box -->
-          <div id="welcome-area" style="display:inline">
-            <div class="card text-center border-primary" style="width: 100%;">
-              <img src="img/infoImg1.jpg" class="card-img-top" alt="People Celebrating">
+          <section class="mt-3" id="welcome-area">
+            <div class="card text-center border-theme-color" style="width: 100%;">
+              <img src="img/infoImg1.jpg" class="card-img-top" id="card-img" alt="People Celebrating">
               <div class="card-body">
-                <h5 class="card-title text-primary fs-2 fw-bold">Quiz Time!</h5>
+                <h5 class="card-title fs-2 fw-bold text-theme-color" id="card-title-text">Quiz Time!</h5>
                 <p class="card-text fs-4 text-muted" id="region"></p>
                 <p class="card-text fs-4">Have what it takes? Test your knowledge on this place!</p>
-                <button class="btn btn-primary btn-lg col-6" id="start">Let's Go!</button>
+                <button class="btn btn-major btn-lg col-6" id="start">Let's Go!</button>
               </div>
+            </div>
+          </section>
+
+          <section class="mt-3" id="submit-area" style="display:none">
+            <div class="card text-center border-theme-color" style="width: 100%;">
+              <img src="img/celebrate.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold text-theme-color">Well Done!</h5>
+              </div>
+            </div>
+          </section>
+
+
+          <div class="card text-center" id="question-area" style="width: 100%;display:none">
+            <div class="card-body border">
+              <h5 class="card-title" id="question-text"></h5>
+            </div>
+            <div class="options list-group list-group-flush">
+              <button type="button" class="list-group-item list-group-item-action list-hover" id="option1">option1</button>
+              <button type="button" class="list-group-item list-group-item-action list-hover" id="option2">option2</button>
+              <button type="button" class="list-group-item list-group-item-action list-hover" id="option3">option3</button>
+              <button type="button" class="list-group-item list-group-item-action list-hover" id="option4">option4</button>
             </div>
           </div>
 
-            <div class="card text-center" id="question-area" style="width: 100%; display:none">
-              <div class="card-body">
-                <h5 class="card-title" id="question-text"></h5>
-              </div>
-              <div class="options list-group list-group-flush">
-                <button type="button" class="list-group-item list-group-item-action" id="option1">option1</button>
-                <button type="button" class="list-group-item list-group-item-action" id="option2">option2</button>
-                <button type="button" class="list-group-item list-group-item-action" id="option3">option3</button>
-                <button type="button" class="list-group-item list-group-item-action" id="option4">option4</button>
-              </div>
-            </div>
-
-            <div class="mx-auto">
-              <button class="btn btn-warning" id="restart">Restart</button>
-              <button class="btn btn-dark" id="next">Next</button>
-            </div>
+          <div class="mt-3">
+            <button class="btn btn-dark" id="restart">Restart</button>
+            <button class="btn btn-major" id="next">Next</button>
           </div>
         </div>
+      </div>
 
 
       </div>
