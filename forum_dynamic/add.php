@@ -118,7 +118,7 @@ if (isset($_SESSION['email'])) {
                 <input type="hidden" name='username' id='my_username' :value="username">
 
                 <p><b>Country:</b> {{countrydisplay}}</p>
-                <input type="hidden" name='country' id='country' :value="countrydisplay">
+                <input name='country' id='country' :value="countrydisplay">
 
                 <div class="form-group">
                     <label for="exampleFormControlInput1"> <b>Subject</b> </label>
