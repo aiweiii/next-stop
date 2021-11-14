@@ -47,6 +47,9 @@ function welcomeQuiz() {
 
 function start() {
     for (let i = 1; i < 5; i++) {
+        document.getElementById("option" + i).disabled = false;
+    }
+    for (let i = 1; i < 5; i++) {
         document.getElementById("option" + i).setAttribute("class", "list-group-item list-group-item-action list-hover");
     }
     document.getElementById("restart").style.display = "inline";
@@ -170,10 +173,6 @@ function next() {
     const regionChosen = document.getElementById("region").innerText;
     var questions = getQuestions(regionChosen);
     let correct_option = questions[currentQuestion].correct;
-    console.log(questions);
-    console.log(currentQuestion);
-    console.log(correct_option);
-
 
     questionText.innerHTML = questions[currentQuestion].question;
     optOneBtn.innerHTML = questions[currentQuestion].answers[0].option;
