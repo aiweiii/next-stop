@@ -46,8 +46,7 @@ if (isset($_SESSION['email'])) {
 </head>
 <body>
 
-    <!-- country  -->
-    <input name='country' id='country' :value="countrydisplay">
+
 
     <!-- navigation bar -->
     <nav>
@@ -122,6 +121,8 @@ if (isset($_SESSION['email'])) {
                 <input type="hidden" name='username' id='my_username' :value="username">
 
                 <p><b>Country:</b> {{countrydisplay}}</p>
+                    <!-- country  -->
+                <input style="display: none;" name='country' id='country' :value="countrydisplay">
 
 
                 <div class="form-group">
