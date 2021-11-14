@@ -60,21 +60,29 @@ function search_students() {
 function getRegion(country) {
     country = country[0].trim();
     if (["Austria", "Belgium", "Czech Republic", "Denmark", "Finland", "France", "Germany", "Iceland", "Ireland", "Italy", "Lithuania", "Netherlands", "Norway", "Poland", "Russia", "Spain", "Sweden", "Switzerland", "UK"].includes(country)) {
+        document.getElementById("start").style.display = "inline";
         return "Europe";
     } else if (["Hong Kong", "China", "India", "Indonesia", "Japan", "Philippines", "South Korea", "Taiwan", "Thailand"].includes(country)){
+        document.getElementById("start").style.display = "inline";
         return "Asia";
     } else if (country == "Australia") {
+        document.getElementById("start").style.display = "inline";
         return "Australia";
     } else if (["Canada", "USA", "Brazil", "Mexico", "Peru"].includes(country)) {
+        document.getElementById("start").style.display = "inline";
         return "America";
     } else if (["Israel", "Turkey"].includes(country)) {
+        document.getElementById("start").style.display = "inline";
         return "MiddleEast";
     } else if (["Kazakhstan"].includes(country)) {
+        document.getElementById("start").style.display = "inline";
         return "CentralAsia";
     } else if (["South Africa"].includes(country)) {
+        document.getElementById("start").style.display = "inline";
         return "Africa";
     } else {
-        return "Oops! We didn't prepare any questions for this place!"
+        document.getElementById("start").style.display = "none";
+        return "Oops! We didn't prepare any questions for this place!";
     }
 }
 
