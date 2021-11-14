@@ -98,8 +98,8 @@
 
     <div class="row g-0" style="height:  calc(100vh - 71px);">
       <!-- Maps -->
-      <div class="col-md-6" style="height: 100%;">
-          <input id="pac-input" class="controls" type="text" placeholder="Enter a location"/>
+      <div class="col-lg-6" style="height: 100%;">
+          <input id="pac-input" class="controls" type="text" placeholder="Enter a University"/>
         <div id="map"></div>
         <div id="infowindow-content">
           <span id="place-name" class="title"></span><br />
@@ -109,9 +109,9 @@
       </div>
 
       <!-- Uni info -->
-      <div class="col-md p-4 sidebar">
+      <div class="col-lg p-4 sidebar">
 
-        <div class="d-flex flex-column align-items-center mt-5" id="instruction" style="display: inline;">
+        <div class="d-flex flex-column align-items-center" id="instruction" style="display: inline;">
           <img id="instructionImage" style="display: block" src="img/welcome.jpg" alt="Welcome!" width=100%>
           <h2 class="pt-5" id="instructionText" style="display: block">Begin by Searching for a Partner University!</h2>
         </div>
@@ -175,8 +175,9 @@
           </div>
 
           <div class="mt-3">
-            <button class="btn btn-dark" id="restart">Restart</button>
-            <button class="btn btn-major" id="next">Next</button>
+            <button class="btn btn-dark" id="restart" style="display:none">Restart</button>
+            <button class="btn btn-major" id="next" style="display:none">Next</button>
+            <button class="btn btn-major" id="end" style="display:none">End!</button>
           </div>
         </div>
       </div>
