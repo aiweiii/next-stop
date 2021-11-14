@@ -49,86 +49,6 @@ if (isset($_SESSION['email'])) {
     <!-- country  -->
     <input type="hidden" name='country' id='country' :value="countrydisplay">
 
-    <script>
-        const app = Vue.createApp( {
-            //=========== DATA PROPERTIES ===========
-            data() {
-                return {
-                    uniArr: [],
-                    countArr: [],
-                    country: '',
-                    email: '',
-                    username: '',
-                    university: '',
-                    universitydisplay: '',
-                    countrydisplay: '',
-                }
-            },
-            //=========== METHODS =========== 
-            methods: {
-                addChild() {
-                    var url = "sessionAPI.php";
-                    axios.get(url) 
-                    .then(response => {
-                        var result = response.data;
-                        // console.log(response.data)
-
-                        var email = result.email;
-                        var username = result.username;
-                        var university = result.university;
-
-                        if (university == ''){
-                            university = 'No university selected yet. Update your <a class="edit-btn" href="../validation_page/validation_page.php">profile page</a> now!'
-                            this.countrydisplay = 'None'
-                        }
-                        this.email = email;
-                        this.username = username;
-                        this.universitydisplay = university;
-
-                    })
-                    .catch(error => {
-                        console.log(error.message)
-                    })
-
-                    var url = "../countries.json";
-                    axios.get(url) 
-                    .then(response => {
-                        var myCountries = response.data;
-                        // console.log(response.data)
-                        var universities = []
-                        var countries = []
-                        for (let i=0; i<myCountries.length; i++){
-                            if (!countries.includes(myCountries[i]['Country'])) {
-                                countries.push(myCountries[i]['Country'])
-                            }
-                            // console.log(myCountries[i]['University'])
-                            // console.log(this.universitydisplay)
-                            if (myCountries[i]['University'] == this.universitydisplay){
-                                this.countrydisplay = myCountries[i]['Country']
-                            }
-                            universities.push(myCountries[i]['University'])
-                            // console.log(universities)
-                        }
-                        this.uniArr = universities;
-                        this.countArr = countries;
-                        // console.log(this.uniArr);
-                        // console.log(this.countArr);
-                        // return universities, countries
-                    })
-                    .catch(error => {
-                        console.log(error.message)
-                    })
-
-                }
-            },
-            created() {
-                this.addChild()
-
-            },
-        } )
-        const vm = app.mount('#app')
-        </script>
-
     <!-- navigation bar -->
     <nav>
         <div class="nav-logo">
@@ -214,58 +134,11 @@ if (isset($_SESSION['email'])) {
                     <textarea class='form-control' id='exampleFormControlTextarea1' placeholder="Include details of your experience!" rows='3' name='entry' id='entry_id' required></textarea>
                 </div>
 
-                <!-- <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"> Subject </span>
-                    <input type="text" class="form-control" placeholder="Summarise your experience!" aria-label="Username" aria-describedby="basic-addon1" name='subject' size='30' id='my_subject' required>
-                </div> -->
-
-                <!-- <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"> Details </span>
-                    <input type="text" class="form-control" placeholder="Inlcude details of your experience!" aria-label="Username" aria-describedby="basic-addon1" name='entry' cols='80' rows='5' id='entry_id' required>
-                </div> -->
-
-                <!-- Details: <br>
-                <small> Inlcude details of your experience!  </small> <br>
-                <textarea name='entry' cols='80' rows='5' id='entry_id' required></textarea>
-                <br> -->
-
-                <!-- <h6 style="color: slateblue;"> Include Tags: </h6>
-                <small> Including the relevant tags will help increase your post's visibility to others! </small>
-                <br><br> -->
-
-                <!-- <div class="btn-group">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        Country
-                    </button>
-                        <ul name='country' class="dropdown-menu">
-                            <li><option value='Korea'>Korea</option></li>
-                            <li><option value='Singapore'>Singapore</option></li>
-                            <li><option value='United Kingdom'>United Kingdom</option></li>
-                        </ul>
-                </div> -->
 
                 <div class="container text-center">
 
                     <hr>
 
-                    <!-- <div class="input-group flex-nowrap" style="width: 25%; margin: auto;">
-                        <span class=" input-group-text" id="addon-wrapping">@</span>
-                        <input type="text" class=" col-md-4 form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping"  name='username' id='my_username' required>
-                    </div> <br> -->
-
-                    <div id="app">
-                        <!-- <div class="container">
-                            Country:
-                                <select name='country' id='country'>
-                                    <option v-for="country in countArr" :value="country"> {{country}} </option>
-                                </select>
-                            <br><br>
-                            University:
-                                <select name='university' id='university'>
-                                    <option v-for="uni in uniArr" :value="uni"> {{uni}} </option>
-                                </select>
-                        </div> -->
-                    </div><br>
 
                     <input type='submit' value='Submit My Entry!' class="btn btn-warning">
                 </div>
@@ -273,8 +146,90 @@ if (isset($_SESSION['email'])) {
             </form>
 
         </div>
-    </div>
 
+        <script>
+        const app = Vue.createApp( {
+            //=========== DATA PROPERTIES ===========
+            data() {
+                return {
+                    uniArr: [],
+                    countArr: [],
+                    country: '',
+                    email: '',
+                    username: '',
+                    university: '',
+                    universitydisplay: '',
+                    countrydisplay: '',
+                }
+            },
+            //=========== METHODS =========== 
+            methods: {
+                addChild() {
+                    var url = "sessionAPI.php";
+                    axios.get(url) 
+                    .then(response => {
+                        var result = response.data;
+                        // console.log(response.data)
+
+                        var email = result.email;
+                        var username = result.username;
+                        var university = result.university;
+
+                        if (university == ''){
+                            university = 'No university selected yet. Update your <a class="edit-btn" href="../validation_page/validation_page.php">profile page</a> now!'
+                            this.countrydisplay = 'None'
+                        }
+                        this.email = email;
+                        this.username = username;
+                        this.universitydisplay = university;
+
+                    })
+                    .catch(error => {
+                        console.log(error.message)
+                    })
+
+                    var url = "../countries.json";
+                    axios.get(url) 
+                    .then(response => {
+                        var myCountries = response.data;
+                        // console.log(response.data)
+                        var universities = []
+                        var countries = []
+                        for (let i=0; i<myCountries.length; i++){
+                            if (!countries.includes(myCountries[i]['Country'])) {
+                                countries.push(myCountries[i]['Country'])
+                            }
+                            // console.log(myCountries[i]['University'])
+                            // console.log(this.universitydisplay)
+                            if (myCountries[i]['University'] == this.universitydisplay){
+                                this.countrydisplay = myCountries[i]['Country']
+                            }
+                            universities.push(myCountries[i]['University'])
+                            // console.log(universities)
+                        }
+                        this.uniArr = universities;
+                        this.countArr = countries;
+                        // console.log(this.uniArr);
+                        // console.log(this.countArr);
+                        // return universities, countries
+                    })
+                    .catch(error => {
+                        console.log(error.message)
+                    })
+
+                }
+            },
+            created() {
+                this.addChild()
+
+            },
+        } )
+        const vm = app.mount('#app')
+        </script>
+
+
+
+    </div>
 
 
 
