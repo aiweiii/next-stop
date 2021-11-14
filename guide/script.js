@@ -78,25 +78,34 @@ function getRegion(country) {
     }
 }
 
-function getDescription(google_name) {
+function getDescription(google_name,country) {
+    country = country[0].trim();
     var json_name;
     var description;
     google_name = google_name.split(" ");
 
     var highest_count = 0;
 
-    fetch("countries.json")
+    fetch("../countries.json")
         .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
         .then(data => {
             // anything you want to do with the data goes between these 2 brackets
             data.forEach(uniObj => {
-                json_name = uniObj["University"];
-                json_name = json_name.split(" ");
-                let compare = (google_name, json_name) => google_name.filter(v => json_name.includes(v)).length;
+                if (uniObj["Country"]==country) {
+                    json_name = uniObj["University"];
+                    json_name = json_name.split(" ");
 
-                if (compare > highest_count) {
-                    highest_count = compare;
-                    description = uniObj["Description"]
+                    let compare = (google_name, json_name) => google_name.filter(v => json_name.includes(v)).length;
+
+                    console.log(google_name);
+                    console.log(json_name);
+                    console.log(compare.length);
+                    console.log();
+
+                    if (compare.length > highest_count) {
+                        highest_count = compare.length;
+                        description = uniObj["Description"];
+                    }
                 }
             });
         })
@@ -141,8 +150,8 @@ function initMap() {
         document.getElementById("region").innerText = getRegion(countryChosen);
 
         // Retrieve University's Description and tag it to the 'desc' tag
-        console.log(getDescription(place.name));
-
+        var google_name = document.getElementById("uniName").innerText;
+        console.log(getDescription(google_name,countryChosen));
 
         if (!place.geometry || !place.geometry.location) {
             return;
