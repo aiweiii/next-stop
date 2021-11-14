@@ -98,7 +98,7 @@
 
     <div class="row g-0" style="height:  calc(100vh - 71px);">
       <!-- Maps -->
-      <div class="col-lg-6" style="height: 100%;">
+      <div class="col-lg-6 height-styling">
           <input id="pac-input" class="controls" type="text" placeholder="Enter a University"/>
         <div id="map"></div>
         <div id="infowindow-content">
@@ -111,9 +111,9 @@
       <!-- Uni info -->
       <div class="col-lg p-4 sidebar">
 
-        <div class="d-flex flex-column align-items-center" id="instruction" style="display: inline;">
-          <img id="instructionImage" style="display: block" src="img/welcome.jpg" alt="Welcome!" width=100%>
-          <h2 class="pt-5" id="instructionText" style="display: block">Begin by Searching for a Partner University!</h2>
+        <div class="h-100 d-flex flex-column justify-content-center" id="instruction">
+          <img id="instructionImage" src="img/welcome.jpg" alt="Welcome!" width=100%>
+          <h2 class="pt-5 text-center" id="instructionText">Begin by Searching for a Partner University!</h2>
         </div>
 
         <div id="uni-info" style="display: none;">
