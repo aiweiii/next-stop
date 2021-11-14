@@ -195,7 +195,7 @@ if (isset($_SESSION['email'])) {
         </div>
     </div>
 
-    <script>
+    <script defer>
         const app = Vue.createApp( {
             //=========== DATA PROPERTIES ===========
             data() {
