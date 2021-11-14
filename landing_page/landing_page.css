@@ -367,6 +367,7 @@ nav a:hover{
 	line-height: 50px;
 	color: #fff;
 	transform: translateX(100%);
+    white-space: nowrap;
 	animation: scrolling 15s linear infinite;
 }
 @keyframes scrolling {
