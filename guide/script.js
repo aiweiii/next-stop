@@ -162,7 +162,8 @@ function initMap() {
         //     document.getElementById("desc").innerText = "Not a partner university."
         // }
         getDescription(google_name,countryChosen);
-        if (document.getElementById("desc").innerText == 'undefined'){
+        console.log(document.getElementById("desc").textContent);
+        if (document.getElementById("desc").textContent == 'undefined'){
             document.getElementById("desc").innerText = "Not a partner university."
         }
         // console.log(typeof getDescription(google_name, countryChosen));
