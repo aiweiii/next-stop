@@ -1,4 +1,5 @@
 const startBtn = document.getElementById("start");
+const nextBtn = document.getElementById("next");
 const restartBtn = document.getElementById("restart");
 const optOneBtn = document.getElementById("option1");
 const optTwoBtn = document.getElementById("option2");
@@ -12,6 +13,7 @@ var score = 0;
 
 startBtn.addEventListener('click', start)
 restartBtn.addEventListener('click',restart)
+nextBtn.addEventListener('click', next)
 
 // IMPT DETERMINE QUESTIONS BEFORE THAT
 
@@ -48,6 +50,9 @@ function start() {
     currentQuestion = 0;
     questionText.innerHTML = questions[currentQuestion].question;
     // document.getElementById("questionImage").src = "hackanm.gif";
+    let correct_option =
+
+
     optOneBtn.innerText = questions[currentQuestion].answers[0].option;
     optOneBtn.onclick = () => {
         // if this option is true
@@ -102,6 +107,7 @@ function start() {
 
 function restart() {
     currentQuestion = 0;
+    nextBtn.classList.remove('hide');
     optOneBtn.classList.remove('hide');
     optTwoBtn.classList.remove('hide');
     optThreeBtn.classList.remove('hide');

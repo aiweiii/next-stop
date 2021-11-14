@@ -1,7 +1,7 @@
-// creating an array and passing the number, questions, options, and answers
 var europe = [
     {
         question: "1. Which is the most visited attraction in Europe?",
+        correct: 2, //please note: this is the index!
         answers: [
             {option:"Eiffel Tower, France", answer:false},
             {option:"Colosseum, Italy", answer: false },
@@ -11,6 +11,7 @@ var europe = [
     },
     {
         question: "2. How many languages are spoken in Europe?",
+        correct: 2,
         answers: [
             { option: "5", answer: false },
             { option: "50", answer: false },
@@ -20,6 +21,7 @@ var europe = [
     },
     {
         question: "3. What is 'Cake' in Swedish?",
+        correct: 2,
         answers: [
             { option: "Hej", answer: false },
             { option: "Snälla", answer: false },
@@ -29,6 +31,7 @@ var europe = [
     },
     {
         question: "4. Which is the most visited country in the world?",
+        correct: 1,
         answers: [
             { option: "France", answer: true },
             { option: "Spain", answer: false },
@@ -38,6 +41,7 @@ var europe = [
     },
     {
         question: "5. Which name is NOT banned in Denmark?",
+        correct: 3,
         answers: [
             { option: "Jakobp", answer: false },
             { option: "Monkey", answer: false },
@@ -50,6 +54,7 @@ var europe = [
 var asia = [
     {
         question: "1. Which is the largest religious monument in the World?",
+        correct: 3,
         answers: [
             { option: "Borobudur - Central Java, Indonesia", answer: false },
             { option: "Spring Temple Buddha - Henan, China", answer: false },
@@ -59,6 +64,7 @@ var asia = [
     },
     {
         question: "2. How many rooms does The Forbidden City in Beijing, China, contains?",
+        correct: 3,
         answers: [
             { option: "20", answer: false },
             { option: "50", answer: false },
@@ -68,6 +74,7 @@ var asia = [
     },
     {
         question: "3. Which country still has a reigning emperor?",
+        correct: 1,
         answers: [
             { option: "Thailand", answer: false },
             { option: "Japan", answer: true },
@@ -77,6 +84,7 @@ var asia = [
     },
     {
         question: "4. Which kind of park does not exist in South Korea?",
+        correct: 0,
         answers: [
             { option: "Elephant-themed park", answer: true },
             { option: "Toilet-themed park", answer: false },
@@ -86,6 +94,7 @@ var asia = [
     },
     {
         question: "5. What is the Vietnamese currency?",
+        correct: 1,
         answers: [
             { option: "Rupee", answer: false },
             { option: "Dong", answer: true },
@@ -100,6 +109,7 @@ var asia = [
 var australia = [
     {
         question: "1. Which is the largest religious monument in the World?",
+        correct: 3,
         answers: [
             { option: "Borobudur - Central Java, Indonesia", answer: false },
             { option: "Spring Temple Buddha - Henan, China", answer: false },
@@ -109,6 +119,7 @@ var australia = [
     },
     {
         question: "2. How many rooms does The Forbidden City in Beijing, China, contains?",
+        correct: 3,
         answers: [
             { option: "20", answer: false },
             { option: "50", answer: false },
@@ -118,6 +129,7 @@ var australia = [
     },
     {
         question: "3. Which country still has a reigning emperor?",
+        correct: 1,
         answers: [
             { option: "Thailand", answer: false },
             { option: "Japan", answer: true },
@@ -127,6 +139,7 @@ var australia = [
     },
     {
         question: "4. Which kind of park does not exist in South Korea?",
+        correct: 0,
         answers: [
             { option: "Elephant-themed park", answer: true },
             { option: "Toilet-themed park", answer: false },
@@ -136,6 +149,7 @@ var australia = [
     },
     {
         question: "5. What is the Vietnamese currency?",
+        correct: 1,
         answers: [
             { option: "Rupee", answer: false },
             { option: "Dong", answer: true },
@@ -148,6 +162,7 @@ var australia = [
 var america = [
     {
         question: "1. Which is the largest religious monument in the World?",
+        correct: 3,
         answers: [
             { option: "Borobudur - Central Java, Indonesia", answer: false },
             { option: "Spring Temple Buddha - Henan, China", answer: false },
@@ -157,6 +172,7 @@ var america = [
     },
     {
         question: "2. How many rooms does The Forbidden City in Beijing, China, contains?",
+        correct: 3,
         answers: [
             { option: "20", answer: false },
             { option: "50", answer: false },
@@ -166,6 +182,7 @@ var america = [
     },
     {
         question: "3. Which country still has a reigning emperor?",
+        correct: 1,
         answers: [
             { option: "Thailand", answer: false },
             { option: "Japan", answer: true },
@@ -175,6 +192,7 @@ var america = [
     },
     {
         question: "4. Which kind of park does not exist in South Korea?",
+        correct: 0,
         answers: [
             { option: "Elephant-themed park", answer: true },
             { option: "Toilet-themed park", answer: false },
@@ -184,6 +202,7 @@ var america = [
     },
     {
         question: "5. What is the Vietnamese currency?",
+        correct: 1,
         answers: [
             { option: "Rupee", answer: false },
             { option: "Dong", answer: true },
@@ -196,6 +215,7 @@ var america = [
 var middleEast = [
     {
         question: "1. Which is the largest religious monument in the World?",
+        correct: 3,
         answers: [
             { option: "Borobudur - Central Java, Indonesia", answer: false },
             { option: "Spring Temple Buddha - Henan, China", answer: false },
@@ -205,6 +225,7 @@ var middleEast = [
     },
     {
         question: "2. How many rooms does The Forbidden City in Beijing, China, contains?",
+        correct: 3,
         answers: [
             { option: "20", answer: false },
             { option: "50", answer: false },
@@ -214,6 +235,7 @@ var middleEast = [
     },
     {
         question: "3. Which country still has a reigning emperor?",
+        correct: 1,
         answers: [
             { option: "Thailand", answer: false },
             { option: "Japan", answer: true },
@@ -223,6 +245,7 @@ var middleEast = [
     },
     {
         question: "4. Which kind of park does not exist in South Korea?",
+        correct: 0,
         answers: [
             { option: "Elephant-themed park", answer: true },
             { option: "Toilet-themed park", answer: false },
@@ -232,6 +255,7 @@ var middleEast = [
     },
     {
         question: "5. What is the Vietnamese currency?",
+        correct: 1,
         answers: [
             { option: "Rupee", answer: false },
             { option: "Dong", answer: true },
@@ -244,6 +268,7 @@ var middleEast = [
 var centralAsia = [
     {
         question: "1. Which is the largest religious monument in the World?",
+        correct: 3,
         answers: [
             { option: "Borobudur - Central Java, Indonesia", answer: false },
             { option: "Spring Temple Buddha - Henan, China", answer: false },
@@ -253,6 +278,7 @@ var centralAsia = [
     },
     {
         question: "2. How many rooms does The Forbidden City in Beijing, China, contains?",
+        correct: 3,
         answers: [
             { option: "20", answer: false },
             { option: "50", answer: false },
@@ -262,6 +288,7 @@ var centralAsia = [
     },
     {
         question: "3. Which country still has a reigning emperor?",
+        correct: 1,
         answers: [
             { option: "Thailand", answer: false },
             { option: "Japan", answer: true },
@@ -271,6 +298,7 @@ var centralAsia = [
     },
     {
         question: "4. Which kind of park does not exist in South Korea?",
+        correct: 0,
         answers: [
             { option: "Elephant-themed park", answer: true },
             { option: "Toilet-themed park", answer: false },
@@ -280,6 +308,7 @@ var centralAsia = [
     },
     {
         question: "5. What is the Vietnamese currency?",
+        correct: 1,
         answers: [
             { option: "Rupee", answer: false },
             { option: "Dong", answer: true },
@@ -292,6 +321,7 @@ var centralAsia = [
 var africa = [
     {
         question: "1. Which is the largest religious monument in the World?",
+        correct: 3,
         answers: [
             { option: "Borobudur - Central Java, Indonesia", answer: false },
             { option: "Spring Temple Buddha - Henan, China", answer: false },
@@ -301,6 +331,7 @@ var africa = [
     },
     {
         question: "2. How many rooms does The Forbidden City in Beijing, China, contains?",
+        correct: 3,
         answers: [
             { option: "20", answer: false },
             { option: "50", answer: false },
@@ -310,6 +341,7 @@ var africa = [
     },
     {
         question: "3. Which country still has a reigning emperor?",
+        correct: 1,
         answers: [
             { option: "Thailand", answer: false },
             { option: "Japan", answer: true },
@@ -319,6 +351,7 @@ var africa = [
     },
     {
         question: "4. Which kind of park does not exist in South Korea?",
+        correct: 0,
         answers: [
             { option: "Elephant-themed park", answer: true },
             { option: "Toilet-themed park", answer: false },
@@ -328,6 +361,7 @@ var africa = [
     },
     {
         question: "5. What is the Vietnamese currency?",
+        correct: 1,
         answers: [
             { option: "Rupee", answer: false },
             { option: "Dong", answer: true },
