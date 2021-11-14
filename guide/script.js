@@ -86,11 +86,6 @@ function getDescription(google_name,country) {
     var counter = 0;
     var highest_count = 0;
     var desc;
-    console.log(google_name);
-    console.log(typeof google_name);
-    console.log();
-    console.log(country);
-    console.log(typeof country);
 
     fetch("../countries.json")
         .then(response => response.json()) // using json() method to EXTRACT json body content from Response object
@@ -163,7 +158,11 @@ function initMap() {
 
         // Retrieve University's Description and tag it to the 'desc' tag
         var google_name = document.getElementById("uniName").innerText;
+        if (typeof (getDescription(google_name, countryChosen))==undefined) {
+            document.getElementById("desc").innerText = "Not a partner university."
+        }
         getDescription(google_name,countryChosen);
+        console.log(typeof getDescription(google_name, countryChosen));
 
         if (!place.geometry || !place.geometry.location) {
             return;

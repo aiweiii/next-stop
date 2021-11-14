@@ -17,8 +17,6 @@ restartBtn.addEventListener('click',restart);
 nextBtn.addEventListener('click', next);
 endBtn.addEventListener('click', end);
 
-// IMPT DETERMINE QUESTIONS BEFORE THAT
-
 function getQuestions(region) {
     if (region == "Europe") {
         return europe;
