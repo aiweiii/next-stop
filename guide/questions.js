@@ -109,7 +109,7 @@ var asia = [
 var australia = [
     {
         question: "1. How many states does Australia have?",
-        correct: 3,
+        correct: 1,
         answers: [
             { option: "Seven", answer: false },
             { option: "Six", answer: true },
@@ -119,7 +119,7 @@ var australia = [
     },
     {
         question: "2. What year did Australia get their first female prime minister?",
-        correct: 3,
+        correct: 2,
         answers: [
             { option: "2007", answer: false },
             { option: "2009", answer: false },
@@ -129,7 +129,7 @@ var australia = [
     },
     {
         question: "3. What constellation is depicted on the Australian flag?",
-        correct: 1,
+        correct: 0,
         answers: [
             { option: "The Southern Cross", answer: true },
             { option: "The Southern Diamond", answer: false },
@@ -139,7 +139,7 @@ var australia = [
     },
     {
         question: "4. Who is Australia's Head of State?",
-        correct: 0,
+        correct: 1,
         answers: [
             { option: "The Prime Minister", answer: false },
             { option: "The Queen", answer: true },
@@ -149,7 +149,7 @@ var australia = [
     },
     {
         question: "5. Which is the largest desert in Australia?",
-        correct: 1,
+        correct: 0,
         answers: [
             { option: "The Great Victorian Desert", answer: true },
             { option: "The Great Sandy Desert", answer: false },
@@ -172,7 +172,7 @@ var america = [
     },
     {
         question: "2. Which is the largest National Park in terms of area in the United States?",
-        correct: 3,
+        correct: 1,
         answers: [
             { option: "Glacier Bay", answer: false },
             { option: "Wrangell–St. Elias", answer: true },
@@ -182,7 +182,7 @@ var america = [
     },
     {
         question: "3. The first successful U.S. satellite launched into earth's orbit was",
-        correct: 1,
+        correct: 2,
         answers: [
             { option: "Sputnik", answer: false },
             { option: "Apollo 1", answer: false },
@@ -192,7 +192,7 @@ var america = [
     },
     {
         question: "4. Towards the South, the United States has it's land border with which of these country?",
-        correct: 0,
+        correct: 2,
         answers: [
             { option: "Canada", answer: false },
             { option: "Mexico", answer: false },
@@ -202,7 +202,7 @@ var america = [
     },
     {
         question: "5. Which of these is not a capital city?",
-        correct: 1,
+        correct: 3,
         answers: [
             { option: "Juneau", answer: false },
             { option: "Hartford", answer: false },
@@ -215,7 +215,7 @@ var america = [
 var middleEast = [
     {
         question: "1. Which of the following countries is not a monarchy?",
-        correct: 3,
+        correct: 0,
         answers: [
             { option: "Yemen", answer: true },
             { option: "Bahrain", answer: false },
@@ -235,7 +235,7 @@ var middleEast = [
     },
     {
         question: "3. What is the largest country on the Arabian peninsula?",
-        correct: 1,
+        correct: 3,
         answers: [
             { option: "Yemen", answer: false },
             { option: "Kuwait", answer: false },
@@ -245,7 +245,7 @@ var middleEast = [
     },
     {
         question: "4. What country uses qanats to irrigate water underground?",
-        correct: 0,
+        correct: 3,
         answers: [
             { option: "Iraq", answer: false },
             { option: "Saudi Arabia", answer: false },
@@ -255,7 +255,7 @@ var middleEast = [
     },
     {
         question: "5. What is the Middle East known as?",
-        correct: 1,
+        correct: 0,
         answers: [
             { option: "Crossroads of the World", answer: true },
             { option: "Asia-Africa", answer: false },
