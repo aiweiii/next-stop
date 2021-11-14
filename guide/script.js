@@ -5,6 +5,7 @@ function checkInput(input) {
         if (!verified && input.includes(word)) {
             verified = true;
             document.getElementById("instruction").style.display = "none";
+            document.getElementById("instruction").style.cssText += 'height:0px !important';
             document.getElementById("instructionImage").style.display = "none";
             document.getElementById("instructionText").style.display = "none";
             document.getElementById("uni-info").style.display = "inline";
