@@ -46,13 +46,13 @@ $university = '*';
 
         <style type="text/css">
 
-            
-
         </style>
 
         <link rel="stylesheet" href="../navbar/navbar.css">
         <link rel="stylesheet" href="../main.css">
         <link rel="stylesheet" href="css/display.css">
+
+        <title>  Forum </title>
 
     </head>
 <body>
