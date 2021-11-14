@@ -47,7 +47,7 @@ if (isset($_SESSION['email'])) {
 <body>
 
     <!-- country  -->
-    <input type="hidden" name='country' id='country' :value="countrydisplay">
+    <input name='country' id='country' :value="countrydisplay">
 
     <!-- navigation bar -->
     <nav>
