@@ -46,8 +46,7 @@ if (isset($_SESSION['email'])) {
 </head>
 <body>
 
-    <!-- country  -->
-    <input type="hidden" name='country' id='country' :value="countrydisplay">
+
 
     <!-- navigation bar -->
     <nav>
@@ -121,7 +120,9 @@ if (isset($_SESSION['email'])) {
                 <input type="hidden" name='university' id='university' :value="universitydisplay">
                 <input type="hidden" name='username' id='my_username' :value="username">
 
-                <p><b>Country:</b> {{countrydisplay}}</p>
+                <p><b>Country:</b> {{ countrydisplay }}</p>
+                    <!-- country  -->
+                <input style="display: none;" name='country' id='country' :value="countrydisplay">
 
 
                 <div class="form-group">
@@ -182,7 +183,6 @@ if (isset($_SESSION['email'])) {
                         this.email = email;
                         this.username = username;
                         this.universitydisplay = university;
-
                     })
                     .catch(error => {
                         console.log(error.message)
@@ -202,11 +202,12 @@ if (isset($_SESSION['email'])) {
                             // console.log(myCountries[i]['University'])
                             // console.log(this.universitydisplay)
                             if (myCountries[i]['University'] == this.universitydisplay){
-                                this.countrydisplay = myCountries[i]['Country']
+                                country = myCountries[i]['Country']
                             }
                             universities.push(myCountries[i]['University'])
                             // console.log(universities)
                         }
+                        this.countrydisplay = country
                         this.uniArr = universities;
                         this.countArr = countries;
                         // console.log(this.uniArr);
@@ -216,13 +217,13 @@ if (isset($_SESSION['email'])) {
                     .catch(error => {
                         console.log(error.message)
                     })
-
                 }
             },
+
             created() {
                 this.addChild()
-
             },
+
         } )
         const vm = app.mount('#app')
         </script>

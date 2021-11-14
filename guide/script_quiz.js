@@ -9,7 +9,7 @@ const optFourBtn = document.getElementById("option4");
 const userScore = document.getElementById("user-score");
 const questionText = document.getElementById("question-text");
 
-let currentQuestion = 0;
+var currentQuestion = 0;
 var score = 0;
 
 startBtn.addEventListener('click', start);
@@ -47,17 +47,18 @@ function welcomeQuiz() {
 
 function start() {
     for (let i = 1; i < 5; i++) {
+        document.getElementById("option" + i).disabled = false;
+    }
+    for (let i = 1; i < 5; i++) {
         document.getElementById("option" + i).setAttribute("class", "list-group-item list-group-item-action list-hover");
     }
     document.getElementById("restart").style.display = "inline";
     const regionChosen = document.getElementById("region").innerText;
     var questions = getQuestions(regionChosen);
 
-    currentQuestion = 0;
     questionText.innerHTML = questions[currentQuestion].question;
     // document.getElementById("questionImage").src = "hackanm.gif";
     let correct_option = questions[currentQuestion].correct;
-
 
     optOneBtn.innerText = questions[currentQuestion].answers[0].option;
     optOneBtn.onclick = () => {
@@ -68,6 +69,9 @@ function start() {
             document.getElementById("option1").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
             var number = correct_option+1;
             document.getElementById("option"+number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
         }
         userScore.innerHTML = score;
         document.getElementById("next").style.display = "inline";
@@ -83,6 +87,9 @@ function start() {
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
+        }
         userScore.innerHTML = score;
         document.getElementById("next").style.display = "inline";
     }
@@ -95,6 +102,9 @@ function start() {
             document.getElementById("option3").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
         }
         userScore.innerHTML = score;
         document.getElementById("next").style.display = "inline";
@@ -109,9 +119,14 @@ function start() {
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
+        }
         userScore.innerHTML = score;
         document.getElementById("next").style.display = "inline";
     }
+
+
 }
 
 function restart() {
@@ -143,7 +158,12 @@ function end() {
 }
 
 function next() {
-    if (currentQuestion==4) {
+    currentQuestion++;
+
+    for (let i = 1; i < 5; i++) {
+        document.getElementById("option" + i).disabled = false;
+    }
+    if (currentQuestion == 4) {
         document.getElementById("next").style.display = "none";
     }
     for (let i = 1; i < 5; i++) {
@@ -153,8 +173,6 @@ function next() {
     const regionChosen = document.getElementById("region").innerText;
     var questions = getQuestions(regionChosen);
     let correct_option = questions[currentQuestion].correct;
-
-    currentQuestion++;
 
     questionText.innerHTML = questions[currentQuestion].question;
     optOneBtn.innerHTML = questions[currentQuestion].answers[0].option;
@@ -166,6 +184,9 @@ function next() {
             document.getElementById("option1").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
         }
         userScore.innerHTML = score;
         if (currentQuestion==4) {
@@ -182,6 +203,9 @@ function next() {
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
+        }
         userScore.innerHTML = score;
         if (currentQuestion == 4) {
             document.getElementById("end").style.display = "inline";
@@ -196,6 +220,9 @@ function next() {
             document.getElementById("option3").setAttribute("class", "bg-danger p-2 text-dark bg-opacity-25")
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
+        }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
         }
         userScore.innerHTML = score;
         if (currentQuestion == 4) {
@@ -212,11 +239,16 @@ function next() {
             var number = correct_option + 1;
             document.getElementById("option" + number).setAttribute("class", "bg-success p-2 text-dark bg-opacity-25")
         }
+        for (let i = 1; i < 5; i++) {
+            document.getElementById("option" + i).disabled = true;
+        }
         userScore.innerHTML = score;
         if (currentQuestion == 4) {
             document.getElementById("end").style.display = "inline";
         }
     }
+
+
 }
 
 welcomeQuiz();
