@@ -1,6 +1,5 @@
 const startBtn = document.getElementById("start");
 const restartBtn = document.getElementById("restart");
-const nextBtn = document.getElementById("next");
 const optOneBtn = document.getElementById("option1");
 const optTwoBtn = document.getElementById("option2");
 const optThreeBtn = document.getElementById("option3");
@@ -13,7 +12,6 @@ var score = 0;
 
 startBtn.addEventListener('click', start)
 restartBtn.addEventListener('click',restart)
-nextBtn.addEventListener('click',next)
 
 // IMPT DETERMINE QUESTIONS BEFORE THAT
 let questions = [
@@ -66,6 +64,7 @@ let questions = [
 
 function welcomeQuiz() {
     startBtn.onclick = () => {
+        document.getElementById("restart").style.display = "none";
         document.getElementById("welcome-area").style.display="none";
         document.getElementById("question-area").style.display="inline";
         start();
@@ -73,6 +72,8 @@ function welcomeQuiz() {
 }
 
 function start() {
+    document.getElementById("restart").style.display="inline";
+
     currentQuestion = 0;
     questionText.innerHTML = questions[currentQuestion].question;
     // document.getElementById("questionImage").src = "hackanm.gif";
@@ -130,7 +131,6 @@ function start() {
 
 function restart() {
     currentQuestion = 0;
-    nextBtn.classList.remove('hide');
     optOneBtn.classList.remove('hide');
     optTwoBtn.classList.remove('hide');
     optThreeBtn.classList.remove('hide');
@@ -142,10 +142,6 @@ function restart() {
 
 function next() {
     currentQuestion++;
-    if (currentQuestion>=4) {
-        // hide the NEXT button?
-        nextBtn.classList.add('hide');
-    }
 
     questionText.innerHTML = questions[currentQuestion].question;
     optOneBtn.innerHTML = questions[currentQuestion].answers[0].option;

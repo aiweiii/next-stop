@@ -175,8 +175,7 @@
           </div>
 
           <div class="mt-3">
-            <button class="btn btn-dark" id="restart">Restart</button>
-            <button class="btn btn-major" id="next">Next</button>
+            <button class="btn btn-dark" id="restart" style="display:none;">Restart</button>
           </div>
         </div>
       </div>
