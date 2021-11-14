@@ -144,6 +144,9 @@ function initMap() {
         // Render University description
         search_students();
 
+        // restart quiz
+        restart()
+
         photoUrl = place.photos[0].getUrl({ maxWidth: 1200, maxHeight: 1200 });
         document.getElementById('image').src = photoUrl;
 

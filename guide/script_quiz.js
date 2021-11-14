@@ -113,24 +113,28 @@ function start() {
 
 function restart() {
     currentQuestion = 0;
-    nextBtn.classList.remove('hide');
-    optOneBtn.classList.remove('hide');
-    optTwoBtn.classList.remove('hide');
-    optThreeBtn.classList.remove('hide');
-    optFourBtn.classList.remove('hide');
     score = 0;
+
     userScore.innerHTML = score;
-    document.getElementById("welcome-area").style.display = "inline";
+    nextBtn.style.display = 'none';
+    restartBtn.style.display = 'none';
+    endBtn.style.display = 'none';
+    document.getElementById("question-area").style.display = "none";
     document.getElementById("submit-area").style.display = "none";
+    document.getElementById("welcome-area").style.display = "inline";
     welcomeQuiz();
 }
 
 function end() {
-    nextBtn.classList.add('hide');
-    optOneBtn.classList.add('hide');
-    optTwoBtn.classList.add('hide');
-    optThreeBtn.classList.add('hide');
-    optFourBtn.classList.add('hide');
+    // nextBtn.classList.add('hide');
+    // optOneBtn.classList.add('hide');
+    // optTwoBtn.classList.add('hide');
+    // optThreeBtn.classList.add('hide');
+    // optFourBtn.classList.add('hide');
+
+    restartBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+    endBtn.style.display = 'none';
     document.getElementById("question-area").style.display = "none";
     document.getElementById("submit-area").style.display = "inline";
 }
